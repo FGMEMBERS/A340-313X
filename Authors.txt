@@ -1,0 +1,23 @@
+This project is a fork of the A340-600HGW. It has incorporated many components from the A340-300 model authored by Skyop and Ampere. 
+
+Systems and EICAS mainly taken from Syd Adams, Justin Smithies, and Thorsten Brehm's 777.
+
+MCP and MFD taken from A320family.
+
+Other Instruments from A330, A380 and 747.
+
+Liveries from Liam Gathercole, Emmanuel Savage, MT-Jun, Patrick Quaedackers, Simbabeat, Andino.
+
+Andino did the new moving parts for the Model (reversers, gear tilt, gear doors, flaps, spoilers, rudder, stabilizator, etc.), lights. Later, a lot of similar work from the new A40-600 was incorporated to the A340-313X.
+
+Andino ported the cockpit and some instruments from the A330, the 777 and other planes.
+
+Yasim rewritten by Andino.
+
+Some of the work on the A340-600 by Simon. Ampere K. Hardraade & "Skyop", Isaias V Prestes and Gijs de Rooy (specially the fuselage and new interiors) has been incorporated into this project.
+
+De-ice truck and Fuel truck from the A330.
+
+
+
+

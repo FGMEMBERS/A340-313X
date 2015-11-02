@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>a343.nacelle.ac</path>
+
+	<params>
+		<reverser>surface-positions/reverser-norm</reverser>
+	</params>
+
+	<!-- Reverse thrust animations -->
+	<animation>
+		<name>Upper-left reverser</name>
+		<type>rotate</type>
+		<object-name>ReverserUpL</object-name>
+		<object-name>ReverserUpLInt</object-name>
+		<property alias="../../params/reverser" />
+		<factor>65</factor>
+		<axis>
+			<x1-m>1.122</x1-m>
+			<y1-m>2.96</y1-m>
+			<z1-m>0.239</z1-m>
+			<x2-m>0.548</x2-m>
+			<y2-m>2.96</y2-m>
+			<z2-m>1.008</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Lower-left reverser</name>
+		<type>rotate</type>
+		<object-name>ReverserDownL</object-name>
+		<object-name>ReverserDownLInt</object-name>
+		<property alias="../../params/reverser" />
+		<factor>65</factor>
+		<axis>
+			<x1-m>0.641</x1-m>
+			<y1-m>2.96</y1-m>
+			<z1-m>-0.98</z1-m>
+			<x2-m>1.126</x2-m>
+			<y2-m>2.96</y2-m>
+			<z2-m>-0.225</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Upper-right reverser</name>
+		<type>rotate</type>
+		<object-name>ReverserUpR</object-name>
+		<object-name>ReverserUpRInt</object-name>
+		<property alias="../../params/reverser" />
+		<factor>65</factor>
+		<axis>
+			<x1-m>-0.548</x1-m>
+			<y1-m>2.96</y1-m>
+			<z1-m>1.008</z1-m>
+			<x2-m>-1.122</x2-m>
+			<y2-m>2.96</y2-m>
+			<z2-m>0.239</z2-m>
+		</axis>
+	</animation>
+	<animation>
+		<name>Lower-right reverser</name>
+		<type>rotate</type>
+		<object-name>ReverserDownR</object-name>
+		<object-name>ReverserDownRInt</object-name>
+		<property alias="../../params/reverser" />
+		<factor>65</factor>
+		<axis>
+			<x1-m>-1.126</x1-m>
+			<y1-m>2.96</y1-m>
+			<z1-m>-0.225</z1-m>
+			<x2-m>-0.641</x2-m>
+			<y2-m>2.96</y2-m>
+			<z2-m>-0.98</z2-m>
+		</axis>
+	</animation>
+
+	<!-- Chrome shader -->
+	<animation>
+		<name>Chrome shader</name>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>../../Models/chrome.png</texture>
+		<object-name>ChromeIntake</object-name>
+	</animation>
+
+	
+
+</PropertyList>

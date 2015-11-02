@@ -1,0 +1,446 @@
+<PropertyList>
+
+
+    <model>
+      <path>Aircraft/A340-313X/Models/A340-313X-avion.xml</path>
+       <offsets>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>-0.35</z-m>
+          <pitch-deg>-0.8</pitch-deg>
+       </offsets>
+                <livery>
+                    <file type="string">House</file>
+                </livery>
+    </model>
+
+
+<!-- Shadow -->
+
+  <!--model>
+    <name>shadowOSG</name>
+    <path>Aircraft/A340-313X/Models/shadow.xml</path>
+ <offsets>
+   <x-m> 0.0</x-m>
+   <y-m> 0.0</y-m>
+   <z-m> 1.0</z-m>
+   <pitch-deg>0</pitch-deg>
+ </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>shadowOSG</object-name>
+    <condition>
+      <equals>
+        <property>sim[0]/rendering/shadows-ac</property>
+        <value>true</value>
+      </equals>
+    </condition>
+  </animation-->
+
+<!-- Airport Operations -->
+
+ <model>
+ <name>Followme</name>
+ <path>Aircraft/A340-313X/Models/Operations/Followme/followme.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/followme</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>80</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m>-50</x-m>
+            <y-m>0</y-m>
+            <z-m>-5.25</z-m>
+ </offsets>
+</model>
+
+ <model>
+ <name>Catering Vehicle</name>
+ <path>Aircraft/A340-313X/Models/Operations/Catering/catering.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/catering</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m>16</x-m>
+  <y-m> 10</y-m>
+  <z-m>-5.25</z-m>
+<heading-deg>180</heading-deg>
+ </offsets>
+</model>
+
+<!-- engine cones -->
+<!-- Engine Safety Cones Left -->
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-13</x-m>
+            <y-m>-9.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-12.6</x-m>
+            <y-m>-8.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-12.6</x-m>
+            <y-m>-10.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-6</x-m>
+            <y-m>-20.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-5.6</x-m>
+            <y-m>-19.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-5.6</x-m>
+            <y-m>-21.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+
+
+<!-- Engine Safety Cones Right -->
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-13</x-m>
+            <y-m>9.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-12.6</x-m>
+            <y-m>8.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-12.6</x-m>
+            <y-m>10.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-6</x-m>
+            <y-m>20.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-5.6</x-m>
+            <y-m>19.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/A340-313X/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-5.6</x-m>
+            <y-m>21.5</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
+
+<!-- Passenger Stairways -->
+
+ <model>
+ <name>Stairwayfront</name>
+ <path>Aircraft/A340-313X/Models/Operations/Stairways/stairs.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/stairs1</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>10</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m>-27.5</x-m>
+  <y-m>-2.7</y-m>
+  <z-m>-5.25</z-m>
+<heading-deg>270</heading-deg>
+ </offsets>
+</model>
+
+ <model>
+ <name>Stairwayback</name>
+ <path>Aircraft/A340-313X/Models/Operations/Stairways/stairs.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/stairs2</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>10</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m> 17.5</x-m>
+  <y-m>-1.65</y-m>
+  <z-m>-5.25</z-m>
+<heading-deg>270</heading-deg>
+ </offsets>
+</model>
+
+
+
+
+
+<model>
+<name>Bus</name>
+ <path>Aircraft/A340-313X/Models/Operations/Bus/bus.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/bus</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+            <x-m>-20</x-m>
+            <y-m>-15</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>-270</heading-deg>
+        </offsets>
+</model>
+
+
+<model>
+<name>GPU truck long</name>
+ <path>Aircraft/A340-313X/Models/Operations/Baggage/chariot.xml</path>
+
+ <condition>
+ <and>
+  <property>controls/switches/gpu</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>10</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+  <x-m>12</x-m>
+            <y-m> 18</y-m>
+            <z-m>-5.25</z-m>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>90</heading-deg>
+        </offsets>
+</model>
+
+
+<!-- Pushback -->
+
+<model>
+ <name>Pushback</name>
+ <path>Aircraft/A340-313X/Models/Pushback/Goldhofert.xml</path>
+ 
+ 
+ <condition>
+ <less-than-equals>
+			             <property>velocities/airspeed-kt</property>
+                                            <value>80</value>
+ </less-than-equals>
+  </condition>
+  
+  
+  
+ <offsets>
+            <x-m>-32.90</x-m>
+            <y-m>-0.03</y-m>
+            <z-m>-5.25</z-m>
+ </offsets>
+</model> 
+
+
+<!-- Fuel Truck -->
+
+<model>
+	<name>fuel-truck</name>
+	<path>Aircraft/A340-313X/Models/Operations/Fuel-Truck/Fuel_Truck_Short_VolvoFM.xml</path>
+	<offsets>
+		<x-m>-9</x-m>
+     	 	<y-m>3</y-m>
+     		 <z-m>-0.84</z-m>
+	</offsets>
+	<condition>
+		<and>
+		<less-than>	
+	         <property>/velocities/groundspeed-kt</property>
+	         <value>1</value>
+	         </less-than>
+		<equals>
+			<property>/services/fuel-truck/enable</property>
+			<value>1</value>
+		</equals>
+		</and>
+	</condition>
+</model>
+
+
+<!-- De-icing Truck -->
+
+<model>
+	<name>de-ice-truck</name>
+	<path>Aircraft/A340-313X/Models/Operations/De-Icing/volvo_deicing_truck.xml</path>
+	<condition>
+		<equals>
+			<property>/services/deicing_truck/enable</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>-18</x-m>
+		<y-m>9.5</y-m>
+		<z-m>-5</z-m>
+		<heading-deg>160</heading-deg>
+	</offsets>
+</model>
+
+</PropertyList>

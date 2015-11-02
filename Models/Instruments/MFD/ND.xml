@@ -1,0 +1,81 @@
+<!--
+Syd Adams
+A340-313X Navigation display
+-->
+
+<PropertyList>
+
+ <!--path>EFIS.ac</path-->
+<!--model>
+		<path>Aircraft/A340-313X/Models/Instruments/MFD/terrain-map-pixel.xml</path>
+		<condition>
+			<and>
+				<greater-than>
+					<property>systems/electrical/outputs/efis</property>
+					<value>15</value>
+				</greater-than>
+
+				<property>/instrumentation/efis/nd/terrain-on-nd</property>
+
+			</and>
+		</condition>
+
+		<offsets>
+			<x-m>0.01</x-m>
+		</offsets>
+	</model-->
+
+ <animation>
+  <type>scale</type>
+  <x-offset>0.85</x-offset>
+  <y-offset>0.85</y-offset>
+  <z-offset>0.85</z-offset>
+ </animation>
+
+    <panel>
+        <path>Aircraft/A340-313X/Models/Instruments/MFD/mfd-panel.xml</path>
+        <bottom-left>
+            <x-m>0.003</x-m>
+            <y-m>-0.090</y-m>
+            <z-m>-0.087</z-m>
+        </bottom-left>
+        <bottom-right>
+            <x-m>0.003</x-m>
+            <y-m>0.090</y-m>
+            <z-m>-0.087</z-m>
+        </bottom-right>
+        <top-left>
+            <x-m>0.003</x-m>
+            <y-m>-0.090</y-m>
+            <z-m>0.094</z-m>
+        </top-left>
+    </panel>
+
+    <panel>
+        <path>Aircraft/A340-313X/Models/Instruments/MFD/mfdtext-panel.xml</path>
+        <bottom-left>
+            <x-m>0.005</x-m>
+            <y-m>-0.090</y-m>
+            <z-m>-0.087</z-m>
+        </bottom-left>
+        <bottom-right>
+            <x-m>0.005</x-m>
+            <y-m>0.090</y-m>
+            <z-m>-0.087</z-m>
+        </bottom-right>
+        <top-left>
+            <x-m>0.005</x-m>
+            <y-m>-0.090</y-m>
+            <z-m>0.094</z-m>
+        </top-left>
+    </panel>
+
+
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+
+</PropertyList>

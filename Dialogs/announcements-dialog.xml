@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <name>Cabin Announcements</name>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Cabin Announcements</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+    <layout>vbox</layout>
+    <halign>center</halign>
+
+    <!--text>
+      <label>Check a box to sound a cabin announcement. To hear them more clearly, you may want to switch to an interior view.</label>
+    </text-->
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Seatbelts Sign</label>
+      <property>/controls/switches/seatbelt-sign</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/seatbelt-sign</property>
+      </binding>
+    </checkbox>
+
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Boarding/Landing Music (1)</label>
+      <property>/controls/switches/music</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/music</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Boarding/Landing Music (2)</label>
+      <property>/controls/switches/music2</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/music2</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Welcome</label>
+      <property>/controls/switches/captain</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/captain</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Safety Briefing</label>
+      <property>/controls/switches/safety</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/safety</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Allow Electronic Devices</label>
+      <property>/controls/switches/tenthousand</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/tenthousand</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Cruising Altitude</label>
+      <property>/controls/switches/cruisingalt</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/cruisingalt</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Descending</label>
+      <property>/controls/switches/decending</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/decending</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Emergency</label>
+      <property>/controls/switches/emergency</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/switches/emergency</property>
+      </binding>
+    </checkbox>
+
+
+
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+</PropertyList>

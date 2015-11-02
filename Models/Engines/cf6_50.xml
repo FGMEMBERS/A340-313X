@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>cf6_50.ac</path>
+
+	<params>
+		<n1>engines/engine[0]/n1</n1>
+	</params>
+
+	<!-- Animation for the fanblades -->
+	<animation>
+		<name>Fan</name>
+		<type>spin</type>
+		<object-name>Blades</object-name>
+		<object-name>Cone</object-name>
+		<object-name>ConeSpiral</object-name>
+		<factor>67</factor>
+		<property alias="../../params/n1" />
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+</PropertyList>

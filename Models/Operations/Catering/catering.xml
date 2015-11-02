@@ -1,0 +1,41 @@
+<PropertyList>
+<path>catering_vehicle.ac</path>
+
+<offsets>
+<heading-deg>360</heading-deg>
+</offsets>
+
+  <animation>
+    <type>select</type>
+    <condition>
+      <property>controls/switches/catering</property>
+      </condition>
+  </animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>Mesh17.004</object-name>
+    <object-name>Mesh37</object-name>
+	 <object-name>Mesh17.008</object-name>
+	<object-name>Mesh17.005</object-name>
+	<object-name>Mesh17.008</object-name>
+	 <object-name>Mesh16.003</object-name>
+	 <object-name>Mesh16.001</object-name>
+ 	<object-name>Mesh16.002</object-name>
+	 <object-name>Mesh12</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>0.9</red>
+      <green>0.9</green>
+      <blue>0.9</blue>
+    </emission>
+  </animation>
+
+
+</PropertyList>

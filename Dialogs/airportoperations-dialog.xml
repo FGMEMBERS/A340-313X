@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <name>Airport Operations</name>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Airport Operations</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+    <layout>vbox</layout>
+    <halign>center</halign>
+
+    <!--text>
+      <label>Check a box to start the departure/arrival procedure. The engines should be switched to idle, or be shut-off for you to do this.</label>
+    </text-->
+
+    <checkbox>
+      <halign>left</halign>
+      <label>FollowMe Vehicle</label>
+      <property>controls/switches/followme</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/followme</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Passenger Stairway (Front)</label>
+      <property>controls/switches/stairs1</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/stairs1</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Passenger Stairway (Back)</label>
+      <property>controls/switches/stairs2</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/stairs2</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Bus</label>
+      <property>controls/switches/bus</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/bus</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Engine Safety Cones</label>
+      <property>controls/switches/cones</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/cones</property>
+      </binding>
+    </checkbox>
+
+    <!--checkbox>
+      <halign>left</halign>
+      <label>Fuel Truck</label>
+      <property>controls/switches/fuel</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/fuel</property>
+      </binding>
+    </checkbox-->
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Baggage Truck</label>
+      <property>controls/switches/gpu</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/gpu</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Catering Vehicles</label>
+      <property>controls/switches/catering</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/catering</property>
+      </binding>
+    </checkbox>
+
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+</PropertyList>

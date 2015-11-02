@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<name>de_ice</name>
+	<layout>vbox</layout>
+
+		
+	<text>
+		<label>De-icing Truck</label>
+	</text>
+
+	<checkbox>
+		<label>Enable De-icing Truck</label>
+		<property>services/deicing_truck/enable</property>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<live>true</live>
+	</checkbox>
+
+	<button>
+		<legend>De-ice Aircraft</legend>
+		<padding>5</padding>
+		<binding>
+			<command>nasal</command>
+			<script>
+				if (getprop("services/deicing_truck/enable") == 1) {
+					setprop("/services/deicing_truck/de-ice", 1);
+					screen.log.write("Starting De-icing Process...", 1, 1, 1);
+				} else
+					screen.log.write("Please Enable the De-icing truck first", 1, 0, 0);
+			</script>
+		</binding>
+	</button>
+	
+	<group>
+	<layout>hbox</layout>
+
+		<button>
+			<legend>Close</legend>
+			<default>true</default>
+			<key>Esc</key>
+		<padding>5</padding>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+		
+	</group>
+
+</PropertyList>

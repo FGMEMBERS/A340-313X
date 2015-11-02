@@ -1,0 +1,24 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "instr-lights" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 0 trans 0
+OBJECT world
+kids 1
+OBJECT poly
+name "EFIS.screen"
+data 8
+Mesh.001
+crease 30.000000
+numvert 4
+0.002183 0.10173 -0.10158
+0.002183 -0.094385 -0.10158
+0.002183 -0.094385 0.101277
+0.002183 0.10173 0.101277
+numsurf 1
+SURF 0x00
+mat 1
+refs 4
+0 0.0 0.0
+3 0.0 0.0
+2 0.0 0.0
+1 0.0 0.0
+kids 0

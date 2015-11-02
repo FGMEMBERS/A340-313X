@@ -1,0 +1,1137 @@
+<PropertyList>
+
+    <sim n="0">
+        <description>Airbus A340-313X</description>
+        <aero>A340-313X</aero>
+        <max-payload type="double">122600</max-payload>
+        <startup>
+            <splash-texture>Aircraft/A340-313X/splash.png</splash-texture>
+        </startup>
+
+     <model n="0">
+            <path>Aircraft/A340-313X/Models/A340-313X.xml</path>
+            <livery>
+                <file type="string">Iberia</file>
+            </livery>
+            <lights>
+                <file type="string">Iberia</file>
+            </lights>
+        </model>
+
+        <!--view n="0">
+            <config n="0">
+                <z-offset-m type="double">-22.84</z-offset-m>
+            </config>
+        </view>
+        <view n="100">
+            <config n="0">
+                <z-offset-m type="double">-22.84</z-offset-m>
+            </config>
+        </view>
+        <view n="101">
+            <config n="0">
+                <z-offset-m type="double">-22.84</z-offset-m>
+            </config>
+        </view-->
+
+       <menubar n="0">
+            <default n="0">
+                <menu n="100">
+                    <label>A340-313X</label>
+                </menu>
+            </default>
+        </menubar>
+
+ 	<weight n="0">
+            <name>Crew</name>
+            <weight-lb type="double">400</weight-lb>
+            <max-lb type="double">600</max-lb>
+            <min-lb type="double">350</min-lb>
+        </weight>
+
+	      <weight n="1">
+            <!--  419 pax max @ 185 lbs -->
+            <name>Passengers</name>
+            <weight-lb type="double">55500</weight-lb>
+            <max-lb type="double">77515</max-lb>
+            <min-lb type="double">0</min-lb>
+        </weight>
+
+	<weight n="2">
+    	<name>Baggage</name>
+    	<weight-lb type="double">30000</weight-lb>
+    	<max-lb type="double">3800</max-lb>
+    	<min-lb type="double">0</min-lb>
+  	</weight>
+
+
+
+    </sim>
+
+    <!--consumables n="0">
+        <fuel n="0">
+            <tank n="3"><name>Rear A</name></tank>
+            <tank n="4"><name>Rear B</name></tank>
+            <tank n="5"><name>Rear C</name></tank>
+        </fuel>
+    </consumables-->
+
+    <instrumentation n="0">
+        <cdu n="0">
+			<!--config>
+				<texture>boeing_brown.png</texture>
+			</config-->
+			<display>IDENT</display>
+			<ident>
+				 <model>A340-313X</model>
+				<engines>RR Trent560</engines>
+			</ident>
+			<input type="string"/>
+			<serviceable>true</serviceable>
+
+        </cdu>
+    </instrumentation>
+
+    <autopilot n="0">
+        <constant>
+            <flare-base type="double">0.2</flare-base>
+			<descent-profile-high-base type="double">0.23</descent-profile-high-base>
+			<descent-profile-high-rate type="double">-0.00084337</descent-profile-high-rate>
+			<descent-profile-low-base type="double">0.17</descent-profile-low-base>
+			<descent-profile-low-rate type="double">-0.00033133</descent-profile-low-rate>
+        </constant>
+    </autopilot>
+
+
+<!-- INCLUIDO DESPUES -->
+
+
+ <sim n="0">
+        <author>Liam Gathercole, Andino</author>
+        <status>alpha</status>
+        <rating>
+            <FDM type="int">4</FDM>
+            <systems type="int">4</systems>
+            <cockpit type="int">4</cockpit>
+            <model type="int">4</model>
+        </rating>
+        <aircraft-version>20130501</aircraft-version>
+        <flight-model>yasim</flight-model>
+        <fuel-fraction type="double">0.10</fuel-fraction>
+        <model n="0">
+            <armrest type="double">0</armrest>
+        </model>
+
+
+<!-- VISTAS -->
+
+        <view n="0">
+            <name>Pilot View</name>
+            <internal archive="y">true</internal>
+		
+            <config>
+                <x-offset-m type="double">-0.50</x-offset-m>
+                <y-offset-m type="double">0.35</y-offset-m>
+                <z-offset-m type="double">-28.90</z-offset-m>
+                <pitch-offset-deg>-13.5</pitch-offset-deg>
+                <limits>
+                    <enabled type="bool">true</enabled> 
+                </limits>
+            </config>
+        </view>
+
+	  <view n="100">
+	    <name>Wing View</name>
+	    <type>lookfrom</type>
+	    <internal archive="y">false</internal>
+	    <config>
+	      <from-model type="bool">true</from-model>
+	      <from-model-idx type="int">0</from-model-idx>
+	      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+	      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+	      <pitch-offset-deg>-8.0</pitch-offset-deg>
+	      <heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
+	      <x-offset-m archive="y"> -3.50 </x-offset-m> <!--Left/Right-->
+	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
+	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
+	    </config>
+	  </view>
+
+	  <view n="101">
+	   <name>Jump seat</name>
+	   <type>lookfrom</type>
+	   <internal type="bool">true</internal>
+	   <config>
+	    <from-model type="bool">true</from-model>
+	    <from-model-idx type="int">0</from-model-idx>
+	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+		        <x-offset-m type="double">-0.09</x-offset-m>
+		        <y-offset-m type="double">0.48</y-offset-m>
+		        <z-offset-m type="double">-28.69</z-offset-m>
+	    <pitch-offset-deg>-10</pitch-offset-deg>
+	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+	   </config>
+	   <dynamic>
+	    <enabled type="bool">false</enabled>
+	   </dynamic>
+	  </view>
+
+	  <view n="102">
+	   <name>Tail view</name>
+	   <type>lookfrom</type>
+	   <internal type="bool">false</internal>
+	   <config>
+	    <from-model type="bool">true</from-model>
+	    <from-model-idx type="int">0</from-model-idx>
+	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+	    <x-offset-m type="double">0.00</x-offset-m>
+	    <y-offset-m type="double">13.20</y-offset-m>
+	    <z-offset-m type="double">28.55</z-offset-m>
+	    <pitch-offset-deg>-10</pitch-offset-deg>
+	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+	   </config>
+	   <dynamic>
+	    <enabled type="bool">false</enabled>
+	   </dynamic>
+	  </view>
+
+	  <view n="103">
+	   <name>Economy class view</name>
+        <type>lookfrom</type>
+        <internal archive="y">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <x-offset-m archive="y">-1.0</x-offset-m>
+            <y-offset-m archive="y">0.70</y-offset-m>
+            <z-offset-m archive="y">-10.66</z-offset-m>
+        </config>
+	  </view>
+
+	<view n="104">
+	   <name>Gear view</name>
+	   <type>lookfrom</type>
+	   <internal type="bool">false</internal>
+	   <config>
+	    <from-model type="bool">true</from-model>
+	    <from-model-idx type="int">0</from-model-idx>
+	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+	    <x-offset-m type="double">0.00</x-offset-m>
+	    <y-offset-m type="double">-4.08</y-offset-m>
+	    <z-offset-m type="double">8.86</z-offset-m>
+	    <pitch-offset-deg>-10</pitch-offset-deg>
+	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+	   </config>
+	   <dynamic>
+	    <enabled type="bool">false</enabled>
+	   </dynamic>
+	  </view>
+
+
+	<view n="105">
+           <name>Copilot seat</name>
+	   <type>lookfrom</type>
+	   <internal type="bool">true</internal>
+	   <config>
+	    <from-model type="bool">true</from-model>
+	    <from-model-idx type="int">0</from-model-idx>
+	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
+		        <x-offset-m type="double">0.45</x-offset-m>
+		        <y-offset-m type="double">0.28</y-offset-m>
+		        <z-offset-m type="double">-28.90</z-offset-m>
+	    <pitch-offset-deg>-10</pitch-offset-deg>
+	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+	   </config>
+	   <dynamic>
+	    <enabled type="bool">false</enabled>
+	   </dynamic>
+	  </view>
+
+
+
+
+
+<help>
+    <title>A340-313X</title>
+    <key>
+        <name>w/W</name>
+        <desc>Walk forwards/backwards (on interior views only)</desc>
+    </key>
+    <key>
+        <name>Delete</name>
+        <desc>toggle thrust reversers</desc>
+    </key>
+    <key>
+        <name>=</name>
+        <desc>Arm Autospoilers</desc>
+    </key>
+    <key>
+        <name>g/G</name>
+        <desc>raise/lower landing gear</desc>
+    </key>
+    <key>
+        <name>B (shift and b)</name>
+        <desc>toggle parking brakes</desc>
+    </key>
+    <key>
+        <name>pgup/pgdn</name>
+        <desc>throttle increase/decrease</desc>
+    </key>
+    <key>
+        <name>]/[</name>
+        <desc>lower/raise flaps</desc>
+    </key>
+    <key>
+        <name>Ctrl-b</name>
+        <desc>toggle speed brakes</desc>
+    </key>
+    <key>
+        <name>s</name>
+        <desc>hold to start engines manually</desc>
+    </key>
+   <text>
+=== Takeoff Procedure ===
+Pre-departure:
+1. Allocate your fuel and weight under Equipment/fuel and payload.
+   Max take off weight is 840,000 lbs.
+   Uncheck any airport operations props around the aircraft
+   Taxi away from the terminal with a Pushback truck
+
+Departure:
+2. Select A340-313X/Autostart (or hold s)
+3. set your flaps
+4. Release the parking brakes
+5. Apply throttle gently, until at full throttle
+6. Rotate at around 140kt
+7. Raise landing gear at positive climb
+8. Maintain positive climb
+
+Captain Notes:
+- Never reverse from terminal without aid from a pushback. It should be used until the aircraft is on the taxiway.
+- The A340-313X is a heavy aircraft, and may take some getting used to the controls.
+- Ensure you allow enough room to manoeuvre around the airport, given that it is a long aircraft.
+- There are risks of overrunning the runway apron upon landing and takeoff, aswell as overrunning the taxiway corners in the A340. In wet conditions especially take care and ensure that the correct speed guidelines and height are maintained.
+
+=== Cruising ===
+Cruising Speed: Mach 0.83 (907 km/h, 490 knots, 564 mph)
+Service Ceiling: 41,000ft, Cruise 33,000 ft
+
+During turbulant conditions, The seatbelt warning sound should be initiated by the captain.
+
+=== Landing ===
+1. Max landing weight 571,000 lbs.
+2. Decend through 200kt, reaching roughly 160kt 1mile before reaching the apron
+3. set flaps accordingly
+4. Land at roughly 140kt, touch down carefully and smoothly at 135kt.
+5. Apply Speedbrakes
+6. Apply thrust reversal and apply throttle
+7. Lower throttle and deactivate thrust reversers
+8. If necessary, Emergency brakes should be used
+</text>
+</help>
+
+
+
+
+        <menubar n="0">
+            <default n="0">
+                <menu n="100">
+                    <enabled type="bool">true</enabled>
+                    <item>
+                        <label>Autostart</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>controls.autostart();</script>
+                        </binding>
+                    </item>
+                    <item >
+                        <label>Pushback</label>
+                        <name>pushback</name>
+                        <binding>
+                            <command>dialog-show</command>
+                            <dialog-name>pushback</dialog-name>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>Select Livery</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>aircraft.livery.dialog.toggle()</script>
+                        </binding>
+                    </item>
+                    <item>
+                        <label>Tiller Steering</label>
+                        <binding>
+                            <command>nasal</command>
+                            <script>dialogs.tiller_steering.open()</script>
+                        </binding>
+                    </item>
+                    <!--item>
+                        <label>Show/Hide Yokes</label>
+                        <binding>
+                            <command>property-toggle</command>
+                            <property>sim/yokes-visible</property>
+                        </binding>
+                    </item-->
+			
+		<item>
+		      <label>Announcements</label>
+		      <binding>
+		       <command>nasal</command>
+		       <script>
+			  var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", 
+				                                              "Aircraft/A340-313X/Dialogs/announcements-dialog.xml");
+			mal.open();
+		       </script>
+		      </binding>
+		</item>
+
+		<item>
+		      <label>Airport Operations</label>
+		      <binding>
+		       <command>nasal</command>
+		       <script>
+			  var mal = gui.Dialog.new("/sim/gui/dialogs/operations/menu/dialog", 
+				                                              "Aircraft/A340-313X/Dialogs/airportoperations-dialog.xml");
+			mal.open();
+		       </script>
+		      </binding>
+		</item>
+
+		<item>
+		      <label>Fuel Dump</label>
+		      <binding>
+		       <command>nasal</command>
+		       <script>
+			  var mal = gui.Dialog.new("/sim/gui/dialogs/dump/menu/dialog", "Aircraft/A340-313X/Dialogs/fueldump-dialog.xml");
+			mal.open();
+		       </script>
+		      </binding>
+		</item>
+
+		<item>
+			<name>fuel</name>
+			<label>Fuel Truck Controls</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+				 var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/A340-313X/Systems/fuel-truck.xml");
+				 fuel.open();
+				</script>
+			</binding>
+			</item>
+
+		<item>
+			<name>fuel</name>
+			<label>De Ice Truck</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+			 var gs = gui.Dialog.new("sim/gui/dialogs/gs/dialog", "Aircraft/A340-313X/Systems/de-ice.xml");
+			 gs.open();
+			</script>
+			</binding>
+			</item>
+
+
+
+                </menu>
+            </default>
+        </menubar>
+
+
+        <multiplay>
+            <generic>
+                <int n="0" alias="/systems/electrical/outputs/strobe"/>
+                <int n="1" alias="/systems/electrical/outputs/beacon"/>
+                <int n="2" alias="/systems/electrical/outputs/taxi-lights"/>
+                <int n="3" alias="/systems/electrical/outputs/logo-lights"/>
+                <int n="4" alias="/systems/electrical/outputs/landing-light[0]"/>
+                <int n="5" alias="/systems/electrical/outputs/landing-light[1]"/>
+                <int n="6" alias="/systems/electrical/outputs/landing-light[2]"/>
+                <int n="7" alias="/systems/electrical/outputs/nav-lights"/>
+                <int n="8" alias="/systems/electrical/outputs/cabin-lights"/>
+
+                <float n="0" alias="/gear/gear[0]/compression-m"/>
+                <float n="1" alias="/gear/gear[1]/compression-m"/>
+                <float n="2" alias="/gear/gear[2]/compression-m"/>
+                <float n="3" alias="/gear/gear[3]/compression-m"/>
+                <float n="4" alias="/gear/gear[4]/compression-m"/>
+                <float n="5" alias="/surface-positions/speedbrake-norm"/>
+                <float n="6" alias="/surface-positions/reverser-norm"/>
+                <string  alias="/sim/multiplay/callsign"/>
+            </generic>
+        </multiplay>
+
+        <flight-recorder include="Systems/flight-recorder.xml"/>
+
+        <dimensions>
+            <radius-m type="double">32</radius-m>
+            <parkpos-offset-m type="double">0.0</parkpos-offset-m>
+        </dimensions>
+        <aircraft-class type="string">gate</aircraft-class>
+        <aircraft-operator>Iberia</aircraft-operator>
+        <aircraft-data>
+            <path>/sim/dimensions/radius-m</path>
+            <path>/sim/dimensions/parkpos-offset-m</path>
+            <path>/sim/aircraft-class</path>
+            <path>/sim/aircraft-operator</path>
+            <path>/sim/view[100]/enabled</path>
+            <path>/sim/view[101]/enabled</path>
+            <path>/sim/yokes-visible</path>
+            <path>/controls/gear/tiller-enabled</path>
+            <path>/sim/weight[0]/weight-lb</path>
+            <path>/sim/weight[1]/weight-lb</path>
+            <path>/sim/weight[2]/weight-lb</path>
+        </aircraft-data>
+       
+
+        <yokes-visible type="bool">1</yokes-visible>
+
+        <airport>
+            <runways>
+                <start-offset-m>50</start-offset-m>
+            </runways>
+        </airport>
+
+        <chase-distance-m>-100</chase-distance-m>
+
+         <flaps>
+            <setting>0.000</setting>  <!-- flaps up -->
+            <setting>0.033</setting>  <!-- flaps 1  -->
+            <setting>0.166</setting>  <!-- flaps 5  -->
+            <setting>0.500</setting>  <!-- flaps 15 --> 
+            <setting>0.666</setting>  <!-- flaps 20 -->
+            <setting>0.833</setting>  <!-- flaps 25 -->
+            <!--setting>1.000</setting-->  <!-- flaps 30 -->
+        </flaps>
+
+        <systems>
+            <path>Aircraft/A340-313X/Systems/systems.xml</path>
+
+            <!--  fast running autopilot rules (running at FDM frequency / 120Hz) -->
+            <autopilot>
+                <path>Aircraft/A340-313X/Systems/A340-autopilot.xml</path>
+            </autopilot>
+            <autopilot>
+                <path>Aircraft/A340-313X/Systems/A340-autothrottle.xml</path>
+            </autopilot>
+            <autopilot>
+                <name>Autobrake system</name>
+                <path>Aircraft/A340-313X/Systems/A340-autobrake.xml</path>
+            </autopilot>
+            <autopilot>
+                <path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+            </autopilot>
+
+            <!--  slow running property-rules (running at frame rate) -->
+            <property-rule n="100">
+                <path>Aircraft/A340-313X/Systems/A340-spoiler-fcs.xml</path>
+            </property-rule>
+            <property-rule n="101">
+                <path>Aircraft/A340-313X/Systems/A340-PFD.xml</path>
+            </property-rule>
+        </systems>
+
+        <instrumentation>
+            <path>Aircraft/A340-313X/Systems/instrumentation.xml</path>
+        </instrumentation>
+
+        <sound>
+            <path>Aircraft/A340-313X/Sounds/A340-sound.xml</path>
+            <stall-horn type="bool">0</stall-horn>
+            <click1 type="bool">0</click1>
+            <click2 type="bool">0</click2>
+            <click3 type="bool">0</click3>
+            <click4 type="bool">0</click4>
+            <click5 type="bool">0</click5>
+            <click6 type="bool">0</click6>
+            <click7 type="bool">0</click7>
+            <click8 type="bool">0</click8>
+        </sound>
+
+        <hud>
+            <enable3d>false</enable3d>
+        </hud>
+
+        <virtual-cockpit>true</virtual-cockpit>
+        <allow-toggle-cockpit>true</allow-toggle-cockpit>
+    </sim>
+
+    <engines n="0">
+        <engine n="0">
+            <n1-limit type="double">98.5</n1-limit>
+        </engine>
+        <engine n="1">
+            <n1-limit type="double">98.5</n1-limit>
+        </engine>
+	<engine n="2">
+            <n1-limit type="double">98.5</n1-limit>
+        </engine>
+	<engine n="3">
+            <n1-limit type="double">98.5</n1-limit>
+        </engine>
+    </engines>
+
+   	<gear>
+		 <gear n="0">
+		  <tyre-smoke type="int">0</tyre-smoke>
+		  <sprayspeed-ms type="double">0</sprayspeed-ms>
+		  <spray-density type="double">0</spray-density>
+		  <caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		 </gear>
+		 <gear n="1">
+		  <tyre-smoke type="int">0</tyre-smoke>
+		  <sprayspeed-ms type="double">0</sprayspeed-ms>
+		  <spray-density type="double">0</spray-density>
+		 </gear>
+		 <gear n="2">
+		  <tyre-smoke type="int">0</tyre-smoke>
+		  <sprayspeed-ms type="double">0</sprayspeed-ms>
+		  <spray-density type="double">0</spray-density>
+		 </gear>
+	</gear>
+
+    <consumables n="0">
+         <fuel>
+            <tank n="0"><name>LH Main</name></tank>
+            <tank n="1"><name>Center</name></tank>
+            <tank n="2"><name>RH Main</name></tank>
+        </fuel>
+     </consumables>
+
+ 
+   <input n="0">
+        <keyboard>
+            
+	<key n="265">
+		<name>F9</name>
+		<desc>Show map</desc>
+		<binding>
+		<command>dialog-show</command>
+		<dialog-name>map</dialog-name>
+		</binding>
+	</key>
+
+	 <key n="61">
+                <name>=</name>
+                <desc>toggle auto spoilers</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.toggleAutoSpoilers();</script>
+                </binding>
+            </key>
+
+	     <key n="127">
+                <name>Delete</name>
+                <desc>Toggle Reversers</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>controls/engines/engine[0]/reverser</property>
+                </binding>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>controls/engines/engine[1]/reverser</property>
+                </binding>
+               <binding>
+                    <command>property-toggle</command>
+                    <property>controls/engines/engine[2]/reverser</property>
+                </binding>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>controls/engines/engine[3]/reverser</property>
+                </binding>
+            </key>
+            <key n="267">
+                <name>F11</name>
+                <desc>Pop up autopilot dialog</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>dialogs.ap_settings.toggle()</script>
+                </binding>
+            </key>
+            <key n="268">
+                <name>F12</name>
+                <desc>Radio Stack</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>dialogs.Radio.open()</script>
+                </binding>
+            </key>
+            <key n="1">
+                <name>Ctrl-A</name>
+                <desc>toggle autopilot altitude lock</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>instrumentation/afds/inputs/alt-hold</property>
+                </binding>
+            </key>
+             <key n="7">
+                <name>Ctrl-G</name>
+                <desc>toggle autopilot glide slope lock</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>instrumentation/afds/inputs/app-hold</property>
+                </binding>
+            </key>
+            <key n="8">
+                <name>Ctrl-H</name>
+                <desc>toggle autopilot heading lock</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>instrumentation/afds/inputs/hdg-hold</property>
+                </binding>
+            </key>
+            <!--key n="9">
+                <name>Ctrl-I</name>
+                <desc>toggle auto spoilers</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.toggleAutoSpoilers();</script>
+                </binding>
+            </key-->
+            <key n="12">
+                <name>Ctrl-L</name>
+                <desc>toggle cabin lights</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>controls/lighting/cabin-lights</property>
+                </binding>
+            </key>
+            <key n="14">
+                <name>Ctrl-N</name>
+                <desc>toggle LNAV lock</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>instrumentation/afds/inputs/lnav-hold</property>
+                </binding>
+            </key>
+            <key n="15">
+                <name>Ctrl-o</name>
+                <desc>A/P ~ Passive</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>autopilot/locks/passive-mode</property>
+                </binding>
+            </key>
+            <key n="16">
+                <name>Ctrl-P</name>
+                <desc>toggle VS</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>instrumentation/afds/inputs/vs-fpa-hold</property>
+                </binding>
+            </key>
+            <key n="19">
+                <name>Ctrl-S</name>
+                <desc>toggle autothrottle</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>instrumentation/afds/inputs/at-hold</property>
+                </binding>
+            </key>
+            <key n="20">
+                <name>Ctrl-t</name>
+                <desc>TO/GA switch</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>a340.afds.input(2,2);</script>
+                </binding>
+            </key>
+            <key n="23">
+                <name>Ctrl-W</name>
+                <desc>enable/disable EICAS warning unit</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>instrumentation/weu/serviceable</property>
+                </binding>
+            </key>
+            <key n="40">
+                <name>(</name>
+                <repeatable type="bool">true</repeatable>
+                <desc>Roll trim-- Left</desc>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/flight/aileron-trim</property>
+                    <step type="double">-0.012</step>
+                </binding>
+            </key>
+            <key n="41">
+                <name>)</name>
+                <repeatable type="bool">true</repeatable>
+                <desc>Roll trim++ Right</desc>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/flight/aileron-trim</property>
+                    <step type="double">0.012</step>
+                </binding>
+            </key>
+
+             <key n="108">
+                <name>l</name>
+                <desc>toggle landing lights</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.toggleLandingLights();</script>
+                </binding>
+            </key>
+            <key n="109">
+                <name>m</name>
+                <desc>mute current master warning</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>a340.Weu.mute_warnings();</script>
+                </binding>
+            </key>
+            <key n="115">
+                <name>s</name>
+                <desc>autostart / shutdown</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.autostart();</script>
+                </binding>
+            </key>
+        </keyboard>
+    </input>
+
+    <instrumentation n="0">
+        <inst-vertical-speed-indicator>
+            <serviceable type="bool">true</serviceable>
+        </inst-vertical-speed-indicator>
+        <radar>
+            <mode-control type="int" archive="y">1</mode-control>
+            <display-mode type="string">plan</display-mode>
+            <display-controls>
+                <WX type="bool" archive="y">false</WX>
+                <pos type="bool" archive="y">false</pos>
+                <data type="bool" archive="y">false</data>
+                <symbol type="bool" archive="y">true</symbol>
+                <rotate type="bool" archive="y">true</rotate>
+                <tcas type="bool" archive="n">true</tcas>
+                <abs-altitude type="bool" archive="y">false</abs-altitude>
+            </display-controls>
+            <serviceable type="bool">true</serviceable>
+            <range n="0" alias="/instrumentation/efis/inputs/range"/>
+            <reference-range-nm type="double" archive="y">640</reference-range-nm>
+            <mode type="string" archive="y">WX</mode>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <tcas>
+                    <color n="0"> <!-- distant targets -->
+                        <red type="float">0</red>
+                        <green type="float">1</green>
+                        <blue type="float">1</blue>
+                    </color>
+                    <color n="1"> <!-- proximity targets -->
+                        <red type="float">0</red>
+                        <green type="float">1</green>
+                        <blue type="float">1</blue>
+                    </color>
+                    <color n="2"> <!-- TA threat targets -->
+                        <red type="float">1</red>
+                        <green type="float">0.5</green>
+                        <blue type="float">0</blue>
+                    </color>
+                    <color n="3"> <!-- RA threat targets -->
+                        <red type="float">1</red>
+                        <green type="float">0</green>
+                        <blue type="float">0</blue>
+                    </color>
+                </tcas>
+                <name type="string">helvetica_bold.txf</name>
+                <size type="float">12</size>
+                <line-spacing type="float">0.01</line-spacing>
+            </font>
+            <lightning type="bool">true</lightning>
+            <radar-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <echo-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/wxecho.png</echo-texture-path>
+            <minimized type="bool">false</minimized>
+            <heading-marker type="bool">true</heading-marker>
+            <limit-deg type="int">360</limit-deg>
+        </radar>
+        <groundradar>
+            <range type="double">1.2</range>
+        </groundradar>
+        <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
+            <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
+            <configuration-module>
+                <category-1>                    <!-- AIRCRAFT_MODE_TYPE_SELECT -->
+                   255 <!-- aircraft type T1, fast turbofan -->
+                </category-1>
+                <category-4>                    <!-- ALTITUDE_CALLOUTS -->
+                    13 <!-- enable all altitude callouts -->
+                </category-4>
+                <category-8>                    <!-- RADIO_ALTITUDE_INPUT_SELECT -->
+                     3 <!-- use precise (but YASim-specific) gear altitude -->
+                </category-8>
+                <category-13>                   <!-- INPUT_OUTPUT_DISCRETE_TYPE_SELECT -->
+                     5 <!-- flashing warning lamp -->
+                </category-13>
+            </configuration-module>
+            <voice>
+                <file-prefix type="string">Sounds/mk-viii/</file-prefix>
+            </voice>
+            <inputs>                            <!-- Module I/O -->
+                <arinc429>
+                    <!-- provide fixed value for decision height -->
+                    <decision-height-ncd> false </decision-height-ncd>
+                    <decision-height> 250 </decision-height>
+                </arinc429>
+            </inputs>
+            <input-feeders>    <!-- disable some internal default feeders -->
+                <discretes>
+                    <!-- will provide custom (nasal) sources for the following input feeders -->
+                    <glideslope-inhibit> false </glideslope-inhibit>
+                    <landing-gear> false </landing-gear>
+                    <landing-flaps> false </landing-flaps>
+                </discretes>
+            </input-feeders>
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+                <volume type="double"> 0.6 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+        </mk-viii>
+        <tcas>
+            <serviceable type="bool">true</serviceable>
+            <inputs>
+                <mode type="int">0</mode>       <!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+            </inputs>
+            <!--voice>
+                <file-prefix type="string">Sounds/tcas/</file-prefix>
+            </voice-->
+            <speaker>                           <!-- Speaker Configuration -->
+                <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
+                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
+                <volume type="double"> 1 </volume>          <!-- Volume at reference distance -->
+            </speaker>
+        </tcas>
+        <efis>
+            <inputs>
+                <tfc  type="bool">true</tfc>
+                <sta  type="bool">true</sta>
+                <arpt type="bool">true</arpt>
+                <wpt  type="bool">true</wpt>
+                <wxr  type="bool">true</wxr>
+                <range type="int">10</range>
+            </inputs>
+            <eicas>
+                <msg n="0">
+                    <text>TESTING TESTING</text>
+                    <red>0.8</red>
+                    <green>0.4</green>
+                    <blue>0.2</blue>
+                    <alpha>0.5</alpha>
+                </msg>
+            </eicas>
+        </efis>
+        <rmu>
+            <unit n="0">
+                <source-index type="int">0</source-index>
+                <source type="string">comm1</source>
+            </unit>
+            <unit n="1">
+                <source-index type="int">2</source-index>
+                <source type="string">nav1</source>
+            </unit>
+            <unit n="2">
+                <source-index type="int">5</source-index>
+                <source type="string">adf</source>
+            </unit>
+        </rmu>
+        <nav>
+            <frequencies>
+                <standby-mhz n="1" type="double">109.50</standby-mhz>
+                <standby-mhz n="2" type="double">109.55</standby-mhz>
+                <standby-mhz n="3" type="double">110.10</standby-mhz>
+                <standby-mhz n="4" type="double">111.70</standby-mhz>
+            </frequencies>
+            <volume type="double">0</volume>
+        </nav>
+        <nav n="1">
+            <frequencies>
+                <standby-mhz n="1" type="double">109.50</standby-mhz>
+                <standby-mhz n="2" type="double">109.55</standby-mhz>
+                <standby-mhz n="3" type="double">110.10</standby-mhz>
+                <standby-mhz n="4" type="double">111.70</standby-mhz>
+            </frequencies>
+            <volume type="double">0</volume>
+        </nav>
+        <dme n="0">
+            <serviceable>true</serviceable>
+            <frequencies>
+                <source>/instrumentation/nav[0]/frequencies/selected-mhz</source>
+            </frequencies>
+        </dme>
+        <dme n="1">
+            <serviceable>true</serviceable>
+            <frequencies>
+                <source>/instrumentation/nav[1]/frequencies/selected-mhz</source>
+            </frequencies>
+        </dme>
+        <transponder>
+            <serviceable>true</serviceable>
+            <id-code>1200</id-code>
+            <mode-switch>4</mode-switch>
+        </transponder>
+        <encoder>
+            <serviceable>true</serviceable>
+        </encoder>
+        <cdu n="0">
+            <serviceable type="bool">true</serviceable>
+            <display>IDENT</display>
+            <input type="string"/>
+        </cdu>
+        <fmc>
+            <to-flap type="double">0.66</to-flap>
+            <vspeeds>
+                <V1 type="double">100</V1>
+                <VR type="double">130</VR>
+                <V2 type="double">140</V2>
+                <Vref type="double">140</Vref>
+            </vspeeds>
+        </fmc>
+        <gps>
+            <config>
+                <min-runway-length-ft type="double">5000</min-runway-length-ft>
+            </config>
+        </gps>
+        <nd>
+            <radar-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <symbol-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/boeing-nd.png</symbol-texture-path>
+            <font>
+                <color>
+                    <red type="float">0.7</red>
+                    <green type="float">0.7</green>
+                    <blue type="float">0.7</blue>
+                    <alpha type="float">1</alpha>
+                </color>
+                <name type="string">helvetica_bold.txf</name>
+                <size type="float">12</size>
+                <line-spacing type="float">0.01</line-spacing>
+            </font>
+            <serviceable type="bool">true</serviceable>
+            <range n="0" alias="/instrumentation/efis/inputs/range"/>
+            <aircraft-heading-up type="bool">true</aircraft-heading-up>
+            <heading-up-deg type="float">0.01</heading-up-deg>
+            <x-center type="float">0.5</x-center>
+            <y-center type="float">0.5</y-center>
+        </nd>
+    </instrumentation>
+
+    <controls n="0">
+        <gear>
+            <brake-parking type="bool">1</brake-parking>
+            <tiller-cmd-norm type="double">0</tiller-cmd-norm>
+            <tiller-enabled type="bool">false</tiller-enabled>
+            <nosegear-steering-cmd-norm type="double">0</nosegear-steering-cmd-norm>
+            <maingear-steering-cmd-norm type="double">0</maingear-steering-cmd-norm>
+        </gear>
+        <flight>
+            <speedbrake-lever type="int">0</speedbrake-lever>
+        </flight>
+        <engines>
+            <autostart-button type="bool">0</autostart-button>
+            <autostart-knob type="int" n="0">0</autostart-knob>
+            <autostart-knob type="int" n="1">0</autostart-knob>
+            <autostart-knob type="int" n="2">0</autostart-knob>
+            <autostart-knob type="int" n="3">0</autostart-knob>
+        </engines>
+    </controls>
+
+    <autopilot n="0">
+        <autobrake>
+            <step type="int">-1</step> <!-- OFF on selection -->
+            <config>
+                 <idle-throttle type="double">0.10</idle-throttle>
+                 <!-- 25% input cancel AB operation -->
+                 <pilot-input type="double">0.25</pilot-input>
+            </config>
+        </autobrake>
+        <locks>
+            <pitch-engaged type="bool">1</pitch-engaged>
+            <roll-engaged type="bool">1</roll-engaged>
+        </locks>
+    </autopilot>
+
+    <nasal n="0">
+
+		<mcdu>
+			<file>Aircraft/A340-313X/Nasal/mCDU/init_A.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/init_B.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/radios.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/select_SID.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/select_STAR.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/f-pln.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/lat_rev.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/common.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/perf.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/loop.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/parse_DB.nas</file>
+			<file>Aircraft/A340-313X/Nasal/mCDU/user.nas</file>
+		</mcdu>
+        <a340>
+            <file>Aircraft/A340-313X/Nasal/Electrical.nas</file>
+            <file>Aircraft/A340-313X/Nasal/systems.nas</file>
+            <file>Aircraft/A340-313X/Nasal/AFDS.nas</file>
+            <file>Aircraft/A340-313X/Nasal/tyresmoke.nas</file>
+            <file>Aircraft/A340-313X/Nasal/gpws.nas</file>
+            <file>Aircraft/A340-313X/Nasal/warnsystem.nas</file>
+            <file>Aircraft/A340-313X/Nasal/brakesystem.nas</file>
+            <file>Aircraft/A340-313X/Nasal/ground_steering.nas</file>
+			<file>Aircraft/A340-313X/Nasal/ground-services.nas</file>
+			<file>Aircraft/A340-313X/Nasal/fuel-dump.nas</file>
+			<file>Aircraft/A340-313X/Nasal/doors.nas</file>
+			<!--file>Aircraft/A340-313X/Nasal/terrainmap.nas</file-->
+			<!--file>Aircraft/A340-313X/Nasal/terrain-map.nas</file-->
+            <file>Aircraft/Generic/limits.nas</file>
+        </a340>
+        <dialogs>
+            <file>Aircraft/A340-313X/Nasal/dialogs.nas</file>
+        </dialogs>
+        <!--cdu>
+            <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
+        </cdu-->
+    </nasal>
+
+    <limits n="0">
+        <max-flap-extension-speed>
+            <flaps>0.033</flaps>
+            <speed>255</speed>
+        </max-flap-extension-speed>
+        <max-flap-extension-speed>
+            <flaps>0.166</flaps>
+            <speed>235</speed>
+        </max-flap-extension-speed>
+        <max-flap-extension-speed>
+            <flaps>0.500</flaps>
+            <speed>215</speed>
+        </max-flap-extension-speed>
+        <max-flap-extension-speed>
+            <flaps>0.666</flaps>
+            <speed>195</speed>
+        </max-flap-extension-speed>
+        <max-flap-extension-speed>
+            <flaps>0.833</flaps>
+            <speed>185</speed>
+        </max-flap-extension-speed>
+        <max-flap-extension-speed>
+            <flaps>1.000</flaps>
+            <speed>170</speed>
+        </max-flap-extension-speed>
+        <max-gear-extension-speed>210</max-gear-extension-speed>
+        <vne>600</vne>
+        <max-positive-g>2.5</max-positive-g>
+        <max-negative-g>-1.76</max-negative-g>
+    </limits>
+
+
+
+
+
+
+</PropertyList>
