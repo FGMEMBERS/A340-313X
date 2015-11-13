@@ -172,7 +172,7 @@ egt="975" tsfc="0.33" epr="33.9" n1-idle="45" n1-max="105" n2-idle="70" n2-max="
 </jet>
 
 
- <thruster x="19.28"  y="0.00" z="-5.55" vx="1" vy="0" vz="0" thrust="20000">
+ <thruster x="19.28"  y="0.00" z="-5.55" vx="1" vy="0" vz="0" thrust="25000">
  <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>
  </thruster>
 

@@ -1,5 +1,7 @@
 This project is a fork of the A340-600HGW. It has incorporated many components from the A340-300 model authored by Skyop and Ampere. 
 
+evaair714 created or fully developed the liveries for China Airlines (both of them), Lufthansa, Finnair (new livery), Turkish Airlines, and Virgin Atlantic.
+
 Systems and EICAS mainly taken from Syd Adams, Justin Smithies, and Thorsten Brehm's 777.
 
 MCP and MFD taken from A320family.
