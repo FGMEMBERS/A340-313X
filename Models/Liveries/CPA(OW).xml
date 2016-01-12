@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Cathay Pacific(ONE WORLD)</name>
+            <texture>/../Models/Liveries/CPA(OW).png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>
