@@ -7,7 +7,7 @@
        <engines>
             <name>1 reverse-thrust</name>
             <mode>looped</mode>
-            <path>Aircraft/A340-313X/Sounds/reverser2.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
             <condition>
                 <property>engines/engine[0]/run</property>
             </condition>
@@ -30,7 +30,7 @@
       <engines>
             <name>2 reverse-thrust</name>
             <mode>looped</mode>
-            <path>Aircraft/A340-313X/Sounds/reverser2.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
             <condition>
                 <property>engines/engine[1]/run</property>
             </condition>
@@ -52,7 +52,7 @@
 		  <engines>
             <name>3 reverse-thrust</name>
             <mode>looped</mode>
-            <path>Aircraft/A340-313X/Sounds/reverser2.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
             <condition>
                 <property>engines/engine[2]/run</property>
             </condition>
@@ -74,7 +74,7 @@
 		<engines>
             <name>3 reverse-thrust</name>
             <mode>looped</mode>
-            <path>Aircraft/A340-313X/Sounds/reverser2.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
             <condition>
                 <property>engines/engine[3]/run</property>
             </condition>
@@ -98,7 +98,7 @@
        <wind>
 			<name>wind</name>
 			<mode>looped</mode>
-			<path>Aircraft/A340-313X/Sounds/wind.wav</path>
+			<path>Aircraft/A340-600HGW/Sounds/wind.wav</path>
 			<property>/velocities/airspeed-kt</property>
 			<volume>
 				<property>/position/altitude-ft</property>
@@ -131,7 +131,7 @@
 
 		<roll>
 			<name>Roll</name>
-			<path>Aircraft/A340-313X/Sounds/roll.wav</path>
+			<path>Aircraft/A340-600HGW/Sounds/roll.wav</path>
 			<mode>looped</mode>
 			<type>avionics</type>
 			<condition>
@@ -174,7 +174,7 @@
 
         <engine>
             <name>1 engine</name>
-            <path>/Aircraft/A340-313X/Sounds/jet.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>engines/engine[0]/run</property>
@@ -199,7 +199,7 @@
 
         <engine>
             <name>2 engine</name>
-            <path>/Aircraft/A340-313X/Sounds/jet.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
              <condition>
                 <property>engines/engine[1]/run</property>
@@ -224,7 +224,7 @@
 
 		 <engine>
             <name>3 engine</name>
-            <path>/Aircraft/A340-313X/Sounds/jet.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>engines/engine[2]/run</property>
@@ -250,7 +250,7 @@
 
  		<engine>
             <name>4 engine</name>
-            <path>/Aircraft/A340-313X/Sounds/jet.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
              <condition>
                 <property>engines/engine[3]/run</property>
@@ -278,7 +278,7 @@
 
         <engine>
             <name>left n1</name>
-            <path>/Aircraft/A340-313X/Sounds/turbine.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[0]/rpm</property>
             <pitch>
@@ -307,7 +307,7 @@
         </engine>
         <engine>
             <name>right n1</name>
-            <path>/Aircraft/A340-313X/Sounds/turbine.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[1]/rpm</property>
             <volume>
@@ -338,7 +338,7 @@
 
         <engine>
             <name>right n1</name>
-            <path>/Aircraft/A340-313X/Sounds/turbine.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[2]/rpm</property>
             <volume>
@@ -368,7 +368,7 @@
 
        <engine>
             <name>right n1</name>
-            <path>/Aircraft/A340-313X/Sounds/turbine.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[3]/rpm</property>
             <volume>
@@ -588,7 +588,7 @@
         <gear1>
             <name>gear</name>
             <mode>in-transit</mode>
-            <path>/Aircraft/A340-313X/Sounds/gear.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/gear.wav</path>
             <property>gear/gear[0]/position-norm</property>
             <!--volume>
                 <property>sim/sound/Ovolume</property>
@@ -637,7 +637,7 @@
         </gearlock>
         <squeal1>
             <name>front wheel squeal</name>
-            <path>Aircraft/A340-313X/Sounds/touchdown.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/touchdown.wav</path>
             <condition>
                 <property>gear/gear[0]/tyre-smoke</property>
             </condition>
@@ -671,7 +671,7 @@
         </squeal1>
         <squeal2>
             <name>right wheel squeal</name>
-            <path>Aircraft/A340-313X/Sounds/touchdown.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/touchdown.wav</path>
             <condition>
                 <property>gear/gear[1]/tyre-smoke</property>
             </condition>
@@ -705,7 +705,7 @@
         </squeal2>
         <squeal3>
             <name>left wheel squeal</name>
-            <path>Aircraft/A340-313X/Sounds/touchdown.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/touchdown.wav</path>
             <condition>
                 <property>gear/gear[2]/tyre-smoke</property>
             </condition>
@@ -741,7 +741,7 @@
         <flap>
             <name>flaps</name>
             <mode>in-transit</mode>
-            <path>Aircraft/A340-313X/Sounds/Flaps.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/Flaps.wav</path>
             <property>surface-positions/flap-pos-norm</property>
             <!--volume>
                 <property>sim/sound/Ovolume</property>
@@ -768,7 +768,7 @@
             <name>stall</name>
             <mode>looped</mode>
             <type>avionics</type>
-            <path>Aircraft/A340-313X/Sounds/stall.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/stall.wav</path>
             <condition>
                 <property>instrumentation/weu/sound/stall-horn</property>
             </condition>
@@ -781,7 +781,7 @@
         <stickshaker>
             <name>stick shaker</name>
             <mode>looped</mode>
-            <path>Aircraft/A340-313X/Sounds/shaker.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/shaker.wav</path>
             <condition>
                 <property>instrumentation/weu/actuators/stick-shaker</property>
             </condition>
@@ -799,7 +799,7 @@
         <switch>
             <name>switch1</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click1.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click1.wav</path>
             <condition>
                 <property>sim/sound/click1</property>
             </condition>
@@ -817,7 +817,7 @@
         <switch>
             <name>switch2</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click2.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click2.wav</path>
             <condition>
                 <property>sim/sound/click2</property>
             </condition>
@@ -835,7 +835,7 @@
         <switch>
             <name>click3</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click3.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click3.wav</path>
             <condition>
                 <property>sim/sound/click3</property>
             </condition>
@@ -853,7 +853,7 @@
         <switch>
             <name>click4</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click4.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click4.wav</path>
             <condition>
                 <property>sim/sound/click4</property>
             </condition>
@@ -871,7 +871,7 @@
         <switch>
             <name>click5</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click5.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click5.wav</path>
             <condition>
                 <property>sim/sound/click5</property>
             </condition>
@@ -889,7 +889,7 @@
         <switch>
             <name>click6</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click6.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click6.wav</path>
             <condition>
                 <property>sim/sound/click6</property>
             </condition>
@@ -907,7 +907,7 @@
         <switch>
             <name>click7</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click7.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click7.wav</path>
             <condition>
                 <property>sim/sound/click7</property>
             </condition>
@@ -925,7 +925,7 @@
         <switch>
             <name>click8</name>
             <mode>once</mode>
-            <path>Aircraft/A340-313X/Sounds/click8.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/click8.wav</path>
             <condition>
                 <property>sim/sound/click8</property>
             </condition>
@@ -943,7 +943,7 @@
         <speedbrake>
             <name>speedbrake</name>
             <mode>in-transit</mode>
-            <path>/Aircraft/A340-313X/Sounds/Flaps.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/Flaps.wav</path>
             <property>surface-positions/speedbrake-norm</property>
             <!--volume>
                 <property>sim/sound/Ovolume</property>
@@ -969,7 +969,7 @@
             <name>warning-siren</name>
             <mode>looped</mode>
             <type>avionics</type>
-            <path>Aircraft/A340-313X/Sounds/siren.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/siren.wav</path>
             <condition>
                 <property>instrumentation/weu/sound/siren</property>
             </condition>
@@ -978,7 +978,7 @@
             <name>config-warning</name>
             <mode>looped</mode>
             <type>avionics</type>
-            <path>Aircraft/A340-313X/Sounds/config-warning.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/config-warning.wav</path>
             <condition>
                 <property>instrumentation/weu/sound/config-warning</property>
             </condition>
@@ -987,7 +987,7 @@
             <name>autopilot disengage</name>
             <mode>once</mode>
             <type>avionics</type>
-            <path>Aircraft/A340-313X/Sounds/airbus-warning.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/airbus-warning.wav</path>
             <condition>
                 <property>instrumentation/weu/sound/autopilot-warning</property>
             </condition>
@@ -1025,7 +1025,7 @@
 
 <music>
 <name>Music</name>
- <path>Aircraft/A340-313X/Sounds/music.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/music.wav</path>
  <mode>looped</mode>
  <condition>
  <and>
@@ -1047,7 +1047,7 @@
 
 <music2>
 <name>Music2</name>
- <path>Aircraft/A340-313X/Sounds/music2.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/music2.wav</path>
  <mode>looped</mode>
  <condition>
  <and>
@@ -1069,7 +1069,7 @@
 
 <seatbelt>
 <name>Seatbelt</name>
- <path>Aircraft/A340-313X/Sounds/seatbelt.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/seatbelt.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1093,7 +1093,7 @@
 
 <safety>
 <name>safety</name>
- <path>Aircraft/A340-313X/Sounds/safety.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/safety.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1117,7 +1117,7 @@
 
 <captain>
 <name>captain</name>
- <path>Aircraft/A340-313X/Sounds/captain.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/captain.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1141,7 +1141,7 @@
 
 <tenthousand>
 <name>Allow Electronic Devices</name>
- <path>Aircraft/A340-313X/Sounds/tenthousand.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/tenthousand.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1165,7 +1165,7 @@
 
 <cruisingalt>
 <name>cruisingalt</name>
- <path>Aircraft/A340-313X/Sounds/cruising.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/cruising.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1190,7 +1190,7 @@
 
 <decending>
 <name>decending</name>
- <path>Aircraft/A340-313X/Sounds/decending.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/decending.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1214,7 +1214,7 @@
 
 <Emergency>
 <name>Emergency</name>
- <path>Aircraft/A340-313X/Sounds/emergency.wav</path>
+ <path>Aircraft/A340-600HGW/Sounds/emergency.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1240,7 +1240,7 @@
 <!-- Services-->
 <engine>
 	<name>fuel truck pump transfer</name>
-	<path>/Aircraft/A340-313X/Sounds/electricalengine.wav</path>
+	<path>/Aircraft/A340-600HGW/Sounds/electricalengine.wav</path>
 	<mode>looped</mode>
         <condition>
             	<less-than>	
@@ -1266,7 +1266,7 @@
 
   <engine>
 	<name>fuel truck pump clean</name>
-	<path>/Aircraft/A340-313X/Sounds/electricalengine.wav</path>
+	<path>/Aircraft/A340-600HGW/Sounds/electricalengine.wav</path>
 	<mode>looped</mode>
         <condition>
             <less-than>	
@@ -1292,7 +1292,7 @@
 
 <engine>
 	<name>de ice truck operation</name>
-	<path>/Aircraft/A340-313X/Sounds/electricalengine.wav</path>
+	<path>/Aircraft/A340-600HGW/Sounds/electricalengine.wav</path>
 	<mode>looped</mode>
         <condition>
             <less-than>	
@@ -1320,14 +1320,14 @@
 
 	<retard>
 			<name>retard</name>
-			<path>Aircraft/A340-313X/Sounds/retard.wav</path>
+			<path>Aircraft/A340-600HGW/Sounds/retard.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
 					<property>sim/current-view/internal</property>
 					<less-than>
 						<property>/position/altitude-agl-ft</property>
-						<value>20</value>
+						<value>37</value>
 					</less-than>
 
 					<greater-than>
@@ -1348,19 +1348,19 @@
 					</greater-than>
 					<less-than>
 						<property>controls/engines/engine[0]/throttle</property>
-						<value>0.6</value>
+						<value>0.5</value>
 					</less-than>
 					<less-than>
 						<property>controls/engines/engine[1]/throttle</property>
-						<value>0.6</value>
+						<value>0.5</value>
 					</less-than>
 					<less-than>
 						<property>controls/engines/engine[2]/throttle</property>
-						<value>0.6</value>
+						<value>0.5</value>
 					</less-than>
 					<less-than>
 						<property>controls/engines/engine[3]/throttle</property>
-						<value>0.6</value>
+						<value>0.5</value>
 					</less-than>
 					<not>
 						<property>/gear/gear[0]/wow</property>
@@ -1415,7 +1415,7 @@
     <apustart>
         <name>apustrt</name>
         <mode>once</mode>
-        <path>Aircraft/A340-313X/Sounds/apu_strt.wav</path>
+        <path>Aircraft/A340-600HGW/Sounds/apu_strt.wav</path>
         <condition>
 			<property>controls/APU/apu-gen-switch</property>
 			<and>
@@ -1453,7 +1453,7 @@
 	<apu-running2>
         <name>apu-run2</name>
         <mode>looped</mode>
-        <path>Aircraft/A340-313X/Sounds/apu_run.wav</path>
+        <path>Aircraft/A340-600HGW/Sounds/apu_run.wav</path>
         <condition>
 			<property>controls/APU/apu_status</property>
 			<value>1</value>
@@ -1502,7 +1502,7 @@
 	<apu-shutdown>
         <name>apu-stop</name>
         <mode>once</mode>
-        <path>Aircraft/A340-313X/Sounds/apu_stop.wav</path>
+        <path>Aircraft/A340-600HGW/Sounds/apu_stop.wav</path>
         <condition>
 			<not>
 				<property>controls/APU/apu-gen-switch</property>
