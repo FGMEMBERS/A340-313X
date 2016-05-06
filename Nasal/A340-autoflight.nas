@@ -110,7 +110,7 @@ var vs_master = func {
 
 var apparmcheck = func {
 	var signal = getprop("/instrumentation/nav/gs-needle-deflection-norm");
-	if (signal <= -0.000000001) {
+	if (signal < 0.5 and signal > -0.5) {
 		setprop("/autopilot/locks/altitude", "gs1-hold");
 		setprop("/controls/switches/app1", 0);
 		setprop("/controls/switches/altl", 0);
