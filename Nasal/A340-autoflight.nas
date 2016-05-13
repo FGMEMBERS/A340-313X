@@ -1,27 +1,20 @@
-# A340 Autoflight system by Joshua Davidson(it0uchpods/411). License: GPL (same as aircraft)
+# A340 IT2 AutoFlight system by Joshua Davidson (it0uchpods/411).
 
 var ap_init = func {
-	setprop("/controls/switches/ap_master", 0);
-	setprop("/controls/switches/hdg", 1);
-	setprop("/controls/switches/nav", 0);
-	setprop("/controls/switches/hdgl", 1);
-	setprop("/controls/switches/navl", 0);
-	setprop("/controls/switches/loc", 0);
-	setprop("/controls/switches/loc1", 0);
-	setprop("/controls/switches/alt", 1);
-	setprop("/controls/switches/vs", 0);
-	setprop("/controls/switches/altl", 1);
-	setprop("/controls/switches/vsl", 0);
-	setprop("/controls/switches/app", 0);
-	setprop("/controls/switches/app1", 0);
-	setprop("/controls/switches/aplatmode", 0);
-	setprop("/controls/switches/aphldtrk", 0);
-	setprop("/controls/switches/apvertmode", 0);
-	setprop("/controls/switches/aphldtrk2", 0);
+	ap_logic_init();
+	setprop("/controls/switches/aplatset", 0);
+	setprop("/controls/switches/apvertset", 0);
+	setprop("/autopilot/settings/target-speed-kt", 100);
+	setprop("/autopilot/settings/target-mach", 0.68);
+	setprop("/autopilot/settings/heading-bug-deg", 360);
+	setprop("/autopilot/settings/target-altitude-ft", 10000);
+	setprop("/autopilot/settings/vertical-speed-fpm", 0);
 	update_arms();
 	ap_refresh();
-	print("AUTOFLIGHT ... FINE!");
+	print("IT2 AUTOFLIGHT ... FINE!");
 }
+
+
 
 var update_arms = func {
   update_locarmelec();
@@ -110,7 +103,7 @@ var vs_master = func {
 
 var apparmcheck = func {
 	var signal = getprop("/instrumentation/nav/gs-needle-deflection-norm");
-	if (signal < 0.5 and signal > -0.5) {
+	if (signal <= -0.000000001) {
 		setprop("/autopilot/locks/altitude", "gs1-hold");
 		setprop("/controls/switches/app1", 0);
 		setprop("/controls/switches/altl", 0);
@@ -134,7 +127,7 @@ var ap_off = func {
 	setprop("/controls/switches/ap_master", 0);
 	setprop("/autopilot/locks/heading", 0);
 	setprop("/autopilot/locks/altitude", 0);
-#	setprop("/controls/switches/apoffsound", 1);
+	setprop("/controls/switches/apoffsound", 1);
 	hdg_master();
 	nav_master();
 	alt_master();
