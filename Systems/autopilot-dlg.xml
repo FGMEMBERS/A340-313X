@@ -8,11 +8,25 @@
 	<name>autopilot</name>
 	<layout>vbox</layout>
 
-	<text>
-		<label>A340 AUTOFLIGHT</label>
-	</text>
-
-	<hrule />
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>left</halign>
+            <label>AUTOFLIGHT</label>
+        </text>
+        <button>
+            <halign>right</halign>
+            <pref-width>20</pref-width>
+            <pref-height>20</pref-height>
+            <legend>X</legend>
+            <key>Esc</key>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+	
+    <hrule/>
 
 	<group>
 		<layout>hbox</layout>
@@ -450,17 +464,6 @@
 			
 		</group>
 
-		<hrule />
-
-		<button>
-			<legend>Close</legend>
-			<binding>
-				<command>dialog-apply</command>
-			</binding>
-			<binding>
-				<command>dialog-close</command>
-			</binding>
-		</button>
 	</group>
 
 </PropertyList>
