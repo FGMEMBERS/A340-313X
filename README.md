@@ -1,6 +1,8 @@
 # A340-313X
 FG Aircraft | Airbus A340-313X by Andino
 
+![image](BRD.png)
+
 it0uchpods is now maintaining this aircraft.
 
 Postscript: how to use the autopilot
