@@ -1,104 +1,1371 @@
 <PropertyList>
     <!-- cockpit x=22.5 y=0 z=0.78 -->
     <fx>
-
-<!-- Reversers-->
-
-       <engines>
-            <name>1 reverse-thrust</name>
-            <mode>looped</mode>
-            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
-            <condition>
-                <property>engines/engine[0]/run</property>
-            </condition>
-            <volume>
-                <property>surface-positions/reverser-norm[0]</property>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>2.75</x>
-                <y>-10.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engines>
-
-
-      <engines>
-            <name>2 reverse-thrust</name>
-            <mode>looped</mode>
-            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
-            <condition>
-                <property>engines/engine[1]/run</property>
-            </condition>
-            <volume>
-                <property>surface-positions/reverser-norm[1]</property>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>2.75</x>
-                <y>-5.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engines>
-
-		  <engines>
-            <name>3 reverse-thrust</name>
-            <mode>looped</mode>
-            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
-            <condition>
-                <property>engines/engine[2]/run</property>
-            </condition>
-            <volume>
-                <property>surface-positions/reverser-norm[2]</property>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>2.75</x>
-                <y>5.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engines>
-
-		<engines>
-            <name>3 reverse-thrust</name>
-            <mode>looped</mode>
-            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
-            <condition>
-                <property>engines/engine[3]/run</property>
-            </condition>
-            <volume>
-                <property>surface-positions/reverser-norm[3]</property>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>2.75</x>
-                <y>10.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engines>
+	
+		<engine>
+			<name>a340_a11</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n11.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_a12</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n12.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_a13</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n13.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_a14</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n14.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a14</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a14p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_b11</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n11.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_b12</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n12.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_b13</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n13.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_b14</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n14.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b14</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b14p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_c11</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n11.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_c12</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n12.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_c13</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n13.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_c14</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n14.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property><less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c14</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c14p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_d11</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n11.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_d12</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n12.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property><less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_d13</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n13.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property><less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_d14</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n14.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property><less-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</less-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d14</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d14p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<engine>
+			<name>a340_a21</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n21.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_a22</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n22.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_a23</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n23.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xa13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_b21</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n21.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_b22</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n22.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_b23</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n23.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xb13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_c11</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n21.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_c22</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n22.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_c23</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n23.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xc13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_d21</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n21.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_d22</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n22.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>a340_d23</name>
+			<mode>looped</mode>
+			<path>FL2070/A340_n23.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>sim/current-view/z-offset-m</property>
+					<value>-2.9</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xd13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<engine>
+			<name>xa340_a11</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n11.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_a12</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n12.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_a13</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n13.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xa13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_b11</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n11.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_b12</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n12.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_b13</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n13.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xb13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_c11</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n11.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_c12</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n12.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_c13</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n13.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xc13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_d21</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n11.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_d12</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n12.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_d13</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n13.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xd13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<engine>
+			<name>xa340_a21</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n21.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_a22</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n22.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/a12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_a23</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n23.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xa13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/a13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_b21</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n21.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b11p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_b22</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n22.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/b12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b12p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_b23</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n23.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xb13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/b13p</property>
+				<offset>0</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_c21</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n21.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_c22</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n22.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/c12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_c23</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n23.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xc13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/c13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-20</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_d21</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n21.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d11</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d11p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_d22</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n22.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/d12</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d12p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+		
+		<engine>
+			<name>xa340_d23</name>
+			<mode>looped</mode>
+			<path>FL2070/xA340_n23.wav</path>
+			<condition>
+				<not><property>sim/current-view/internal</property></not>
+			</condition>
+			<volume>
+				<property>sim/sound/engines/xd13</property>
+			</volume>
+			<pitch>
+				<property>sim/sound/engines/d13p</property>
+				<offset>0.1</offset>
+			</pitch>
+			<position>
+				<x>0.0</x>
+				<y>-40</y>
+				<z>0.0</z>
+			</position>
+		</engine>
+	
+	
+	
+	
+	
+	
+	
+	
 
 <!--Wind-->
 
        <wind>
 			<name>wind</name>
 			<mode>looped</mode>
-			<path>Aircraft/A340-600HGW/Sounds/wind.wav</path>
+			<path>Sounds/wind.wav</path>
 			<property>/velocities/airspeed-kt</property>
 			<volume>
 				<property>/position/altitude-ft</property>
@@ -131,7 +1398,7 @@
 
 		<roll>
 			<name>Roll</name>
-			<path>Aircraft/A340-600HGW/Sounds/roll.wav</path>
+			<path>Sounds/roll.wav</path>
 			<mode>looped</mode>
 			<type>avionics</type>
 			<condition>
@@ -169,365 +1436,6 @@
 				<z>0.78</z>
 			</position-->
 		</roll>
-
-<!--Engines jet -->
-
-        <engine>
-            <name>1 engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
-            <mode>looped</mode>
-            <condition>
-                <property>engines/engine[0]/run</property>
-            </condition>
-            <volume>
-                <property>engines/engine[0]/thrust-lbs</property>
-                <offset>-0.75</offset>
-               <factor>0.000028571</factor>
-                <min>0.0</min>
-                <max>5.0</max>
-            </volume>
-            <!-- volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
-                </volume -->
-            <position>
-                <x>0</x>
-                <y>9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-        <engine>
-            <name>2 engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
-            <mode>looped</mode>
-             <condition>
-                <property>engines/engine[1]/run</property>
-            </condition>
-            <volume>
-                <property>engines/engine[1]/thrust-lbs</property>
-                <offset>-0.75</offset>
-               <factor>0.000028571</factor>
-                <min>0.0</min>
-                <max>5.0</max>
-            </volume>
-            <!-- volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
-                </volume -->
-            <position>
-                <x>0</x>
-                <y>9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-		 <engine>
-            <name>3 engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
-            <mode>looped</mode>
-            <condition>
-                <property>engines/engine[2]/run</property>
-            </condition>
-            <volume>
-                <property>engines/engine[2]/thrust-lbs</property>
-                <offset>-0.75</offset>
-               <factor>0.000028571</factor>
-                <min>0.0</min>
-                <max>5.0</max>
-            </volume>
-            <!-- volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
-                </volume -->
-            <position>
-                <x>0</x>
-                <y>9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-			<max-dist>500.0</max-dist>
-        </engine>
-
- 		<engine>
-            <name>4 engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
-            <mode>looped</mode>
-             <condition>
-                <property>engines/engine[3]/run</property>
-            </condition>
-            <volume>
-                <property>engines/engine[3]/thrust-lbs</property>
-                <offset>-0.75</offset>
-                <factor>0.000028571</factor>
-                <min>0.0</min>
-                <max>5.0</max>
-            </volume>
-            <!-- volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
-                </volume -->
-            <position>
-                <x>0</x>
-                <y>9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-
-<!-- Engines turbine -->
-
-        <engine>
-            <name>left n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
-            <mode>looped</mode>
-            <property>engines/engine[0]/rpm</property>
-            <pitch>
-                <property>engines/engine[0]/rpm</property>
-                <offset>0.8</offset>
-                <factor>0.01</factor>
-                <min>0.0</min>
-                <max>100.0</max>
-            </pitch>
-            <volume>
-                <property>engines/engine[0]/rpm</property>
-                <factor>0.1</factor>
-                <min>0.0</min>
-                <max>0.5</max>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>0</x>
-                <y>9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-        <engine>
-            <name>right n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
-            <mode>looped</mode>
-            <property>engines/engine[1]/rpm</property>
-            <volume>
-                <property>engines/engine[1]/rpm</property>
-                <factor>0.1</factor>
-                <min>0.0</min>
-                <max>0.5</max>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <pitch>
-                <property>engines/engine[1]/rpm</property>
-                <offset>0.8</offset>
-                <factor>0.01</factor>
-                <min>0.0</min>
-                <max>100.0</max>
-            </pitch>
-            <position>
-                <x>0</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-
-        <engine>
-            <name>right n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
-            <mode>looped</mode>
-            <property>engines/engine[2]/rpm</property>
-            <volume>
-                <property>engines/engine[2]/rpm</property>
-                <factor>0.1</factor>
-                <min>0.0</min>
-                <max>0.5</max>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <pitch>
-                <property>engines/engine[2]/rpm</property>
-                <offset>0.8</offset>
-                <factor>0.01</factor>
-                <min>0.0</min>
-                <max>100.0</max>
-            </pitch>
-            <position>
-                <x>0</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-       <engine>
-            <name>right n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
-            <mode>looped</mode>
-            <property>engines/engine[3]/rpm</property>
-            <volume>
-                <property>engines/engine[3]/rpm</property>
-                <factor>0.1</factor>
-                <min>0.0</min>
-                <max>0.5</max>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <pitch>
-                <property>engines/engine[3]/rpm</property>
-                <offset>0.8</offset>
-                <factor>0.01</factor>
-                <min>0.0</min>
-                <max>100.0</max>
-            </pitch>
-            <position>
-                <x>0</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-<!-- Engines start -->
-
-        <engine>
-            <name>1 start</name>
-            <path>/Sounds/starter_start.wav</path>
-            <mode>once</mode>
-            <condition>
-				<property>engines/engine[0]/run</property>
-                <!--and>
-					<equals>
-						<property>controls/engines/autostart-knob[0]</property>
-						<value>-1</value>
-					</equals>
-					<not><property>engines/engine[0]/run</property></not>
-					<or>
-      		      		<property>engines/engine[1]/run</property>
-        	    		<property>controls/electric/APU-generator</property>
-					</or>
-                </and-->
-            </condition>
-            <volume>0.5</volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>0</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-       
-
-        <engine>
-            <name>2 start</name>
-            <path>/Sounds/starter_start.wav</path>
-            <mode>once</mode>
-            <condition>
-				<property>engines/engine[1]/run</property>
-                <!--and>
-					<equals>
-						<property>controls/engines/autostart-knob[0]</property>
-						<value>-1</value>
-					</equals>
-					<not><property>engines/engine[0]/run</property></not>
-					<or>
-      		      		<property>engines/engine[1]/run</property>
-        	    		<property>controls/electric/APU-generator</property>
-					</or>
-                </and-->
-            </condition>
-            <volume>0.5</volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>0</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-
-
-        <engine>
-            <name>3 start</name>
-            <path>/Sounds/starter_start.wav</path>
-            <mode>once</mode>
-            <condition>
-				<property>engines/engine[2]/run</property>
-                <!--and>
-					<equals>
-						<property>controls/engines/autostart-knob[0]</property>
-						<value>-1</value>
-					</equals>
-					<not><property>engines/engine[0]/run</property></not>
-					<or>
-      		      		<property>engines/engine[1]/run</property>
-        	    		<property>controls/electric/APU-generator</property>
-					</or>
-                </and-->
-            </condition>
-            <volume>0.5</volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>0</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
-
-
-        <engine>
-            <name>4 start</name>
-            <path>/Sounds/starter_start.wav</path>
-            <mode>once</mode>
-            <condition>
-				<property>engines/engine[3]/run</property>
-                <!--and>
-					<equals>
-						<property>controls/engines/autostart-knob[0]</property>
-						<value>-1</value>
-					</equals>
-					<not><property>engines/engine[0]/run</property></not>
-					<or>
-      		      		<property>engines/engine[1]/run</property>
-        	    		<property>controls/electric/APU-generator</property>
-					</or>
-                </and-->
-            </condition>
-            <volume>0.5</volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>0</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>600.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engine>
-
 
 <!-- nose wheel-->
 
@@ -588,7 +1496,7 @@
         <gear1>
             <name>gear</name>
             <mode>in-transit</mode>
-            <path>/Aircraft/A340-600HGW/Sounds/gear.wav</path>
+            <path>FL2070/340gear.wav</path>
             <property>gear/gear[0]/position-norm</property>
             <!--volume>
                 <property>sim/sound/Ovolume</property>
@@ -611,33 +1519,9 @@
             <reference-dist>100.0</reference-dist>
             <max-dist>6000.0</max-dist>
         </gear1>
-        <gearlock>
-            <name>gear-lock</name>
-            <path>Sounds/gear-lck.wav</path>
-            <condition>
-                <and>
-                    <equals>
-                        <property>gear/gear[0]/position-norm</property>
-                        <value>0</value>
-                    </equals>
-                    <property>sim/current-view/internal</property>
-                </and>
-            </condition>
-            <pitch>
-                <factor>0.0001</factor>
-            </pitch>
-            <volume>2.0</volume>
-            <position>
-                <x>-22</x>
-                <y>0</y>
-                <z>-2</z>
-            </position>
-            <reference-dist>100.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </gearlock>
         <squeal1>
             <name>front wheel squeal</name>
-            <path>Aircraft/A340-600HGW/Sounds/touchdown.wav</path>
+            <path>Sounds/touchdown.wav</path>
             <condition>
                 <property>gear/gear[0]/tyre-smoke</property>
             </condition>
@@ -671,7 +1555,7 @@
         </squeal1>
         <squeal2>
             <name>right wheel squeal</name>
-            <path>Aircraft/A340-600HGW/Sounds/touchdown.wav</path>
+            <path>Sounds/touchdown.wav</path>
             <condition>
                 <property>gear/gear[1]/tyre-smoke</property>
             </condition>
@@ -705,7 +1589,7 @@
         </squeal2>
         <squeal3>
             <name>left wheel squeal</name>
-            <path>Aircraft/A340-600HGW/Sounds/touchdown.wav</path>
+            <path>Sounds/touchdown.wav</path>
             <condition>
                 <property>gear/gear[2]/tyre-smoke</property>
             </condition>
@@ -741,7 +1625,7 @@
         <flap>
             <name>flaps</name>
             <mode>in-transit</mode>
-            <path>Aircraft/A340-600HGW/Sounds/Flaps.wav</path>
+            <path>FL2070/340flaps.wav</path>
             <property>surface-positions/flap-pos-norm</property>
             <!--volume>
                 <property>sim/sound/Ovolume</property>
@@ -768,7 +1652,7 @@
             <name>stall</name>
             <mode>looped</mode>
             <type>avionics</type>
-            <path>Aircraft/A340-600HGW/Sounds/stall.wav</path>
+            <path>Sounds/stall.wav</path>
             <condition>
                 <property>instrumentation/weu/sound/stall-horn</property>
             </condition>
@@ -781,7 +1665,7 @@
         <stickshaker>
             <name>stick shaker</name>
             <mode>looped</mode>
-            <path>Aircraft/A340-600HGW/Sounds/shaker.wav</path>
+            <path>Sounds/shaker.wav</path>
             <condition>
                 <property>instrumentation/weu/actuators/stick-shaker</property>
             </condition>
@@ -799,7 +1683,7 @@
         <switch>
             <name>switch1</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click1.wav</path>
+            <path>Sounds/click1.wav</path>
             <condition>
                 <property>sim/sound/click1</property>
             </condition>
@@ -817,7 +1701,7 @@
         <switch>
             <name>switch2</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click2.wav</path>
+            <path>Sounds/click2.wav</path>
             <condition>
                 <property>sim/sound/click2</property>
             </condition>
@@ -835,7 +1719,7 @@
         <switch>
             <name>click3</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click3.wav</path>
+            <path>Sounds/click3.wav</path>
             <condition>
                 <property>sim/sound/click3</property>
             </condition>
@@ -853,7 +1737,7 @@
         <switch>
             <name>click4</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click4.wav</path>
+            <path>Sounds/click4.wav</path>
             <condition>
                 <property>sim/sound/click4</property>
             </condition>
@@ -871,7 +1755,7 @@
         <switch>
             <name>click5</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click5.wav</path>
+            <path>Sounds/click5.wav</path>
             <condition>
                 <property>sim/sound/click5</property>
             </condition>
@@ -889,7 +1773,7 @@
         <switch>
             <name>click6</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click6.wav</path>
+            <path>Sounds/click6.wav</path>
             <condition>
                 <property>sim/sound/click6</property>
             </condition>
@@ -907,7 +1791,7 @@
         <switch>
             <name>click7</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click7.wav</path>
+            <path>Sounds/click7.wav</path>
             <condition>
                 <property>sim/sound/click7</property>
             </condition>
@@ -925,7 +1809,7 @@
         <switch>
             <name>click8</name>
             <mode>once</mode>
-            <path>Aircraft/A340-600HGW/Sounds/click8.wav</path>
+            <path>Sounds/click8.wav</path>
             <condition>
                 <property>sim/sound/click8</property>
             </condition>
@@ -943,7 +1827,7 @@
         <speedbrake>
             <name>speedbrake</name>
             <mode>in-transit</mode>
-            <path>/Aircraft/A340-600HGW/Sounds/Flaps.wav</path>
+            <path>Sounds/Flaps.wav</path>
             <property>surface-positions/speedbrake-norm</property>
             <!--volume>
                 <property>sim/sound/Ovolume</property>
@@ -962,32 +1846,11 @@
             <max-dist>6000.0</max-dist-->
         </speedbrake>
 
- 
-
-
-        <warningsiren>
-            <name>warning-siren</name>
-            <mode>looped</mode>
-            <type>avionics</type>
-            <path>Aircraft/A340-600HGW/Sounds/siren.wav</path>
-            <condition>
-                <property>instrumentation/weu/sound/siren</property>
-            </condition>
-        </warningsiren>
-        <configwarning>
-            <name>config-warning</name>
-            <mode>looped</mode>
-            <type>avionics</type>
-            <path>Aircraft/A340-600HGW/Sounds/config-warning.wav</path>
-            <condition>
-                <property>instrumentation/weu/sound/config-warning</property>
-            </condition>
-        </configwarning>
         <apdisengage>
             <name>autopilot disengage</name>
             <mode>once</mode>
             <type>avionics</type>
-            <path>Aircraft/A340-600HGW/Sounds/airbus-warning.wav</path>
+            <path>Sounds/airbus-warning.wav</path>
             <condition>
                 <property>instrumentation/weu/sound/autopilot-warning</property>
             </condition>
@@ -1008,15 +1871,6 @@
                 <factor>1.2</factor>
             </pitch>
         </crash>
-        <avhum>
-            <path>/Sounds/avionics-400Hz.wav</path>
-            <mode>looped</mode>
-            <type>avionics</type>
-            <property>/systems/electrical/outputs/avionics</property>
-            <volume>
-                <factor>0.2</factor>
-            </volume>
-        </avhum>
 
 
 <!-- Announcements -->
@@ -1025,7 +1879,7 @@
 
 <music>
 <name>Music</name>
- <path>Aircraft/A340-600HGW/Sounds/music.wav</path>
+ <path>Sounds/music.wav</path>
  <mode>looped</mode>
  <condition>
  <and>
@@ -1047,7 +1901,7 @@
 
 <music2>
 <name>Music2</name>
- <path>Aircraft/A340-600HGW/Sounds/music2.wav</path>
+ <path>Sounds/music2.wav</path>
  <mode>looped</mode>
  <condition>
  <and>
@@ -1069,7 +1923,7 @@
 
 <seatbelt>
 <name>Seatbelt</name>
- <path>Aircraft/A340-600HGW/Sounds/seatbelt.wav</path>
+ <path>Sounds/seatbelt.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1093,7 +1947,7 @@
 
 <safety>
 <name>safety</name>
- <path>Aircraft/A340-600HGW/Sounds/safety.wav</path>
+ <path>Sounds/safety.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1117,7 +1971,7 @@
 
 <captain>
 <name>captain</name>
- <path>Aircraft/A340-600HGW/Sounds/captain.wav</path>
+ <path>Sounds/captain.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1141,7 +1995,7 @@
 
 <tenthousand>
 <name>Allow Electronic Devices</name>
- <path>Aircraft/A340-600HGW/Sounds/tenthousand.wav</path>
+ <path>Sounds/tenthousand.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1165,7 +2019,7 @@
 
 <cruisingalt>
 <name>cruisingalt</name>
- <path>Aircraft/A340-600HGW/Sounds/cruising.wav</path>
+ <path>Sounds/cruising.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1190,7 +2044,7 @@
 
 <decending>
 <name>decending</name>
- <path>Aircraft/A340-600HGW/Sounds/decending.wav</path>
+ <path>Sounds/decending.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1214,7 +2068,7 @@
 
 <Emergency>
 <name>Emergency</name>
- <path>Aircraft/A340-600HGW/Sounds/emergency.wav</path>
+ <path>Sounds/emergency.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -1240,7 +2094,7 @@
 <!-- Services-->
 <engine>
 	<name>fuel truck pump transfer</name>
-	<path>/Aircraft/A340-600HGW/Sounds/electricalengine.wav</path>
+	<path>Sounds/electricalengine.wav</path>
 	<mode>looped</mode>
         <condition>
             	<less-than>	
@@ -1266,7 +2120,7 @@
 
   <engine>
 	<name>fuel truck pump clean</name>
-	<path>/Aircraft/A340-600HGW/Sounds/electricalengine.wav</path>
+	<path>Sounds/electricalengine.wav</path>
 	<mode>looped</mode>
         <condition>
             <less-than>	
@@ -1292,7 +2146,7 @@
 
 <engine>
 	<name>de ice truck operation</name>
-	<path>/Aircraft/A340-600HGW/Sounds/electricalengine.wav</path>
+	<path>Sounds/electricalengine.wav</path>
 	<mode>looped</mode>
         <condition>
             <less-than>	
@@ -1320,7 +2174,7 @@
 
 	<retard>
 			<name>retard</name>
-			<path>Aircraft/A340-600HGW/Sounds/retard.wav</path>
+			<path>Sounds/retard.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
@@ -1408,126 +2262,6 @@
 			<!--reference-dist>10</reference-dist>
 			<max-dist>100</max-dist-->
 		</overspeed>
-
-
-		<!-- APU Sounds -->
-
-    <apustart>
-        <name>apustrt</name>
-        <mode>once</mode>
-        <path>Aircraft/A340-600HGW/Sounds/apu_strt.wav</path>
-        <condition>
-			<property>controls/APU/apu-gen-switch</property>
-			<and>
-			<less-than>
-				<property>engines/engine/rpm</property>
-				<value>100</value>
-			</less-than>
-			<less-than>
-				<property>engines/engine[1]/rpm</property>
-				<value>100</value>
-			</less-than>
-			<less-than>
-				<property>engines/engine[2]/rpm</property>
-				<value>100</value>
-			</less-than>
-			<less-than>
-				<property>engines/engine[3]/rpm</property>
-				<value>100</value>
-			</less-than>
-			</and>
-		</condition>
-		<volume>
-				<property>/sim/sound/effects/volume</property>
-			</volume>
-		<!--position>
-			<x>26</x>
-			<y>0</y>
-			<z>4</z>
-		</position>		
-		<reference-dist>10</reference-dist>	
-		<max-dist>30</max-dist>	
-		<volume>0.3</volume-->		
-    </apustart>
-
-	<apu-running2>
-        <name>apu-run2</name>
-        <mode>looped</mode>
-        <path>Aircraft/A340-600HGW/Sounds/apu_run.wav</path>
-        <condition>
-			<property>controls/APU/apu_status</property>
-			<value>1</value>
-			<!--equals>
-				<property>engines/engine/rpm</property>
-				<value>100</value>
-			</equals-->
-		</condition>
-		<position>
-			<x>26</x>
-			<y>0</y>
-			<z>4</z>
-		</position>	
-		<volume>
-				<property>/sim/sound/effects/volume</property>
-			</volume>
-		<!--reference-dist>10</reference-dist>
-		<max-dist>30</max-dist>
-		<volume>0.3</volume-->
-    </apu-running2>
-	
-	
-	<!--apu-running>
-        <name>apu-run</name>
-        <mode>looped</mode>
-        <path>Aircraft/A330-200/Sounds/res/apu_run.wav</path>
-        <condition>
-			<not>
-				<property>controls/APU/starter</property>
-			</not>
-			<greater-than-equals>
-				<property>engines/engine/rpm</property>
-				<value>80</value>
-			</greater-than-equals>
-		</condition>
-		<position>
-			<x>26</x>
-			<y>0</y>
-			<z>4</z>
-		</position>	
-		<reference-dist>10</reference-dist>
-		<max-dist>30</max-dist>
-		<volume>0.3</volume>
-    </apu-running-->
-
-	<apu-shutdown>
-        <name>apu-stop</name>
-        <mode>once</mode>
-        <path>Aircraft/A340-600HGW/Sounds/apu_stop.wav</path>
-        <condition>
-			<not>
-				<property>controls/APU/apu-gen-switch</property>
-			</not>
-			<less-than>
-				<property>engines/engine/rpm</property>
-				<value>100</value>
-			</less-than>		
-			<greater-than>
-				<property>engines/engine/rpm</property>
-				<value>0</value>
-			</greater-than>	
-		</condition>
-		<volume>
-				<property>/sim/sound/effects/volume</property>
-			</volume>
-		<!--position>
-			<x>26</x>
-			<y>0</y>
-			<z>4</z>
-		</position>	
-		<reference-dist>10</reference-dist>
-		<max-dist>30</max-dist>
-		<volume>0.5</volume-->
-    </apu-shutdown>	
 
 
 
