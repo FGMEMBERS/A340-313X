@@ -43,9 +43,6 @@
     </config>
   </pid-controller>
 
-
-
-
   <!-- Heading Bug Hold.  2 stage cascade controller. -->
 
   <!-- Stage #1 sets target roll based on diff between current heading -->
@@ -235,66 +232,6 @@
  <!-- Pitch Axis Modes                                                -->
  <!-- =============================================================== -->
 
- <!-- Simple pitch hold --> 
- <pid-controller>
-    <name>Pitch hold</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>pitch-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/pitch-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.05</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>1.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-   </pid-controller>
-
- <!-- Simple angle of attack hold --> 
- <pid-controller>
-    <name>AOA hold</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>aoa-hold</value>
-    </enable>
-    <input>
-      <prop>/orientation/alpha-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-aoa-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.05</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>0.5</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
-
   <!-- Altitude hold.  2 stage cascade controller. -->
 
   <!-- Stage #1 sets target rate of climb based on diff between current alt -->
@@ -318,8 +255,8 @@
 		<config>
 			<Kp>0.3</Kp>
 			<Ki>0</Ki>
-			<u_min>-1.667</u_min>
-			<u_max>33.333</u_max>
+			<u_min>-15.333</u_min>
+			<u_max>15.333</u_max>
 		</config>
 	</pi-simple-controller>
 	<pid-controller>
@@ -350,64 +287,6 @@
 		</config>
 	</pid-controller>
 
-  <!-- AGL hold.  2 stage cascade controller. -->
-
-  <!-- Stage #1 sets target rate of climb based on diff between current agl -->
-  <!-- and target agl. -->
-  <pi-simple-controller>
-    <name>AGL Hold (Altimeter based) Stage 1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>agl-hold</value>
-    </enable>
-    <input>
-      <prop>/position/altitude-agl-ft</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-agl-ft</prop>
-    </reference>
-    <output>
-      <prop>/autopilot/internal/target-climb-rate-fps</prop>
-    </output>
-    <config>
-      <Kp>0.3</Kp>          <!-- proportional gain -->
-      <Ki>0.0</Ki>          <!-- integral gain -->
-      <u_min>-16.67</u_min> <!-- minimum output clamp -->
-      <u_max>8.33</u_max>   <!-- maximum output clamp -->
-    </config>
-  </pi-simple-controller>
-
-  <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
-  <pid-controller>
-    <name>Altitude Hold (Altimeter based) Stage 2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>agl-hold</value>
-    </enable>
-    <input>
-      <prop>/velocities/vertical-speed-fps</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/internal/target-climb-rate-fps</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.01</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
-
   <!-- Glideslope hold. -->
 
   <!-- Stage #2 drives the elevator-trim to achieve the desired climb rate. -->
@@ -433,7 +312,7 @@
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>       <!-- 10 integrator time -->
+      <Ti>100.0</Ti>       <!-- 10 integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-1.0</u_min> <!--  -1.0 minimum output clamp -->
       <u_max>1.0</u_max>  <!-- 1.0 maximum output clamp -->
@@ -479,14 +358,13 @@
 
  <!-- Auto throttle --> 
  <pid-controller>
-    <name>Auto Throttle (5 sec lookahead)</name>
+    <name>Auto Throttle</name>
     <debug>false</debug>
     <enable>
       <prop>/autopilot/locks/speed</prop>
       <value>speed-with-throttle</value>
     </enable>
     <input>
-      <!-- <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop> -->
       <prop>/velocities/airspeed-kt</prop>
     </input>
     <reference>
@@ -514,72 +392,6 @@
       <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
-
- <!-- Hold speed by varying pitch trim (Two stage cascading controller) --> 
- <pid-controller>
-    <name>Speed hold (vary pitch trim) Stage #1</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>speed-with-pitch-trim</value>
-    </enable>
-    <input>
-      <prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
-    </reference>
-    <output>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
-    </output>
-    <config>
-      <Kp>-1.0</Kp>       <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>1.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-15.0</u_min><!-- minimum output clamp -->
-      <u_max>15.0</u_max> <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
-
- <pid-controller>
-    <name>Speed hold (vary pitch trim) Stage #2</name>
-    <debug>false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>speed-with-pitch-trim</value>
-    </enable>
-    <input>
-      <prop>/orientation/pitch-deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator-trim</prop>
-    </output>
-    <config>
-      <Kp>-0.05</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>    <!-- input value weighing factor -->
-      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-                          <!-- unfiltered derivative error -->
-      <Ti>1.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>    <!-- derivator time -->
-      <u_min>-1.0</u_min> <!-- minimum output clamp -->
-      <u_max>1.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </pid-controller>
-
-
-<!--
-
-MD-81 Custom PIDs
-
--->
 
 <!-- Auto throttle (Mach Hold)-->
 
@@ -612,5 +424,56 @@ MD-81 Custom PIDs
       <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
+  
+<!-- Elevator Trim Controller -->
+
+  <!--pid-controller>
+    <name>Elevator Control</name>
+    <debug>false</debug>
+    <enable>
+      <prop>null/prop>
+      <value>null</value>
+    </enable>
+    <input>
+      <prop>/orientation/pitch-deg</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/internal/target-pitch-deg</prop>
+    </reference>
+    <output>
+      <prop>/controls/flight/elevator-trim</prop>
+    </output>
+    <config>
+      <Kp>-0.015</Kp>
+      <beta>1.0</beta>
+      <alpha>0.1</alpha>
+      <gamma>0.0</gamma>
+      <Ti>1.0</Ti>
+      <Td>0.00001</Td>
+      <u_min>
+        <value>-0.8</value>
+      </u_min>
+      <u_max>
+        <value>0.8</value>
+      </u_max>
+    </config>
+  </pid-controller-->
+  
+    <!--filter>
+        <name>Elevator control filter</name>
+        <debug>false</debug>
+        <feedback-if-disabled>true</feedback-if-disabled>
+        <initialize-to>output</initialize-to>
+		<enable>
+			<prop>null/prop>
+			<value>null</value>
+		</enable>
+        <input>
+            <property>/controls/flight/elevator-trim-filter</property>
+        </input>
+        <output>/controls/flight/elevator-trim</output>
+        <type>noise-spike</type>
+        <max-rate-of-change>0.5</max-rate-of-change>
+    </filter-->
 
 </PropertyList>
