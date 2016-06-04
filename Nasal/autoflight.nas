@@ -1,4 +1,4 @@
-# A340 IT2 AutoFlight system by Joshua Davidson (it0uchpods/411).
+# A340 AutoFlight system by Joshua Davidson (it0uchpods/411).
 
 var ap_init = func {
 	ap_logic_init();
@@ -11,10 +11,8 @@ var ap_init = func {
 	setprop("/autopilot/settings/vertical-speed-fpm", 0);
 	update_arms();
 	ap_refresh();
-	print("IT2 AUTOFLIGHT ... FINE!");
+	print("AUTOFLIGHT ... FINE!");
 }
-
-
 
 var update_arms = func {
   update_locarmelec();
@@ -66,12 +64,10 @@ var nav_master = func {
 }
 
 var locarmcheck = func {
-	var locdefl = getprop("instrumentation/nav/heading-needle-deflection");
-	if (locdefl > 9.999999999 or locdefl < - 9.999999999) {
+	var locdefl = getprop("instrumentation/nav/heading-needle-deflection-norm");
+	if ((locdefl < 0.9233) and (getprop("instrumentation/nav/signal-quality-norm") > 0.99)) {
 		setprop("/autopilot/locks/heading", "nav1-hold");
 		setprop("/controls/switches/loc1", 0);
-		setprop("/controls/switches/hdgl", 0);
-		setprop("/controls/switches/navl", 0);
 		setprop("/controls/switches/aplatmode", 2);
 		setprop("/controls/switches/aphldtrk", 1);
 	} else {
@@ -106,8 +102,6 @@ var apparmcheck = func {
 	if (signal <= -0.000000001) {
 		setprop("/autopilot/locks/altitude", "gs1-hold");
 		setprop("/controls/switches/app1", 0);
-		setprop("/controls/switches/altl", 0);
-		setprop("/controls/switches/vsl", 0);
 		setprop("/controls/switches/apvertmode", 2);
 		setprop("/controls/switches/aphldtrk2", 1);
 	} else {
