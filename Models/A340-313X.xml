@@ -14,6 +14,17 @@
                 </livery>
     </model>
 
+	<nasal>
+		<load>
+		     # livery path
+  	 	     var livery_update = aircraft.livery_update.new("Aircraft/A340-313X/Models/Liveries")
+		</load>
+
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+
 
 <!-- Shadow -->
 
