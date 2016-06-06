@@ -620,8 +620,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <name>=</name>
                 <desc>toggle auto spoilers</desc>
                 <binding>
-                    <command>nasal</command>
-                    <script>controls.toggleAutoSpoilers();</script>
+                    <command>property-toggle</command>
+					<property>controls/flight/speedbreak-arm</property>
+					<value>0</value>
+					<value>1</value>
                 </binding>
             </key>
 
