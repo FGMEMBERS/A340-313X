@@ -14,7 +14,7 @@
 			<w>256</w>
 			<h>256</h>
 			<texture>
-				<path>Aircraft/A340-313X/Models/Instruments/ECAM/res/page-fctl.png</path>
+				<path>Aircraft/411Workshop/Models/Instruments/ECAM/res/page-fctl.png</path>
 				<x1>0.0</x1>
 				<y1>0.0</y1>
 				<x2>1</x2>
@@ -33,7 +33,7 @@
 			<w>8</w>
 			<h>8</h>
 			<texture>
-				<path>Aircraft/A340-313X/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
+				<path>Aircraft/411Workshop/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
 				<x1>0</x1>
 				<y1>0</y1>
 				<x2>0.5</x2>
@@ -63,7 +63,7 @@
 			<w>8</w>
 			<h>8</h>
 			<texture>
-				<path>Aircraft/A340-313X/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
+				<path>Aircraft/411Workshop/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
 				<x1>0.5</x1>
 				<y1>0</y1>
 				<x2>1</x2>
@@ -77,8 +77,8 @@
 					<property>/surface-positions/right-aileron-pos-norm</property>
 					<interpolation>
 					<entry><ind>0</ind><dep>45</dep></entry>
-					<entry><ind>-1</ind><dep>27</dep></entry>
-					<entry><ind>1</ind><dep>70</dep></entry>
+					<entry><ind>-1</ind><dep>70</dep></entry>
+					<entry><ind>1</ind><dep>27</dep></entry>
 					</interpolation>
 				</transformation>
 				<transformation>
@@ -96,7 +96,7 @@
 			<w>8</w>
 			<h>8</h>
 			<texture>
-				<path>Aircraft/A340-313X/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
+				<path>Aircraft/411Workshop/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
 				<x1>0</x1>
 				<y1>0</y1>
 				<x2>0.5</x2>
@@ -126,7 +126,7 @@
 			<w>8</w>
 			<h>8</h>
 			<texture>
-				<path>Aircraft/A340-313X/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
+				<path>Aircraft/411Workshop/Models/Instruments/ECAM/res/page-fctl-arrow.png</path>
 				<x1>0.5</x1>
 				<y1>0</y1>
 				<x2>1</x2>

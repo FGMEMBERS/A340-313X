@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <PropertyList>
 
+
     <flipflop>
         <name>Auto Speedbrake Engage logic</name>
         <debug>false</debug>
@@ -8,22 +9,22 @@
         <enable>
             <condition>
                 <equals>
-                    <property>controls/flight/speedbrake-lever</property>
+                    <property>controls/flight/speedbrake-arm</property>
                     <value>1</value>
                 </equals>
             </condition>
         </enable>
         <S>
             <or>
-                <property>controls/engines/engine[0]/reverser</property>
-                <property>autopilot/autobrake/engaged</property>
                 <and>
                     <property>autopilot/autobrake/throttles-at-idle</property>
                     <property>gear/gear[1]/wow</property>
                     <property>gear/gear[2]/wow</property>
+                    <property>gear/gear[3]/wow</property>
+                    <property>gear/gear[4]/wow</property>
                     <greater-than>
                         <property>velocities/groundspeed-kt</property>
-                        <value>80</value>
+                        <value>40</value>
                     </greater-than>
                 </and>
             </or>
@@ -33,6 +34,7 @@
         </R>
         <output>controls/flight/speedbrake</output>
     </flipflop>
+
 
     <!-- flap protection -->
 

@@ -111,7 +111,7 @@
     	<factor>1.8</factor>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.06</y-m>
+    		<y-m>-0.059</y-m>
     		<z-m>0.0524</z-m>
     	</center>
     	<axis>
@@ -193,7 +193,7 @@
     	<factor>1.8</factor>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.024</y-m>
+    		<y-m>0.0235</y-m>
     		<z-m>0.0524</z-m>
     	</center>
     	<axis>
@@ -237,7 +237,7 @@
     	<factor>1.8</factor>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.06</y-m>
+    		<y-m>0.061</y-m>
     		<z-m>0.0524</z-m>
     	</center>
     	<axis>
