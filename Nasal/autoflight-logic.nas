@@ -14,6 +14,7 @@ var ap_logic_init = func {
 	setprop("/controls/switches/aphldtrk", 0);
 	setprop("/controls/switches/apvertmode", 3);
 	setprop("/controls/switches/aphldtrk2", 0);
+	setprop("/controls/switches/apoffsound", 1);
 	print("AUTOFLIGHT LOGIC ... FINE!");
 }
 

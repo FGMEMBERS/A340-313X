@@ -74,26 +74,24 @@
 		<layout>hbox</layout>
 		
 		<button>
-			<legend>AP off</legend>
-			<not><property>controls/switches/ap_mastersw</property></not>
-			<value>0</value>
+			<legend>AP Toggle</legend>
 			<live type="bool">true</live>
 			<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property>/controls/switches/ap_mastersw</property>
 			<value>0</value>
-			</binding>
-		</button>
-		<button>
-			<legend>AP on</legend>
-			<property>controls/switches/ap_mastersw</property>
-			<live type="bool">true</live>
-			<binding>
-			<command>property-assign</command>
-			<property>/controls/switches/ap_mastersw</property>
 			<value>1</value>
 			</binding>
 		</button>
+		<text>
+				<label>[AP]</label>
+				<visible>
+					<equals>
+						<property>controls/switches/ap_mastersw</property>
+						<value>1</value>
+					</equals>
+				</visible>
+		</text>
 	</group>
 
 	<group>

@@ -146,7 +146,7 @@ setlistener("/sim/signals/fdm-initialized", func {
     init_switches();
     settimer(update_electrical,5);
     print("Electrical System ... ok");
-	a340.ap_init();
+	it2.ap_init();
 });
 
 var init_switches = func{
