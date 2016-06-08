@@ -1,115 +1,148 @@
-# A340 AutoFlight control logic by Joshua Davidson (it0uchpods/411).
+# IT AUTOFLIGHT Logic by Joshua Davidson (it0uchpods/411).
+# V2.7.0
 
 var ap_logic_init = func {
-	setprop("/controls/switches/ap_master", 0);
-	setprop("/controls/switches/hdg", 1);
-	setprop("/controls/switches/nav", 0);
-	setprop("/controls/switches/loc", 0);
-	setprop("/controls/switches/loc1", 0);
-	setprop("/controls/switches/alt", 0);
-	setprop("/controls/switches/vs", 0);
-	setprop("/controls/switches/app", 0);
-	setprop("/controls/switches/app1", 0);
-	setprop("/controls/switches/aplatmode", 0);
-	setprop("/controls/switches/aphldtrk", 0);
-	setprop("/controls/switches/apvertmode", 3);
-	setprop("/controls/switches/aphldtrk2", 0);
-	setprop("/controls/switches/apoffsound", 1);
+	setprop("/controls/it2/ap_master", 0);
+	setprop("/controls/it2/at_master", 0);
+	setprop("/controls/it2/hdg", 1);
+	setprop("/controls/it2/nav", 0);
+	setprop("/controls/it2/loc", 0);
+	setprop("/controls/it2/loc1", 0);
+	setprop("/controls/it2/alt", 0);
+	setprop("/controls/it2/vs", 0);
+	setprop("/controls/it2/app", 0);
+	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/aplatmode", 0);
+	setprop("/controls/it2/aphldtrk", 0);
+	setprop("/controls/it2/apvertmode", 3);
+	setprop("/controls/it2/aphldtrk2", 0);
+	setprop("/controls/it2/apoffsound", 1);
+	setprop("/controls/it2/ias", 1);
+	setprop("/controls/it2/mach", 0);
+	setprop("/controls/it2/apthrmode", 0);
 	print("AUTOFLIGHT LOGIC ... FINE!");
 }
 
 # AP Master System
-setlistener("/controls/switches/ap_mastersw", func {
-  var apmas = getprop("/controls/switches/ap_mastersw");
+setlistener("/controls/it2/ap_mastersw", func {
+  var apmas = getprop("/controls/it2/ap_mastersw");
   if (apmas == 0) {
-	setprop("/controls/switches/ap_master", 0);
+	setprop("/controls/it2/ap_master", 0);
     ap_off();
   } else if (apmas == 1) {
-	setprop("/controls/switches/ap_master", 1);
-	setprop("/controls/switches/apoffsound", 0);
+	setprop("/controls/it2/ap_master", 1);
+	setprop("/controls/it2/apoffsound", 0);
     ap_refresh();
   }
 });
 
+# AT Master System
+setlistener("/controls/it2/at_mastersw", func {
+  var atmas = getprop("/controls/it2/at_mastersw");
+  if (atmas == 0) {
+	setprop("/controls/it2/at_master", 0);
+    at_off();
+  } else if (atmas == 1) {
+	setprop("/controls/it2/at_master", 1);
+    at_refresh();
+  }
+});
+
 # Master Lateral
-setlistener("/controls/switches/aplatset", func {
-  var latset = getprop("/controls/switches/aplatset");
+setlistener("/controls/it2/aplatset", func {
+  var latset = getprop("/controls/it2/aplatset");
   if (latset == 0) {
-	setprop("/controls/switches/hdg", 1);
-	setprop("/controls/switches/nav", 0);
-	setprop("/controls/switches/loc", 0);
-	setprop("/controls/switches/loc1", 0);
-	setprop("/controls/switches/app", 0);
-	setprop("/controls/switches/app1", 0);
-	setprop("/controls/switches/aplatmode", 0);
-	setprop("/controls/switches/aphldtrk", 0);
+	setprop("/controls/it2/hdg", 1);
+	setprop("/controls/it2/nav", 0);
+	setprop("/controls/it2/loc", 0);
+	setprop("/controls/it2/loc1", 0);
+	setprop("/controls/it2/app", 0);
+	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/aplatmode", 0);
+	setprop("/controls/it2/aphldtrk", 0);
     hdg_master();
   } else if (latset == 1) {
-	setprop("/controls/switches/hdg", 0);
-	setprop("/controls/switches/nav", 1);
-	setprop("/controls/switches/loc", 0);
-	setprop("/controls/switches/loc1", 0);
-	setprop("/controls/switches/app", 0);
-	setprop("/controls/switches/app1", 0);
-	setprop("/controls/switches/aplatmode", 1);
-	setprop("/controls/switches/aphldtrk", 1);
+	setprop("/controls/it2/hdg", 0);
+	setprop("/controls/it2/nav", 1);
+	setprop("/controls/it2/loc", 0);
+	setprop("/controls/it2/loc1", 0);
+	setprop("/controls/it2/app", 0);
+	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/aplatmode", 1);
+	setprop("/controls/it2/aphldtrk", 1);
     nav_master();
   } else if (latset == 2) {
 	setprop("/instrumentation/nav/signal-quality-norm", 0);
-	setprop("/controls/switches/hdg", 0);
-	setprop("/controls/switches/nav", 0);
-	setprop("/controls/switches/loc", 1);
-	setprop("/controls/switches/loc1", 1);
-	setprop("/controls/switches/apilsmode", 0);
+	setprop("/controls/it2/hdg", 0);
+	setprop("/controls/it2/nav", 0);
+	setprop("/controls/it2/loc", 1);
+	setprop("/controls/it2/loc1", 1);
+	setprop("/controls/it2/apilsmode", 0);
   }
 });
 
 # Master Vertical
-setlistener("/controls/switches/apvertset", func {
-  var vertset = getprop("/controls/switches/apvertset");
+setlistener("/controls/it2/apvertset", func {
+  var vertset = getprop("/controls/it2/apvertset");
   if (vertset == 0) {
-	setprop("/controls/switches/alt", 1);
-	setprop("/controls/switches/vs", 0);
-	setprop("/controls/switches/app", 0);
-	setprop("/controls/switches/app1", 0);
-	setprop("/controls/switches/altc", 0);
-	setprop("/controls/switches/flch", 0);
-	setprop("/controls/switches/apvertmode", 0);
-	setprop("/controls/switches/aphldtrk2", 0);
-	setprop("/controls/switches/apilsmode", 0);
+	setprop("/controls/it2/alt", 1);
+	setprop("/controls/it2/vs", 0);
+	setprop("/controls/it2/app", 0);
+	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/altc", 0);
+	setprop("/controls/it2/flch", 0);
+	setprop("/controls/it2/apvertmode", 0);
+	setprop("/controls/it2/aphldtrk2", 0);
+	setprop("/controls/it2/apilsmode", 0);
     alt_master();
   } else if (vertset == 1) {
-	setprop("/controls/switches/alt", 0);
-	setprop("/controls/switches/vs", 1);
-	setprop("/controls/switches/app", 0);
-	setprop("/controls/switches/app1", 0);
-	setprop("/controls/switches/altc", 0);
-	setprop("/controls/switches/flch", 0);
-	setprop("/controls/switches/apvertmode", 1);
-	setprop("/controls/switches/aphldtrk2", 0);
-	setprop("/controls/switches/apilsmode", 0);
+	setprop("/controls/it2/alt", 0);
+	setprop("/controls/it2/vs", 1);
+	setprop("/controls/it2/app", 0);
+	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/altc", 0);
+	setprop("/controls/it2/flch", 0);
+	setprop("/controls/it2/apvertmode", 1);
+	setprop("/controls/it2/aphldtrk2", 0);
+	setprop("/controls/it2/apilsmode", 0);
     vs_master();
   } else if (vertset == 2) {
 	setprop("/instrumentation/nav/signal-quality-norm", 0);
-	setprop("/controls/switches/hdg", 0);
-	setprop("/controls/switches/nav", 0);
-	setprop("/controls/switches/loc", 1);
-	setprop("/controls/switches/loc1", 1);
+	setprop("/controls/it2/hdg", 0);
+	setprop("/controls/it2/nav", 0);
+	setprop("/controls/it2/loc", 1);
+	setprop("/controls/it2/loc1", 1);
 	setprop("/instrumentation/nav/gs-rate-of-climb", 0);
-	setprop("/controls/switches/alt", 0);
-	setprop("/controls/switches/vs", 0);
-	setprop("/controls/switches/app", 1);
-	setprop("/controls/switches/app1", 1);
-	setprop("/controls/switches/altc", 0);
-	setprop("/controls/switches/flch", 0);
-	setprop("/controls/switches/apilsmode", 1);
+	setprop("/controls/it2/alt", 0);
+	setprop("/controls/it2/vs", 0);
+	setprop("/controls/it2/app", 1);
+	setprop("/controls/it2/app1", 1);
+	setprop("/controls/it2/altc", 0);
+	setprop("/controls/it2/flch", 0);
+	setprop("/controls/it2/apilsmode", 1);
   } 
 });
 
+# Master Thrust
+setlistener("/controls/it2/apthrset", func {
+  var thrset = getprop("/controls/it2/apthrset");
+  if (thrset == 0) {
+	setprop("/controls/it2/ias", 1);
+	setprop("/controls/it2/mach", 0);
+	setprop("/controls/it2/apthrmode", 0);
+    ias_master();
+  } else if (thrset == 1) {
+	setprop("/controls/it2/ias", 0);
+	setprop("/controls/it2/mach", 1);
+	setprop("/controls/it2/apthrmode", 1);
+    mach_master();
+  }
+});
+
 # Capture Logic
-setlistener("/controls/switches/apvertset", func {
-  var ap = getprop("/controls/switches/ap_master");
-  var vertm = getprop("/controls/switches/apvertset");
+setlistener("/controls/it2/apvertset", func {
+  var ap = getprop("/controls/it2/ap_master");
+  var vertm = getprop("/controls/it2/apvertset");
   if (ap) {
 	if (vertm == 1) {
       altcaptt.start();
@@ -124,7 +157,7 @@ var altcapt = func {
   var alt = getprop("/autopilot/settings/target-altitude-ft");
   var dif = calt - alt;
   if (dif < 500 and dif > -500) {
-  setprop("/controls/switches/apvertset", 0);
+  setprop("/controls/it2/apvertset", 0);
   }
 }
 

@@ -1009,7 +1009,7 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>0</value>
 				</binding>
 		</action>
@@ -1023,7 +1023,7 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>1</value>
 				</binding>
 		</action>
@@ -1217,7 +1217,7 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>1</value>
 				</binding>
 		</action>
@@ -1226,7 +1226,7 @@
 		<type>select</type>
 		<object-name>LNAVBtnLt</object-name>
 		<condition>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>1</value>
 		</condition>
 	</animation>
@@ -1245,7 +1245,7 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>2</value>
 				</binding>
 		</action>
@@ -1257,11 +1257,11 @@
 		<condition>
 			<or>
 				<equals>
-						<property>/controls/switches/loc</property>
+						<property>/controls/it2/loc</property>
 						<value>1</value>
 				</equals>
 				<equals>
-						<property>/controls/switches/loc1</property>
+						<property>/controls/it2/loc1</property>
 						<value>1</value>
 				</equals>
 			</or>
@@ -1279,7 +1279,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 			<command>property-assign</command>
-			<property>/controls/switches/ap_mastersw</property>
+			<property>/controls/it2/ap_mastersw</property>
 			<value>1</value>
 			</binding>
 		</action>
@@ -1294,7 +1294,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 			<command>property-assign</command>
-			<property>/controls/switches/ap_mastersw</property>
+			<property>/controls/it2/ap_mastersw</property>
 			<value>0</value>
 			</binding>
 		</action>
@@ -1307,7 +1307,7 @@
 		<type>select</type>
 		<object-name>APBtns</object-name>
 		<condition>
-			<not><property>controls/switches/ap_mastersw</property></not>
+			<not><property>/controls/it2/ap_mastersw</property></not>
 		</condition>
 	</animation>
 	
@@ -1317,7 +1317,7 @@
 		<object-name>ATBtns2</object-name>
 		<object-name>APBtnLts</object-name>
 		<condition>
-			<property>controls/switches/ap_mastersw</property>
+			<property>/controls/it2/ap_mastersw</property>
 		</condition>
 	</animation>
 
@@ -1439,7 +1439,7 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>0</value>
 				</binding>
 		</action>
@@ -1453,42 +1453,8 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/alt</property>
-				<value>1</value>
-				</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>controls/switches/vs</property>
+				<property>/controls/it2/apvertset</property>
 				<value>0</value>
-				</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>controls/switches/app</property>
-				<value>0</value>
-				</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>controls/switches/app1</property>
-				<value>0</value>
-				</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>controls/switches/apvertmode</property>
-				<value>0</value>
-				</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>controls/switches/apilsmode</property>
-				<value>0</value>
-				</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>controls/switches/aphldtrk2</property>
-				<value>0</value>
-				</binding>
-				<binding>
-				<command>nasal</command>
-				<script>a340.alt_master();</script>
 				</binding>
 		</action>
 	</animation>
@@ -1498,7 +1464,7 @@
 		<object-name>ALTtoggle</object-name>
 		<condition>
 			<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>0</value>
 			</equals>
 		</condition>
@@ -1647,7 +1613,7 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>1</value>
 				</binding>
 		</action>
@@ -1981,7 +1947,7 @@
 			</binding>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>1</value>
 				</binding>
 		</action>
@@ -1997,7 +1963,7 @@
 			</binding>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>1</value>
 				</binding>
 		</action>
@@ -2037,7 +2003,7 @@
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>2</value>
 				</binding>
 		</action>
@@ -2050,11 +2016,11 @@
 		<condition>
 			<or>
 				<equals>
-						<property>/controls/switches/app</property>
+						<property>/controls/it2/app</property>
 						<value>1</value>
 				</equals>
 				<equals>
-						<property>/controls/switches/app1</property>
+						<property>/controls/it2/app1</property>
 						<value>1</value>
 				</equals>
 			</or>

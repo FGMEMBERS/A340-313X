@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- MD-88/MD-90 Autopilot Configuration Dialog -->
+<!-- A340 Autopilot Configuration Dialog -->
 
 
 <PropertyList>
@@ -78,7 +78,7 @@
 			<live type="bool">true</live>
 			<binding>
 			<command>property-toggle</command>
-			<property>/controls/switches/ap_mastersw</property>
+			<property>/controls/it2/ap_mastersw</property>
 			<value>0</value>
 			<value>1</value>
 			</binding>
@@ -87,7 +87,7 @@
 				<label>[AP]</label>
 				<visible>
 					<equals>
-						<property>controls/switches/ap_mastersw</property>
+						<property>/controls/it2/ap_mastersw</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -149,7 +149,7 @@
 				<label>[HDG]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>0</value>
 					</equals>
 				</visible>
@@ -158,7 +158,7 @@
 				<label>[NAV]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -167,7 +167,7 @@
 				<label>[LOC ARM]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/loc1</property>
+						<property>/controls/it2/loc1</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -176,7 +176,7 @@
 				<label>[LOC]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>2</value>
 					</equals>
 				</visible>
@@ -189,7 +189,7 @@
 				<label>[ALT]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>0</value>
 					</equals>
 				</visible>
@@ -198,7 +198,7 @@
 				<label>[VS]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -207,7 +207,7 @@
 				<label>[G/S ARM]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/app1</property>
+						<property>/controls/it2/app1</property>
 						<value>1</value>
 					</equals>
 				</visible>
@@ -216,7 +216,7 @@
 				<label>[G/S]</label>
 				<visible>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>2</value>
 					</equals>
 				</visible>
@@ -324,7 +324,7 @@
 				<legend>HDG</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>0</value>
 				</binding>
 			</button>
@@ -369,7 +369,7 @@
 				<legend>ALT</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>0</value>
 				</binding>
 			</button>
@@ -396,7 +396,7 @@
 				<legend>VS</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>1</value>
 				</binding>
 			</button>
@@ -437,7 +437,7 @@
 				<legend>LNAV</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>1</value>
 				</binding>
 			</button>
@@ -446,7 +446,7 @@
 				<legend>LOC</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/aplatset</property>
+				<property>/controls/it2/aplatset</property>
 				<value>2</value>
 				</binding>
 			</button>
@@ -455,7 +455,7 @@
 				<legend>APPR</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>controls/switches/apvertset</property>
+				<property>/controls/it2/apvertset</property>
 				<value>2</value>
 				</binding>
 			</button>
