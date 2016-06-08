@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT Logic by Joshua Davidson (it0uchpods/411).
-# V2.7.0
+# V2.8
 
 var ap_logic_init = func {
 	setprop("/controls/it2/ap_master", 0);
@@ -94,6 +94,8 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/apvertmode", 0);
 	setprop("/controls/it2/aphldtrk2", 0);
 	setprop("/controls/it2/apilsmode", 0);
+    var altnow = int((getprop("/instrumentation/altimeter/indicated-altitude-ft")+50)/100)*100;
+	setprop("/autopilot/settings/target-altitude-ft", altnow);
     alt_master();
   } else if (vertset == 1) {
 	setprop("/controls/it2/alt", 0);
@@ -120,7 +122,15 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/altc", 0);
 	setprop("/controls/it2/flch", 0);
 	setprop("/controls/it2/apilsmode", 1);
-  } 
+  } else if (vertset == 3) {
+	setprop("/controls/it2/alt", 0);
+	setprop("/controls/it2/vs", 0);
+	setprop("/controls/it2/altc", 1);
+	setprop("/controls/it2/flch", 0);
+	setprop("/controls/it2/apvertmode", 0);
+	setprop("/controls/it2/aphldtrk2", 0);
+    altcap_master();
+  }
 });
 
 # Master Thrust
@@ -140,16 +150,13 @@ setlistener("/controls/it2/apthrset", func {
 });
 
 # Capture Logic
-setlistener("/controls/it2/apvertset", func {
-  var ap = getprop("/controls/it2/ap_master");
-  var vertm = getprop("/controls/it2/apvertset");
-  if (ap) {
+setlistener("/controls/it2/apvertmode", func {
+  var vertm = getprop("/controls/it2/apvertmode");
 	if (vertm == 1) {
       altcaptt.start();
     } else {
 	  altcaptt.stop();
     }
-  }
 });
 
 var altcapt = func {
@@ -157,7 +164,7 @@ var altcapt = func {
   var alt = getprop("/autopilot/settings/target-altitude-ft");
   var dif = calt - alt;
   if (dif < 500 and dif > -500) {
-  setprop("/controls/it2/apvertset", 0);
+  setprop("/controls/it2/apvertset", 3);
   }
 }
 

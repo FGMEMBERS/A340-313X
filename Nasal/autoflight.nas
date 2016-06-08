@@ -1,12 +1,12 @@
 # IT AUTOFLIGHT Subsystem by Joshua Davidson (it0uchpods/411).
-# V2.7.0
+# V2.8
 
 var ap_init = func {
 	ap_logic_init();
 	setprop("/controls/it2/aplatset", 0);
 	setprop("/controls/it2/apvertset", 0);
 	setprop("/controls/it2/apthrset", 0);
-	setprop("/autopilot/settings/target-speed-kt", 100);
+	setprop("/autopilot/settings/target-speed-kt", 200);
 	setprop("/autopilot/settings/target-mach", 0.68);
 	setprop("/autopilot/settings/heading-bug-deg", 360);
 	setprop("/autopilot/settings/target-altitude-ft", 10000);
@@ -112,6 +112,16 @@ var apparmcheck = func {
 	}
 }
 
+var altcap_master = func {
+	var ap = getprop("/controls/it2/ap_master");
+	var altc = getprop("/controls/it2/altc");
+	if (altc & ap) {
+		setprop("/autopilot/locks/altitude", "altitude-hold");
+	} else {
+		return 0;
+	}
+}
+
 var ias_master = func {
 	var ap = getprop("/controls/it2/at_master");
 	var ias = getprop("/controls/it2/ias");
@@ -137,6 +147,7 @@ var ap_refresh = func {
 	nav_master();
 	alt_master();
 	vs_master();
+	altcap_master();
 }
 
 var at_refresh = func {
@@ -153,6 +164,7 @@ var ap_off = func {
 	nav_master();
 	alt_master();
 	vs_master();
+	altcap_master();
 }
 
 var at_off = func {

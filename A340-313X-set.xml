@@ -510,7 +510,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 
             <!--  fast running autopilot rules (running at FDM frequency / 120Hz) -->
             <autopilot>
-                <path>Aircraft/A340-313X/Systems/A340-autopilot.xml</path>
+                <path>Aircraft/A340-313X/Systems/it-autoflight.xml</path>
             </autopilot>
             <autopilot>
                 <path>Aircraft/A340-313X/Systems/A340-autothrottle.xml</path>
