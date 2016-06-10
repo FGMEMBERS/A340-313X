@@ -1974,9 +1974,9 @@
 		<object-name>ElevatorR</object-name>
 		<property>controls/flight/elevator-trim</property>
 		<interpolation>
-			<entry><ind>-1</ind><dep>15.35</dep></entry>
+			<entry><ind>-1</ind><dep>-15.35</dep></entry>
 			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>1</ind><dep>-2.35</dep></entry>
+			<entry><ind>1</ind><dep>2.35</dep></entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -2368,8 +2368,10 @@
         <property>gear/gear[3]/rollspeed-ms</property>
         <factor>10</factor>
 	<condition>
-		<property>/gear/gear[3]/wow</property>
-		<value>true</value>
+		<and>
+		<property>/gear/gear[1]/wow</property>
+		<property>/gear/gear[2]/wow</property>
+		</and>
 	</condition>
         <axis>
             <x>0</x>
