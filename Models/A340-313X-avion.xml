@@ -2365,7 +2365,7 @@
 	
 	<object-name>_LightGr.008</object-name>
 	<object-name>_LightGr.015</object-name>
-        <property>gear/gear[3]/rollspeed-ms</property>
+        <property>gear/gear[1]/rollspeed-ms</property>
         <factor>10</factor>
 	<condition>
 		<and>

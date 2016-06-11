@@ -1010,7 +1010,7 @@
 				<binding>
 				<command>property-assign</command>
 				<property>/controls/it2/aplatset</property>
-				<value>0</value>
+				<value>1</value>
 				</binding>
 		</action>
 	</animation>
@@ -1024,7 +1024,7 @@
 				<binding>
 				<command>property-assign</command>
 				<property>/controls/it2/aplatset</property>
-				<value>1</value>
+				<value>0</value>
 				</binding>
 		</action>
 	</animation>
@@ -1203,35 +1203,6 @@
 			</binding>
 		</action>
 	</animation>
-
-
-
-<!-- LNAV -->
-
-
-	<animation>
-		<type>pick</type>
-		<object-name>LNAVBtn</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-				<binding>
-				<command>property-assign</command>
-				<property>/controls/it2/aplatset</property>
-				<value>1</value>
-				</binding>
-		</action>
-	</animation>
-	<animation>
-		<type>select</type>
-		<object-name>LNAVBtnLt</object-name>
-		<condition>
-						<property>/controls/it2/aplatmode</property>
-						<value>1</value>
-		</condition>
-	</animation>
-
-
 
 <!-- LOC-->
 
@@ -1936,7 +1907,15 @@
 		<type>pick</type>
 		<object-name>VSKnb</object-name>
 		<action>
-			<!--button>0</button-->
+			<button>0</button>
+			<repeatable type="bool">true</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/apvertset</property>
+				<value>1</value>
+			</binding>
+		</action>
+		<action>
 			<button>3</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
@@ -1945,14 +1924,8 @@
 				<step type="double">100</step>
 				<max>9999</max>
 			</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>/controls/it2/apvertset</property>
-				<value>1</value>
-				</binding>
 		</action>
 		<action>
-			<!--button>1</button-->
 			<button>4</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
@@ -1961,11 +1934,6 @@
 				<step type="double">-100</step>
 				<min>-9999</min>
 			</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>/controls/it2/apvertset</property>
-				<value>1</value>
-				</binding>
 		</action>
 	</animation>
 	<animation>
