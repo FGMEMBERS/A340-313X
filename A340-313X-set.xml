@@ -615,17 +615,20 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		<dialog-name>map</dialog-name>
 		</binding>
 	</key>
-
-	 <key n="61">
-                <name>=</name>
-                <desc>toggle auto spoilers</desc>
-                <binding>
-                    <command>property-toggle</command>
-					<property>controls/flight/speedbreak-arm</property>
-					<value>0</value>
-					<value>1</value>
-                </binding>
-            </key>
+	
+ <key n="2">
+  <name>Ctrl-B</name>
+  <desc>Toggle speedbrake</desc>
+  <binding>
+   <command>property-toggle</command>
+   <property>/controls/flight/speedbrake</property>
+  </binding>
+  <binding>
+   <command>property-assign</command>
+   <property>/controls/flight/speedbrake-arm</property>
+   <value>0</value>
+  </binding>
+ </key>
 
 	     <key n="127">
                 <name>Delete</name>

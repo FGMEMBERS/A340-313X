@@ -24,7 +24,7 @@
                     <property>gear/gear[4]/wow</property>
                     <greater-than>
                         <property>velocities/groundspeed-kt</property>
-                        <value>40</value>
+                        <value>60</value>
                     </greater-than>
                 </and>
             </or>
@@ -32,7 +32,7 @@
         <R>
             <not><property>autopilot/autobrake/throttles-at-idle</property></not>
         </R>
-        <output>controls/flight/speedbrake</output>
+        <output>controls/flight/speedbrake</output>	
     </flipflop>
 
 
