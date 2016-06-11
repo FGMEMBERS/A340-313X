@@ -2236,7 +2236,7 @@
         <type>spin</type>
         <object-name>_Black_</object-name>
 	<object-name>_Gainsbo.003</object-name>
-        <property>gear/gear/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[7]</property>
         <factor>10</factor>
 		<offset-deg>0</offset-deg>
         <axis>
@@ -2260,11 +2260,8 @@
 	
 	<object-name>_LightGr.017</object-name>
 	<object-name>_LightGr.020</object-name>
-        <property>gear/gear[2]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[9]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[2]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2284,11 +2281,8 @@
 	
 	<object-name>_LightGr.016</object-name>
 	<object-name>_LightGr.021</object-name>
-        <property>gear/gear[2]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[9]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[2]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2312,11 +2306,8 @@
 	
 	<object-name>_LightGr.010</object-name>
 	<object-name>_LightGr.011</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[8]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[1]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2337,11 +2328,8 @@
 	
 	<object-name>_LightGr.007</object-name>
 	<object-name>_LightGr.012</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[8]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[1]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2365,14 +2353,8 @@
 	
 	<object-name>_LightGr.008</object-name>
 	<object-name>_LightGr.015</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[10]</property>
         <factor>10</factor>
-	<condition>
-		<and>
-		<property>/gear/gear[1]/wow</property>
-		<property>/gear/gear[2]/wow</property>
-		</and>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2393,7 +2375,7 @@
 		<path>Aircraft/A340-313X/Models/Engines/a343.nacelle.xml</path>
 		<overlay>
 			<params>
-				<reverser>surface-positions/reverser-norm</reverser>
+				<reverser>sim/multiplay/generic/float[6]</reverser>
 			</params>
 		</overlay>
 		<offsets>
@@ -2427,7 +2409,7 @@
 		<path>Aircraft/A340-313X/Models/Engines/a343.nacelle.xml</path>
 		<overlay>
 			<params>
-				<reverser>surface-positions/reverser-norm</reverser>
+				<reverser>sim/multiplay/generic/float[6]</reverser>
 			</params>
 		</overlay>
 		<offsets>
@@ -2461,7 +2443,7 @@
 		<path>Aircraft/A340-313X/Models/Engines/a343.nacelle.xml</path>
 		<overlay>
 			<params>
-				<reverser>surface-positions/reverser-norm</reverser>
+				<reverser>sim/multiplay/generic/float[6]</reverser>
 			</params>
 		</overlay>
 		<offsets>
@@ -2496,7 +2478,7 @@
 		<path>Aircraft/A340-313X/Models/Engines/a343.nacelle.xml</path>
 		<overlay>
 			<params>
-				<reverser>surface-positions/reverser-norm</reverser>
+				<reverser>sim/multiplay/generic/float[6]</reverser>
 			</params>
 		</overlay>
 		<offsets>

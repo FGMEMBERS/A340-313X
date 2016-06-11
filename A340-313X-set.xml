@@ -458,6 +458,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <float n="4" alias="/gear/gear[4]/compression-m"/>
                 <float n="5" alias="/surface-positions/speedbrake-norm"/>
                 <float n="6" alias="/surface-positions/reverser-norm"/>
+				<float n="7" alias="/gear/gear[0]/rollspeed-ms"/>
+				<float n="8" alias="/gear/gear[1]/rollspeed-ms"/>
+				<float n="9" alias="/gear/gear[2]/rollspeed-ms"/>
+				<float n="10" alias="/gear/gear[3]/rollspeed-ms"/>
                 <string  alias="/sim/multiplay/callsign"/>
             </generic>
         </multiplay>
