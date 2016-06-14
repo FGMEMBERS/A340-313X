@@ -21,7 +21,7 @@
         <signals include="/Aircraft/Generic/flightrecorder/components/controls.xml" />
         <signals include="/Aircraft/Generic/flightrecorder/components/surfaces.xml"/>
         <signals include="/Aircraft/Generic/flightrecorder/components/engine-jet.xml">
-            <count type="int">2</count>
+            <count type="int">4</count>
         </signals>
         <signals include="/Aircraft/Generic/flightrecorder/components/gear-retractable.xml">
             <count type="int">4</count>
@@ -109,11 +109,11 @@
             </signal>
             <signal>
                 <type>float</type>
-                <property type="string">/gear/gear[3]/compression-m</property> <!-- "virtual gear", contact point for left axle -->
+                <property type="string">/gear/gear[3]/compression-m</property>
             </signal>
             <signal>
                 <type>float</type>
-                <property type="string">/gear/gear[4]/compression-m</property> <!-- "virtual gear", contact point for right axle -->
+                <property type="string">/gear/gear[4]/compression-m</property>
             </signal>
 
             <signal>

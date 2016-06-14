@@ -810,65 +810,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <inst-vertical-speed-indicator>
             <serviceable type="bool">true</serviceable>
         </inst-vertical-speed-indicator>
-        <radar>
-            <mode-control type="int" archive="y">1</mode-control>
-            <display-mode type="string">plan</display-mode>
-            <display-controls>
-                <WX type="bool" archive="y">false</WX>
-                <pos type="bool" archive="y">false</pos>
-                <data type="bool" archive="y">false</data>
-                <symbol type="bool" archive="y">true</symbol>
-                <rotate type="bool" archive="y">true</rotate>
-                <tcas type="bool" archive="n">true</tcas>
-                <abs-altitude type="bool" archive="y">false</abs-altitude>
-            </display-controls>
-            <serviceable type="bool">true</serviceable>
-            <range n="0" alias="/instrumentation/efis/inputs/range"/>
-            <reference-range-nm type="double" archive="y">640</reference-range-nm>
-            <mode type="string" archive="y">WX</mode>
-            <font>
-                <color>
-                    <red type="float">0.7</red>
-                    <green type="float">0.7</green>
-                    <blue type="float">0.7</blue>
-                    <alpha type="float">1</alpha>
-                </color>
-                <tcas>
-                    <color n="0"> <!-- distant targets -->
-                        <red type="float">0</red>
-                        <green type="float">1</green>
-                        <blue type="float">1</blue>
-                    </color>
-                    <color n="1"> <!-- proximity targets -->
-                        <red type="float">0</red>
-                        <green type="float">1</green>
-                        <blue type="float">1</blue>
-                    </color>
-                    <color n="2"> <!-- TA threat targets -->
-                        <red type="float">1</red>
-                        <green type="float">0.5</green>
-                        <blue type="float">0</blue>
-                    </color>
-                    <color n="3"> <!-- RA threat targets -->
-                        <red type="float">1</red>
-                        <green type="float">0</green>
-                        <blue type="float">0</blue>
-                    </color>
-                </tcas>
-                <name type="string">helvetica_bold.txf</name>
-                <size type="float">12</size>
-                <line-spacing type="float">0.01</line-spacing>
-            </font>
-            <lightning type="bool">true</lightning>
-            <radar-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-            <echo-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/wxecho.png</echo-texture-path>
-            <minimized type="bool">false</minimized>
-            <heading-marker type="bool">true</heading-marker>
-            <limit-deg type="int">360</limit-deg>
-        </radar>
-        <groundradar>
-            <range type="double">1.2</range>
-        </groundradar>
         <mk-viii>  <!-- mk-viii configuration, see: http://wiki.flightgear.org/index.php/GPWS -->
             <serviceable>true</serviceable>     <!-- EGPWS_ENABLE -->
             <configuration-module>
@@ -1013,27 +954,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <min-runway-length-ft type="double">5000</min-runway-length-ft>
             </config>
         </gps>
-        <nd>
-            <radar-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-            <symbol-texture-path type="string">Aircraft/A340-313X/Models/Instruments/MFD/boeing-nd.png</symbol-texture-path>
-            <font>
-                <color>
-                    <red type="float">0.7</red>
-                    <green type="float">0.7</green>
-                    <blue type="float">0.7</blue>
-                    <alpha type="float">1</alpha>
-                </color>
-                <name type="string">helvetica_bold.txf</name>
-                <size type="float">12</size>
-                <line-spacing type="float">0.01</line-spacing>
-            </font>
-            <serviceable type="bool">true</serviceable>
-            <range n="0" alias="/instrumentation/efis/inputs/range"/>
-            <aircraft-heading-up type="bool">true</aircraft-heading-up>
-            <heading-up-deg type="float">0.01</heading-up-deg>
-            <x-center type="float">0.5</x-center>
-            <y-center type="float">0.5</y-center>
-        </nd>
     </instrumentation>
 
     <controls n="0">
@@ -1102,6 +1022,8 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<!--file>Aircraft/A340-313X/Nasal/terrainmap.nas</file-->
 			<!--file>Aircraft/A340-313X/Nasal/terrain-map.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
+			<file>Aircraft/A340-313X/Models/Instruments/ND/ND.nas</file>
+			<file>Aircraft/A340-313X/Nasal/efis.nas</file>
         </a340>
 		<it2>
 			<file>Aircraft/A340-313X/Nasal/autoflight.nas</file>

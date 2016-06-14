@@ -94,23 +94,6 @@ This file selects the instrumentation modules that should be available.
         <number>0</number>
     </turn-indicator>
 
-    <radar>
-        <name>radar</name>
-        <number>0</number>
-    </radar>
-
-    <navigation-display>
-        <name>nd</name>
-        <number>0</number>
-        <symbols include="nav-display.xml"/>
-    </navigation-display>
-
-    <groundradar>
-        <name>groundradar</name>
-        <airport-id-source>instrumentation/groundradar/id</airport-id-source>
-        <range-source>instrumentation/groundradar/range</range-source>
-    </groundradar>
-
     <mk-viii>
         <name>mk-viii</name>
         <number>0</number>

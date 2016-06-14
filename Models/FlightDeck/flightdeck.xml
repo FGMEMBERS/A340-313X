@@ -167,7 +167,7 @@
 	<!-- Navigational Displays -->
 	
 	<model>
-		<path>Aircraft/A340-313X/Models/Instruments/MFD/ND.xml</path>
+		<path>Aircraft/A340-313X/Models/Instruments/ND/ND_L.xml</path>
 		<offsets>
 			<x-m>-0.5837</x-m>
 			<y-m>-0.3227</y-m>
@@ -183,7 +183,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A340-313X/Models/Instruments/MFD/ND.xml</path>
+		<path>Aircraft/A340-313X/Models/Instruments/ND/ND_R.xml</path>
 		<offsets>
 			<x-m>-0.5837</x-m>
 			<y-m>0.3161</y-m>

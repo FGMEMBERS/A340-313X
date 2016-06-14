@@ -429,13 +429,13 @@
   <animation>
         <type>rotate</type>
         <object-name>MFDSwtchL1</object-name>
-	<object-name>ND.center</object-name>
-        <property>instrumentation/efis/mfd/mode-num</property>
+        <property>instrumentation/efis/mfd/pnl_mode-num</property>
         <interpolation>
-            <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>1</ind><dep>30</dep></entry>
-            <entry><ind>2</ind><dep>60</dep></entry>
-            <entry><ind>3</ind><dep>90</dep></entry>
+            <entry><ind>0</ind><dep>-30</dep></entry>
+            <entry><ind>1</ind><dep>  0</dep></entry>
+            <entry><ind>2</ind><dep> 30</dep></entry>
+            <entry><ind>3</ind><dep> 60</dep></entry>
+            <entry><ind>4</ind><dep> 90</dep></entry>
         </interpolation>
         <center>
             <x-m>0.0</x-m>
@@ -452,13 +452,13 @@
  <animation>
         <type>pick</type>
         <object-name>MFDSwtchL1</object-name>
-	<object-name>ND.center</object-name>
         <action>
+            <button>0</button>
             <button>3</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("display",1);</script>
+                <script>a340.mode_inc();</script>
             </binding>
         </action>
     </animation>
@@ -466,35 +466,21 @@
     <animation>
         <type>pick</type>
        <object-name>MFDSwtchL1</object-name>
-	<object-name>ND.center</object-name>
         <action>
+            <button>1</button>
             <button>4</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("display",-1);</script>
+                <script>a340.mode_dec();</script>
             </binding>
         </action>
     </animation>
-
-   <animation>
-        <type>pick</type>
-        <object-name>ND.center</object-name>
-        <action>
-            <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>a340.Efis.ctl_func("center",0);</script>
-            </binding>
-        </action>
-    </animation>
-
 
  <animation>
         <type>rotate</type>
         <object-name>MFDSwtchL2</object-name>
-	<property>instrumentation/efis/inputs/range</property>
+	<property>instrumentation/efis/inputs/range-nm</property>
         <interpolation>
             <entry><ind>10</ind><dep>0</dep></entry>
             <entry><ind>20</ind><dep>30</dep></entry>
@@ -520,11 +506,12 @@
         <type>pick</type>
         <object-name>MFDSwtchL2</object-name>
         <action>
+            <button>0</button>
             <button>3</button> <!--  scroll up -->
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("range",1);</script>
+                <script>a340.ctl_func("range",1);</script>
             </binding>
         </action>
     </animation>
@@ -533,11 +520,12 @@
         <type>pick</type>
         <object-name>MFDSwtchL2</object-name>
         <action>
+            <button>1</button>
             <button>4</button> <!--  scroll down -->
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("range",-1);</script>
+                <script>a340.ctl_func("range",-1);</script>
             </binding>
         </action>
     </animation>
@@ -548,13 +536,13 @@
 <animation>
         <type>rotate</type>
         <object-name>MFDSwtchR1</object-name>
-	<object-name>ND.center.001</object-name>
-        <property>instrumentation/efis/mfd/mode-num</property>
+        <property>instrumentation/efis/mfd/pnl_mode-num</property>
         <interpolation>
-            <entry><ind>0</ind><dep>0</dep></entry>
-            <entry><ind>1</ind><dep>30</dep></entry>
-            <entry><ind>2</ind><dep>60</dep></entry>
-            <entry><ind>3</ind><dep>90</dep></entry>
+            <entry><ind>0</ind><dep>-30</dep></entry>
+            <entry><ind>1</ind><dep>  0</dep></entry>
+            <entry><ind>2</ind><dep> 30</dep></entry>
+            <entry><ind>3</ind><dep> 60</dep></entry>
+            <entry><ind>4</ind><dep> 90</dep></entry>
         </interpolation>
         <center>
             <x-m>0.0</x-m>
@@ -571,13 +559,13 @@
  <animation>
         <type>pick</type>
         <object-name>MFDSwtchR1</object-name>
-	<object-name>ND.center.001</object-name>
         <action>
+            <button>0</button>
             <button>3</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("display",1);</script>
+                <script>a340.mode_inc();</script>
             </binding>
         </action>
     </animation>
@@ -585,26 +573,13 @@
     <animation>
         <type>pick</type>
        <object-name>MFDSwtchR1</object-name>
-	<object-name>ND.center.001</object-name>
         <action>
+            <button>1</button>
             <button>4</button>
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("display",-1);</script>
-            </binding>
-        </action>
-    </animation>
-
-   <animation>
-        <type>pick</type>
-        <object-name>ND.center.001</object-name>
-        <action>
-            <button>0</button>
-            <repeatable>false</repeatable>
-            <binding>
-                <command>nasal</command>
-                <script>a340.Efis.ctl_func("center",0);</script>
+                <script>a340.mode_dec();</script>
             </binding>
         </action>
     </animation>
@@ -613,7 +588,7 @@
  <animation>
         <type>rotate</type>
         <object-name>MFDSwtchR2</object-name>
-	<property>instrumentation/efis/inputs/range</property>
+	<property>instrumentation/efis/inputs/range-nm</property>
         <interpolation>
             <entry><ind>10</ind><dep>0</dep></entry>
             <entry><ind>20</ind><dep>30</dep></entry>
@@ -639,11 +614,12 @@
         <type>pick</type>
         <object-name>MFDSwtchR2</object-name>
         <action>
+            <button>0</button>
             <button>3</button> <!--  scroll up -->
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("range",1);</script>
+                <script>a340.ctl_func("range",1);</script>
             </binding>
         </action>
     </animation>
@@ -652,11 +628,12 @@
         <type>pick</type>
         <object-name>MFDSwtchR2</object-name>
         <action>
+            <button>1</button>
             <button>4</button> <!--  scroll down -->
             <repeatable>false</repeatable>
             <binding>
                 <command>nasal</command>
-                <script>a340.Efis.ctl_func("range",-1);</script>
+                <script>a340.ctl_func("range",-1);</script>
             </binding>
         </action>
     </animation>
@@ -678,7 +655,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<!--property>instrumentation/mfd/nav-display[0]</property-->
-				<property>instrumentation/efis/inputs/lh-vor-adf</property>
+				<property>instrumentation/efis/input/lh-vor-adf</property>
 				<value type="int">2</value>
 				<value type="int">0</value>
 				<value type="int">1</value>
@@ -690,7 +667,7 @@
 		<type>rotate</type>
 		<object-name>NAV1SwtchL</object-name>
 		<!--property>instrumentation/mfd/nav-display[0]</property-->
-		<property>instrumentation/efis/inputs/lh-vor-adf</property>
+		<property>instrumentation/efis/input/lh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -713,7 +690,7 @@
 		<type>rotate</type>
 		<object-name>NAV1SwtchR</object-name>
 		<!--property>instrumentation/mfd/nav-display[0]</property-->
-		<property>instrumentation/efis/inputs/lh-vor-adf</property>
+		<property>instrumentation/efis/input/lh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -742,7 +719,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<!--property>instrumentation/mfd/nav-display[1]</property-->
-				<property>instrumentation/efis/inputs/rh-vor-adf</property>
+				<property>instrumentation/efis/input/rh-vor-adf</property>
 				<value type="int">2</value>
 				<value type="int">0</value>
 				<value type="int">1</value>
@@ -754,7 +731,7 @@
 		<type>rotate</type>
 		<object-name>NAV2SwtchL</object-name>
 		<!--property>instrumentation/mfd/nav-display[1]</property-->
-		<property>instrumentation/efis/inputs/rh-vor-adf</property>
+		<property>instrumentation/efis/input/rh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -776,7 +753,7 @@
 		<type>rotate</type>
 		<object-name>NAV2SwtchR</object-name>
 		<!--property>instrumentation/mfd/nav-display[1]</property-->
-		<property>instrumentation/efis/inputs/rh-vor-adf</property>
+		<property>instrumentation/efis/input/rh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -2035,25 +2012,31 @@
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
-            <binding>
-                <command>property-toggle</command>
-                <property>instrumentation/efis/inputs/sta</property>
-            </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(3);</script>
-            </binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/efis/inputs/VORD</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/efis/inputs/DME</property>
+			</binding>
         </action>
     </animation>
 	<animation>
 		<name>Sta button light</name>
 		<type>select</type>
 		<object-name>StaBtnLts</object-name>
-		<condition>
+		<condition> 
 			<and>
-			<property>instrumentation/efis/inputs/sta</property>
-			<property>/systems/electrical/outputs/avionics</property>
-		</and>	
+				<greater-than>
+					<property>/instrumentation/efis/inputs/VORD</property>
+					<value>0</value>
+				</greater-than>
+				<greater-than>
+					<property>/instrumentation/efis/inputs/DME</property>
+					<value>0</value>
+				</greater-than>
+			</and>	
 		</condition>
 	</animation>
 
@@ -2117,7 +2100,7 @@
 	</animation>
 
 <!-- Data left -->
-      <animation>
+      <!--animation>
         <type>pick</type>
         <object-name>RDR.data</object-name>
         <action>
@@ -2132,14 +2115,14 @@
                 <script>controls.click(3);</script>
             </binding>
         </action>
-    </animation>
+    </animation-->
 	<animation>
 		<name>Data button light</name>
 		<type>select</type>
 		<object-name>DataBtnLts</object-name>
 		<condition>
 			<and>
-			<property>instrumentation/radar/display-controls/data</property>
+			<property>/controls/unimplemented_controls</property>
 			<property>/systems/electrical/outputs/avionics</property>
 		</and>	
 		</condition>
@@ -2150,7 +2133,7 @@
 <!-- Efis controls CoPilot-->
 
 	<!-- Apt right -->
-	<animation>
+      <animation>
         <type>pick</type>
         <object-name>RDR.arpt.001</object-name>
         <action>
@@ -2180,40 +2163,43 @@
 
 	
 
-	<!-- Sta right -->
-	<animation>
+<!-- sta right -->
+      <animation>
         <type>pick</type>
         <object-name>RDR.sta.001</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>
-            <binding>
-                <command>property-toggle</command>
-                <property>instrumentation/efis/inputs/sta</property>
-            </binding>
-            <binding>
-                <command>nasal</command>
-                <script>controls.click(3);</script>
-            </binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/efis/inputs/VORD</property>
+			</binding>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/efis/inputs/DME</property>
+			</binding>
         </action>
     </animation>
 	<animation>
 		<name>Sta button light</name>
 		<type>select</type>
 		<object-name>StaBtnLts.001</object-name>
-		<condition>
+		<condition> 
 			<and>
-				<property>instrumentation/efis/inputs/sta</property>
-				<property>/systems/electrical/outputs/avionics</property>
+				<greater-than>
+					<property>/instrumentation/efis/inputs/VORD</property>
+					<value>0</value>
+				</greater-than>
+				<greater-than>
+					<property>/instrumentation/efis/inputs/DME</property>
+					<value>0</value>
+				</greater-than>
 			</and>	
 		</condition>
 	</animation>
 
-
-
-
-	<!-- wpt right -->
-	<animation>
+    <!-- wpt right -->
+      <animation>
         <type>pick</type>
         <object-name>RDR.wpt.001</object-name>
         <action>
@@ -2235,17 +2221,15 @@
 		<object-name>WptBtnLts.001</object-name>
 		<condition>
 			<and>
-				<property>instrumentation/efis/inputs/wpt</property>
-				<property>/systems/electrical/outputs/avionics</property>
-			</and>	
+			<property>instrumentation/efis/inputs/wpt</property>
+			<property>/systems/electrical/outputs/avionics</property>
+		</and>	
 		</condition>
 	</animation>
 
 
-
-
-	<!-- wxr right -->
-	<animation>
+<!-- wxr right -->
+      <animation>
         <type>pick</type>
         <object-name>RDR.wxr.001</object-name>
         <action>
@@ -2267,15 +2251,15 @@
 		<object-name>WxrBtnLts.001</object-name>
 		<condition>
 			<and>
-				<property>instrumentation/efis/inputs/wxr</property>
-				<property>/systems/electrical/outputs/avionics</property>
-			</and>	
+			<property>instrumentation/efis/inputs/wxr</property>
+			<property>/systems/electrical/outputs/avionics</property>
+		</and>	
 		</condition>
 	</animation>
 
 
 	<!-- Data right -->
-	<animation>
+	<!--animation>
         <type>pick</type>
         <object-name>RDR.data.001</object-name>
         <action>
@@ -2290,14 +2274,14 @@
                 <script>controls.click(3);</script>
             </binding>
         </action>
-    </animation>
+    </animation-->
 	<animation>
 		<name>Data button light</name>
 		<type>select</type>
 		<object-name>DataBtnLts.001</object-name>
 		<condition>
 			<and>
-				<property>instrumentation/radar/display-controls/data</property>
+				<property>/controls/unimplemented_controls</property>
 				<property>/systems/electrical/outputs/avionics</property>
 			</and>	
 		</condition>
