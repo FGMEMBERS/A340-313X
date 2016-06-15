@@ -781,7 +781,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>instrumentation/afds/inputs/ias-mach-selected</property>
+				<property>/controls/it2/apthrmode</property>
 			</binding>
 		</action>
 	</animation>
@@ -795,17 +795,17 @@
 		<object-name>IAS1</object-name>
 		<object-name>Spd</object-name>
 		<condition>
-			<not>
-				<property>instrumentation/afds/inputs/ias-mach-selected</property>
-				<value>0</value>
-			</not>
+			<equals>
+			<property>/controls/it2/apthrmode</property>
+			<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<name>IAS setting 100's</name>
 		<type>textranslate</type>
 		<object-name>IAS100</object-name>
-		<property>autopilot/settings/target-speed-kt</property>
+		<property>/autopilot/settings/target-speed-kt</property>
 		<factor>0.001</factor>
 		<step>100</step>
 		<axis>
@@ -817,7 +817,7 @@
 		<name>IAS setting 10's</name>
 		<type>textranslate</type>
 		<object-name>IAS10</object-name>
-		<property>autopilot/settings/target-speed-kt</property>
+		<property>/autopilot/settings/target-speed-kt</property>
 		<factor>0.01</factor>
 		<step>10</step>
 		<axis>
@@ -829,7 +829,7 @@
 		<name>IAS setting 1's</name>
 		<type>textranslate</type>
 		<object-name>IAS1</object-name>
-		<property>autopilot/settings/target-speed-kt</property>
+		<property>/autopilot/settings/target-speed-kt</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -846,14 +846,17 @@
 		<object-name>Mach.01</object-name>
 		<object-name>Mach</object-name>
 		<condition>
-			<property>instrumentation/afds/inputs/ias-mach-selected</property>
+			<equals>
+			<property>/controls/it2/apthrmode</property>
+			<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 	<animation>
 		<name>Mach setting 1's</name>
 		<type>textranslate</type>
 		<object-name>Mach1</object-name>
-		<property>autopilot/settings/target-speed-mach</property>
+		<property>/autopilot/settings/target-mach</property>
 		<factor>0.1</factor>
 		<step>1</step>
 		<axis>
@@ -865,7 +868,7 @@
 		<name>Mach setting .1's</name>
 		<type>textranslate</type>
 		<object-name>Mach.1</object-name>
-		<property>autopilot/settings/target-speed-mach</property>
+		<property>/autopilot/settings/target-mach</property>
 		<step>0.1</step>
 		<axis>
 			<x>0</x>
@@ -876,7 +879,7 @@
 		<name>Mach setting .01's</name>
 		<type>textranslate</type>
 		<object-name>Mach.01</object-name>
-		<property>autopilot/settings/target-speed-mach</property>
+		<property>/autopilot/settings/target-mach</property>
 		<factor>10</factor>
 		<step>0.01</step>
 		<axis>
@@ -890,53 +893,63 @@
 		<type>pick</type>
 		<object-name>SpdKnb</object-name>
 		<action>
-			<button>0</button>
 			<button>3</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
 				<condition>
-					<not>
-						<property>instrumentation/afds/inputs/ias-mach-selected</property>
-					</not>
+					<equals>
+					<property>/controls/it2/apthrmode</property>
+					<value>0</value>
+					</equals>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/target-speed-kt</property>
+				<property>/autopilot/settings/target-speed-kt</property>
 				<step type="double">1</step>
-				<max>999</max>
+				<min>0</min>
+				<max>380</max>
 			</binding>
 			<binding>
 				<condition>
-					<property>instrumentation/afds/inputs/ias-mach-selected</property>
+					<equals>
+					<property>/controls/it2/apthrmode</property>
+					<value>1</value>
+					</equals>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/target-speed-mach</property>
+				<property>/autopilot/settings/target-mach</property>
 				<step type="double">0.01</step>
-				<max>9.99</max>
+				<min>0</min>
+				<max>0.99</max>
 			</binding>
 		</action>
 		<action>
-			<button>1</button>
 			<button>4</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
 				<condition>
-					<not>
-						<property>instrumentation/afds/inputs/ias-mach-selected</property>
-					</not>
+					<equals>
+					<property>/controls/it2/apthrmode</property>
+					<value>0</value>
+					</equals>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/target-speed-kt</property>
+				<property>/autopilot/settings/target-speed-kt</property>
 				<step type="double">-1</step>
 				<min>0</min>
+				<max>380</max>
 			</binding>
 			<binding>
-				<condition>	
-					<property>instrumentation/afds/inputs/ias-mach-selected</property>
+				<condition>
+					<equals>
+					<property>/controls/it2/apthrmode</property>
+					<value>1</value>
+					</equals>
 				</condition>
 				<command>property-adjust</command>
-				<property>autopilot/settings/target-speed-mach</property>
+				<property>/autopilot/settings/target-mach</property>
 				<step type="double">-0.01</step>
 				<min>0</min>
+				<max>0.99</max>
 			</binding>
 		</action>
 	</animation>
@@ -944,7 +957,7 @@
 		<name>Speed knob kt rotate</name>
 		<type>rotate</type>
 		<object-name>SpdKnb</object-name>
-		<property>autopilot/settings/target-speed-kt</property>
+		<property>/autopilot/settings/target-speed-kt</property>
 		<factor>2</factor>
 		<axis>
 			<x>-1</x>
@@ -961,7 +974,7 @@
 		<name>Speed knob Mach rotate</name>
 		<type>rotate</type>
 		<object-name>SpdKnb</object-name>
-		<property>autopilot/settings/target-speed-mach</property>
+		<property>/autopilot/settings/target-mach</property>
 		<factor>2000</factor>
 		<axis>
 			<x>1</x>
@@ -1205,8 +1218,8 @@
 		<condition>
 			<or>
 				<equals>
-						<property>/controls/it2/loc</property>
-						<value>1</value>
+						<property>/controls/it2/aplatmode</property>
+						<value>2</value>
 				</equals>
 				<equals>
 						<property>/controls/it2/loc1</property>
@@ -1220,52 +1233,28 @@
 <!-- Main autopilot controls -->
 	
 	<animation>
+		<name>Autopilot engage button pick</name>
 		<type>pick</type>
 		<object-name>APBtns</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property>/controls/it2/ap_mastersw</property>
-			<value>1</value>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>pick</type>
-		<object-name>APBtns2</object-name>
-		<object-name>APBtnLts</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>false</repeatable>
-			<binding>
-			<command>property-assign</command>
-			<property>/controls/it2/ap_mastersw</property>
-			<value>0</value>
 			</binding>
 		</action>
 	</animation>
 
-
-
 	<animation>
-		<name>APsel</name>
+		<name>Autopilot engage button light</name>
 		<type>select</type>
-		<object-name>APBtns</object-name>
-		<condition>
-			<not><property>/controls/it2/ap_mastersw</property></not>
-		</condition>
-	</animation>
-	
-	<animation>
-		<name>APsel2</name>
-		<type>select</type>
-		<object-name>ATBtns2</object-name>
 		<object-name>APBtnLts</object-name>
 		<condition>
-			<property>/controls/it2/ap_mastersw</property>
+			<equals>
+				<property>/controls/it2/ap_master</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -1279,28 +1268,8 @@
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>
 			<binding>
-				<command>nasal</command>
-				<script>controls.click(3);a340.afds.input(2,5);</script>
-			</binding>
-				<binding>
-				<command>property-assign</command>
-				<property>instrumentation/afds/inputs/at-armed</property>
-				<value>1</value>
-			</binding>
-			<binding>
-				<command>property-assign</command>
-				<property>instrumentation/afds/inputs/at-armed[1]</property>
-				<value>1</value>
-			</binding>
-			<binding>
-				<command>property-assign</command>
-				<property>instrumentation/afds/inputs/at-armed[2]</property>
-				<value>1</value>
-			</binding>
-			<binding>
-				<command>property-assign</command>
-				<property>instrumentation/afds/inputs/at-armed[3]</property>
-				<value>1</value>
+				<command>property-toggle</command>
+				<property>/controls/it2/at_mastersw</property>
 			</binding>
 		</action>
 	</animation>
@@ -1309,10 +1278,10 @@
 		<type>select</type>
 		<object-name>ATBtnLt</object-name>
 		<condition>
-			<not-equals>
-					<property>instrumentation/afds/ap-modes/speed-mode</property>
-					<value></value>
-				</not-equals>
+			<equals>
+				<property>/controls/it2/at_master</property>
+				<value>1</value>
+			</equals>
 		</condition>
 	</animation>
 
@@ -1961,8 +1930,8 @@
 		<condition>
 			<or>
 				<equals>
-						<property>/controls/it2/app</property>
-						<value>1</value>
+						<property>/controls/it2/apvertmode</property>
+						<value>2</value>
 				</equals>
 				<equals>
 						<property>/controls/it2/app1</property>

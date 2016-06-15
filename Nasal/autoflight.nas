@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT Subsystem by Joshua Davidson (it0uchpods/411).
-# V2.8
+# V2.9
 
 var ap_init = func {
 	ap_logic_init();
@@ -8,6 +8,8 @@ var ap_init = func {
 	setprop("/controls/it2/apthrset", 0);
 	setprop("/autopilot/settings/target-speed-kt", 200);
 	setprop("/autopilot/settings/target-mach", 0.68);
+	setprop("/autopilot/settings/idlethr", 0);
+	setprop("/autopilot/settings/clbthr", 900);
 	setprop("/autopilot/settings/heading-bug-deg", 360);
 	setprop("/autopilot/settings/target-altitude-ft", 10000);
 	setprop("/autopilot/settings/vertical-speed-fpm", 0);
@@ -122,21 +124,41 @@ var altcap_master = func {
 	}
 }
 
-var ias_master = func {
-	var ap = getprop("/controls/it2/at_master");
-	var ias = getprop("/controls/it2/ias");
-	if (ias & ap) {
-		setprop("/autopilot/locks/speed", "speed-with-throttle");
+var flch_master = func {
+	var ap = getprop("/controls/it2/ap_master");
+	var flch = getprop("/controls/it2/flch");
+	if (flch & ap) {
+		setprop("/autopilot/locks/altitude", "flch");
 	} else {
 		return 0;
 	}
 }
 
-var mach_master = func {
-	var ap = getprop("/controls/it2/at_master");
-	var mach = getprop("/controls/it2/mach");
-	if (mach & ap) {
-		setprop("/autopilot/locks/speed", "mach-with-throttle");
+var thr_master = func {
+	var at = getprop("/controls/it2/at_master");
+	var thr = getprop("/controls/it2/thr");
+	if (thr & at) {
+		setprop("/autopilot/locks/speed", "thr");
+	} else {
+		return 0;
+	}
+}
+
+var idle_master = func {
+	var at = getprop("/controls/it2/at_master");
+	var idle = getprop("/controls/it2/idle");
+	if (idle & at) {
+		setprop("/autopilot/locks/speed", "idle");
+	} else {
+		return 0;
+	}
+}
+
+var clb_master = func {
+	var at = getprop("/controls/it2/at_master");
+	var clb = getprop("/controls/it2/clb");
+	if (clb & at) {
+		setprop("/autopilot/locks/speed", "clb");
 	} else {
 		return 0;
 	}
@@ -148,11 +170,13 @@ var ap_refresh = func {
 	alt_master();
 	vs_master();
 	altcap_master();
+	flch_master();
 }
 
 var at_refresh = func {
-	ias_master();
-	mach_master();
+	thr_master();
+	idle_master();
+	clb_master();
 }
 
 var ap_off = func {
@@ -165,11 +189,13 @@ var ap_off = func {
 	alt_master();
 	vs_master();
 	altcap_master();
+	flch_master();
 }
 
 var at_off = func {
 	setprop("/controls/it2/at_master", 0);
 	setprop("/autopilot/locks/speed", 0);
-	ias_master();
-	mach_master();
+	thr_master();
+	idle_master();
+	clb_master();
 }

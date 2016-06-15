@@ -517,9 +517,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <path>Aircraft/A340-313X/Systems/it-autoflight.xml</path>
             </autopilot>
             <autopilot>
-                <path>Aircraft/A340-313X/Systems/A340-autothrottle.xml</path>
-            </autopilot>
-            <autopilot>
                 <name>Autobrake system</name>
                 <path>Aircraft/A340-313X/Systems/A340-autobrake.xml</path>
             </autopilot>

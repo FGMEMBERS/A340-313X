@@ -9,6 +9,7 @@
 		setprop("instrumentation/efis/inputs/sta", 0);
 		setprop("instrumentation/efis/inputs/arpt", 0);
 		setprop("instrumentation/efis/nd/display-mode", "ARC");
+		setprop("instrumentation/efis/mfd/true-north", "false");
 		
         var toggle_listeners = {
             # symbolic alias : relative property (as used in bindings), initial value, type
