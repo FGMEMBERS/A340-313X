@@ -189,7 +189,7 @@ var altcapt = func {
   var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
   var alt = getprop("/autopilot/settings/target-altitude-ft");
   var dif = calt - alt;
-  if (dif < 250 and dif > -250) {
+  if (dif < 400 and dif > -400) {
     setprop("/controls/it2/apvertset", 3);
     setprop("/controls/it2/apthrmode2", 0);
   }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Airbus A340-600HGW for FlightGear -->
 <!-- Primary Flight Display -->
 
 <PropertyList>
@@ -83,7 +82,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%1.2f</format>
-		<property>autopilot/settings/target-speed-mach</property>
+		<property>autopilot/settings/target-mach</property>
 		<font>helvetica_bold.txf</font>
 		<character-size>0.009</character-size>
 		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
@@ -101,7 +100,7 @@
 		<object-name>Autopilot IAS setting</object-name>
 		<condition>
 			<equals>
-				<property>instrumentation/afds/inputs/ias-mach-selected</property>
+				<property>controls/it2/apthrmode</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -112,7 +111,7 @@
 		<object-name>Autopilot Mach setting</object-name>
 		<condition>
 			<equals>
-				<property>instrumentation/afds/inputs/ias-mach-selected</property>
+				<property>controls/it2/apthrmode</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -267,7 +266,7 @@
 		<type>select</type>
 		<object-name>APFD</object-name>
 		<condition>
-			<property>instrumentation/afds/inputs/FD</property>
+			<property>/controls/it2/fd_master</property>
 		</condition>
 	</animation>
 	<animation>
@@ -275,34 +274,61 @@
 		<type>select</type>
 		<object-name>APAT</object-name>
 		<condition>
-			<not-equals>
-					<property>instrumentation/afds/ap-modes/speed-mode</property>
-					<value></value>
-				</not-equals>
+				<property>/controls/it2/at_master</property>
 		</condition>
 	</animation>
 
 	<animation>
-		<name>Autopilot speed hold indicator</name>
+		<name>Autopilot thr hold indicator</name>
 		<type>select</type>
-		<object-name>APSpeed</object-name>
+		<object-name>thr</object-name>
 		<condition>
+			<and>
 		        <equals>
-		            <property>instrumentation/afds/ap-modes/speed-mode</property>
-		            <value>SPD</value>
+		            <property>/controls/it2/at_master</property>
+		            <value>1</value>
 		        </equals>
+		        <equals>
+		            <property>/controls/it2/apthrmode2</property>
+		            <value>0</value>
+		        </equals>
+			</and>
 		</condition>
 	</animation>
-
+	
 	<animation>
-		<name>Autopilot TO/GA hold indicator</name>
+		<name>Autopilot idle hold indicator</name>
 		<type>select</type>
-		<object-name>APToGa</object-name>
+		<object-name>idle</object-name>
 		<condition>
-				<equals>
-				    <property>instrumentation/afds/ap-modes/speed-mode</property>
-				    <value></value>
-				</equals>
+			<and>
+		        <equals>
+		            <property>/controls/it2/at_master</property>
+		            <value>1</value>
+		        </equals>
+		        <equals>
+		            <property>/controls/it2/apthrmode2</property>
+		            <value>1</value>
+		        </equals>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<name>Autopilot clb hold indicator</name>
+		<type>select</type>
+		<object-name>clb</object-name>
+		<condition>
+			<and>
+		        <equals>
+		            <property>/controls/it2/at_master</property>
+		            <value>1</value>
+		        </equals>
+		        <equals>
+		            <property>/controls/it2/apthrmode2</property>
+		            <value>2</value>
+		        </equals>
+			</and>
 		</condition>
 	</animation>
 
@@ -365,6 +391,17 @@
 					<equals>
 						<property>/controls/it2/apvertmode</property>
 						<value>1</value>
+					</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autopilot FLCH indicator</name>
+		<type>select</type>
+		<object-name>flch</object-name>
+		<condition>
+					<equals>
+						<property>/controls/it2/apvertmode</property>
+						<value>4</value>
 					</equals>
 		</condition>
 	</animation>

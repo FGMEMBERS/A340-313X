@@ -5,7 +5,48 @@ MATERIAL "instr-lights.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0 
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0.667974 0.667974 0.667974  spec 0 0 0  shi 128  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0.658824 0.670588 0.67451  spec 0 0 0  shi 128  trans 0
 OBJECT world
-kids 52
+kids 54
+OBJECT poly
+name "idle"
+data 8
+Mesh.080
+texture "pfd2.png"
+crease 30.000000
+numvert 4
+0.003121 0.084229 0.057728
+0.003121 0.092186 0.057728
+0.003121 0.092186 0.078951
+0.003121 0.084229 0.078951
+numsurf 1
+SURF 0x0
+mat 1
+refs 4
+3 0.680469 0.885391
+0 0.743359 0.885391
+1 0.743359 0.915391
+2 0.680469 0.915391
+kids 0
+OBJECT poly
+name "flch"
+loc 0 -0.000258401 0.0355004
+data 8
+Mesh.045
+texture "symbols2.png"
+crease 45.000000
+numvert 4
+0.003059 0.066651 -0.013695
+0.003059 0.066651 0.012512
+0.003059 0.07401 0.012512
+0.003059 0.07401 -0.013695
+numsurf 1
+SURF 0x30
+mat 3
+refs 4
+3 0.195978 0.648574
+2 0.00913179 0.648574
+1 0.00913128 0.559387
+0 0.195978 0.559387
+kids 0
 OBJECT poly
 name "sidestick-pos"
 loc 0.0029681 0.00566601 0.00657052
@@ -438,6 +479,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APAlt"
+loc 0 6.34268e-005 0.0352362
 data 8
 Mesh.072
 texture "pfd.png"
@@ -458,6 +500,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APApp"
+loc 0 -7.45058e-009 0.0351245
 data 8
 Mesh.073
 texture "pfd.png"
@@ -570,6 +613,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APHdg"
+loc 0 0 -0.0342219
 data 8
 Mesh.077
 texture "pfd.png"
@@ -590,6 +634,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APLnav"
+loc 0 0.000669979 -0.0323738
 data 8
 Mesh.078
 texture "pfd.png"
@@ -610,6 +655,7 @@ refs 4
 kids 0
 OBJECT poly
 name "APLoc"
+loc 0 0.000111662 -0.0341102
 data 8
 Mesh.079
 texture "pfd.png"
@@ -629,7 +675,7 @@ refs 4
 1 0.683398 0.030625
 kids 0
 OBJECT poly
-name "APSpeed"
+name "thr"
 data 8
 Mesh.080
 texture "pfd.png"
@@ -649,10 +695,11 @@ refs 4
 1 0.680469 0.915391
 kids 0
 OBJECT poly
-name "APToGa"
+name "clb"
+loc 0 0.00937977 0
 data 8
 Mesh.081
-texture "pfd.png"
+texture "pfd2.png"
 crease 30.000000
 numvert 4
 0.003121 0.074871 0.078951
@@ -1624,6 +1671,7 @@ refs 4
 kids 0
 OBJECT poly
 name "vnav"
+loc 0 -0.000146732 0.0355004
 data 8
 Mesh.045
 texture "symbols.png"

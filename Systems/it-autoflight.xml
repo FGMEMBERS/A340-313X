@@ -43,9 +43,19 @@
 		<debug>false</debug>
 		<type>gain</type>
 		<enable>
-			<property>/controls/it2/ap_master</property>
-			<value>1</value>
-		</enable> 
+			<condition>
+				<or>
+					<equals>
+						<property>/autopilot/locks/heading</property>
+						<value>dg-heading-hold</value>
+					</equals>
+					<equals>
+						<property>/autopilot/locks/heading</property>
+						<value>true-heading-hold</value>
+					</equals>
+				</or>
+			</condition>
+		</enable>
 		<input>
 			<condition>
 				<equals>
@@ -66,16 +76,6 @@
 			<property>/autopilot/internal/true-heading-error-deg</property>
 			<scale>7.3</scale>
 		</input>
-		<input>
-			<condition>
-				<equals>
-					<property>/autopilot/locks/heading</property>
-					<value>nav1-hold</value>
-				</equals>
-			</condition>
-			<prop>/autopilot/internal/nav1-heading-error-deg-filtered</prop>
-			<scale>1.5</scale>
-		</input>
 		<output>
 			<property>/autopilot/internal/target-roll-deg</property>
 		</output>
@@ -93,9 +93,19 @@
 		<name>System Command: Roll</name>
 		<debug>false</debug>
 		<enable>
-			<property>/controls/it2/ap_master</property>
-			<value>1</value>
-		</enable> 
+			<condition>
+				<or>
+					<equals>
+						<property>/autopilot/locks/heading</property>
+						<value>dg-heading-hold</value>
+					</equals>
+					<equals>
+						<property>/autopilot/locks/heading</property>
+						<value>true-heading-hold</value>
+					</equals>
+				</or>
+			</condition>
+		</enable>
 		<input>
 			<property>/orientation/roll-deg</property>
 		</input>
@@ -132,6 +142,65 @@
 			<u_max>0.80</u_max>  	<!-- maximum output clamp -->
 		</config>
 	</pid-controller>
+
+	
+  <pid-controller>
+    <name>Nav1 Hold Stage 1</name>
+    <debug>false</debug>
+    <enable>
+      <prop>/autopilot/locks/heading</prop>
+      <value>nav1-hold</value>
+    </enable>
+    <input>
+      <prop>/autopilot/internal/nav1-heading-error-deg</prop>
+    </input>
+    <reference>
+      <value>0.0</value>
+    </reference>
+    <output>
+      <prop>/autopilot/internal/target-roll-deg</prop>
+    </output>
+    <config>
+      <Kp>-5.0</Kp>        <!-- proportional gain -->
+      <beta>1.0</beta>     <!-- input value weighing factor -->
+      <alpha>1.0</alpha>   <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
+                           <!-- unfiltered derivative error -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Td>0.00001</Td>     <!-- derivator time -->
+      <u_min>-20.0</u_min> <!-- minimum output clamp -->
+      <u_max>20.0</u_max>  <!-- maximum output clamp -->
+    </config>
+  </pid-controller>
+
+  <pid-controller>
+    <name>Nav1 Hold Stage 2</name>
+    <debug>false</debug>
+    <enable>
+      <prop>/autopilot/locks/heading</prop>
+      <value>nav1-hold</value>
+    </enable>
+    <input>
+      <prop>/orientation/roll-deg</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/internal/target-roll-deg</prop>
+    </reference>
+    <output>
+      <prop>/controls/flight/aileron</prop>
+    </output>
+    <config>
+      <Kp>0.25</Kp>        <!-- proportional gain -->
+      <beta>0.5</beta>    <!-- input value weighing factor -->
+      <alpha>1.0</alpha>  <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+                          <!-- unfiltered derivative error -->
+      <Ti>10.0</Ti>       <!-- integrator time -->
+      <Td>0.00001</Td>    <!-- derivator time -->
+      <u_min>-1.0</u_min> <!-- minimum output clamp -->
+      <u_max>1.0</u_max>  <!-- maximum output clamp -->
+    </config>
+  </pid-controller>
 
  <!-- =============================================================== -->
  <!-- Vertical Modes                                                  -->
@@ -193,7 +262,7 @@
 			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
 			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
 								<!-- unfiltered derivative error -->
-			<Ti>10.0</Ti>       <!-- integrator time -->
+			<Ti>40.0</Ti>       <!-- integrator time -->
 			<Td>0.00001</Td>    <!-- derivator time -->
 			<u_min>-0.85</u_min> <!-- minimum output clamp -->
 			<u_max>0.85</u_max>  <!-- maximum output clamp -->
@@ -218,7 +287,7 @@
 			<prop>/instrumentation/nav[0]/gs-rate-of-climb</prop>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-trim</prop>
+			<prop>/controls/flight/elevator-trim-filter</prop>
 		</output>
 		<config>
 			<Kp>-0.01</Kp>      <!-- proportional gain -->
@@ -257,7 +326,7 @@
 				</equals>
 			</condition>
 			<prop>/velocities/mach</prop>
-			<scale>10.0</scale>
+			<scale>15.0</scale>
 		</input>
 		<reference>
 			<condition>
@@ -282,7 +351,7 @@
 			<prop>/autopilot/settings/target-pitch-deg</prop>
 		</output>
 		<config>
-			<Kp>-0.15</Kp>       <!-- proportional gain -->
+			<Kp>-0.25</Kp>       <!-- proportional gain -->
 			<beta>1.0</beta>    <!-- input value weighing factor -->
 			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
 			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
@@ -311,7 +380,7 @@
 			<prop>/controls/flight/elevator-trim-filter</prop>
 		</output>
 		<config>
-			<Kp>-0.07</Kp>      <!-- proportional gain -->
+			<Kp>-0.08</Kp>      <!-- proportional gain -->
 			<beta>1.0</beta>    <!-- input value weighing factor -->
 			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
 			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
