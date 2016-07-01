@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT Logic by Joshua Davidson (it0uchpods/411).
-# V2.9
+# V2.10
 
 var ap_logic_init = func {
 	setprop("/controls/it2/ap_master", 0);
