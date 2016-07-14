@@ -7,7 +7,7 @@ MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0.658824 0.670588 0.67451  spec 0
 OBJECT world
 kids 54
 OBJECT poly
-name "idle"
+name "clb"
 data 8
 Mesh.080
 texture "pfd2.png"
@@ -695,7 +695,7 @@ refs 4
 1 0.680469 0.915391
 kids 0
 OBJECT poly
-name "clb"
+name "idle"
 loc 0 0.00937977 0
 data 8
 Mesh.081
