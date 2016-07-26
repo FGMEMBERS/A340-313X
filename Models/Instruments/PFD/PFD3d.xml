@@ -18,7 +18,7 @@
         <object-name>sidestick-pos</object-name>
 		<condition>
 			<equals>
-				<property>/controls/it2/ap_master</property>
+				<property>/it-autoflight/ap_master</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -258,7 +258,7 @@
 		<type>select</type>
 		<object-name>APEng</object-name>
 		<condition>
-				<property>/controls/it2/ap_master</property>
+				<property>/it-autoflight/ap_master</property>
 		</condition>
 	</animation>
 	<animation>
@@ -266,7 +266,7 @@
 		<type>select</type>
 		<object-name>APFD</object-name>
 		<condition>
-			<property>/controls/it2/fd_master</property>
+			<property>/it-autoflight/fd_master</property>
 		</condition>
 	</animation>
 	<animation>
@@ -274,7 +274,7 @@
 		<type>select</type>
 		<object-name>APAT</object-name>
 		<condition>
-				<property>/controls/it2/at_master</property>
+				<property>/it-autoflight/at_master</property>
 		</condition>
 	</animation>
 
@@ -285,11 +285,11 @@
 		<condition>
 			<and>
 		        <equals>
-		            <property>/controls/it2/at_master</property>
+		            <property>/it-autoflight/at_master</property>
 		            <value>1</value>
 		        </equals>
 		        <equals>
-		            <property>/controls/it2/apthrmode2</property>
+		            <property>/it-autoflight/apthrmode2</property>
 		            <value>0</value>
 		        </equals>
 			</and>
@@ -303,11 +303,11 @@
 		<condition>
 			<and>
 		        <equals>
-		            <property>/controls/it2/at_master</property>
+		            <property>/it-autoflight/at_master</property>
 		            <value>1</value>
 		        </equals>
 		        <equals>
-		            <property>/controls/it2/apthrmode2</property>
+		            <property>/it-autoflight/apthrmode2</property>
 		            <value>1</value>
 		        </equals>
 			</and>
@@ -321,11 +321,11 @@
 		<condition>
 			<and>
 		        <equals>
-		            <property>/controls/it2/at_master</property>
+		            <property>/it-autoflight/at_master</property>
 		            <value>1</value>
 		        </equals>
 		        <equals>
-		            <property>/controls/it2/apthrmode2</property>
+		            <property>/it-autoflight/apthrmode2</property>
 		            <value>2</value>
 		        </equals>
 			</and>
@@ -338,7 +338,7 @@
 		<object-name>APHdg</object-name>
 		<condition>
 					<equals>
-						<property>/controls/it2/aplatmode</property>
+						<property>/it-autoflight/aplatmode</property>
 						<value>0</value>
 					</equals>
 		</condition>
@@ -350,11 +350,11 @@
 		<condition>
 			<or>
 					<equals>
-						<property>/controls/it2/aplatmode</property>
+						<property>/it-autoflight/aplatmode</property>
 						<value>2</value>
 					</equals>
 					<equals>
-						<property>/controls/it2/loc1</property>
+						<property>/it-autoflight/loc1</property>
 						<value>1</value>
 					</equals>
 			</or>
@@ -366,7 +366,7 @@
 		<object-name>APLnav</object-name>
 		<condition>
 					<equals>
-						<property>/controls/it2/aplatmode</property>
+						<property>/it-autoflight/aplatmode</property>
 						<value>1</value>
 					</equals>
 		</condition>
@@ -378,7 +378,7 @@
 		<object-name>APAlt</object-name>
 		<condition>
 					<equals>
-						<property>/controls/it2/apvertmode</property>
+						<property>/it-autoflight/apvertmode</property>
 						<value>0</value>
 					</equals>
 		</condition>
@@ -389,7 +389,7 @@
 		<object-name>vnav</object-name>
 		<condition>
 					<equals>
-						<property>/controls/it2/apvertmode</property>
+						<property>/it-autoflight/apvertmode</property>
 						<value>1</value>
 					</equals>
 		</condition>
@@ -400,7 +400,7 @@
 		<object-name>flch</object-name>
 		<condition>
 					<equals>
-						<property>/controls/it2/apvertmode</property>
+						<property>/it-autoflight/apvertmode</property>
 						<value>4</value>
 					</equals>
 		</condition>
@@ -412,11 +412,11 @@
 		<condition>
 			<or>
 					<equals>
-						<property>/controls/it2/apvertmode</property>
+						<property>/it-autoflight/apvertmode</property>
 						<value>2</value>
 					</equals>
 					<equals>
-						<property>/controls/it2/app1</property>
+						<property>/it-autoflight/app1</property>
 						<value>1</value>
 					</equals>
 			</or>
