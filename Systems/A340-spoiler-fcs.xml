@@ -8,31 +8,79 @@
         <type>RS</type>
         <enable>
             <condition>
-                <equals>
-                    <property>controls/flight/speedbrake-arm</property>
-                    <value>1</value>
-                </equals>
+				<and>
+					<equals>
+						<property>controls/flight/speedbrake-arm</property>
+						<value>1</value>
+					</equals>
+					<less-than>
+						<property>/surface-positions/reverser-norm</property>
+						<value>0.01</value>
+					</less-than>
+					<less-than>
+						<property>/surface-positions/reverser-norm[1]</property>
+						<value>0.01</value>
+					</less-than>
+					<less-than>
+						<property>/surface-positions/reverser-norm[2]</property>
+						<value>0.01</value>
+					</less-than>
+					<less-than>
+						<property>/surface-positions/reverser-norm[3]</property>
+						<value>0.01</value>
+					</less-than>
+				</and>
             </condition>
         </enable>
         <S>
-            <or>
-                <and>
-                    <property>autopilot/autobrake/throttles-at-idle</property>
-                    <property>gear/gear[1]/wow</property>
-                    <property>gear/gear[2]/wow</property>
-                    <property>gear/gear[3]/wow</property>
-                    <property>gear/gear[4]/wow</property>
+				<and>
+                    <less-than>
+                        <property>/controls/engines/engine/throttle</property>
+                        <value>0.15</value>
+                    </less-than>
+                    <less-than>
+                        <property>/controls/engines/engine[1]/throttle</property>
+                        <value>0.15</value>
+                    </less-than>
+                    <less-than>
+                        <property>/controls/engines/engine[2]/throttle</property>
+                        <value>0.15</value>
+                    </less-than>
+                    <less-than>
+                        <property>/controls/engines/engine[3]/throttle</property>
+                        <value>0.15</value>
+                    </less-than>
+                    <property>/gear/gear[1]/wow</property>
+                    <property>/gear/gear[2]/wow</property>
+                    <property>/gear/gear[3]/wow</property>
+                    <property>/gear/gear[4]/wow</property>
                     <greater-than>
-                        <property>velocities/groundspeed-kt</property>
+                        <property>/velocities/groundspeed-kt</property>
                         <value>60</value>
                     </greater-than>
-                </and>
-            </or>
+				</and>
         </S>
         <R>
-            <not><property>autopilot/autobrake/throttles-at-idle</property></not>
+				<or>
+                    <greater-than>
+                        <property>/controls/engines/engine/throttle</property>
+                        <value>0.16</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>/controls/engines/engine[1]/throttle</property>
+                        <value>0.16</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>/controls/engines/engine[2]/throttle</property>
+                        <value>0.16</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>/controls/engines/engine[3]/throttle</property>
+                        <value>0.16</value>
+                    </greater-than>
+				</or>
         </R>
-        <output>controls/flight/speedbrake</output>	
+        <output>/controls/flight/spoilers</output>	
     </flipflop>
 
 
