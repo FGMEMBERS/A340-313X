@@ -92,16 +92,6 @@
         </cdu>
     </instrumentation>
 
-    <autopilot n="0">
-        <constant>
-            <flare-base type="double">0.2</flare-base>
-			<descent-profile-high-base type="double">0.23</descent-profile-high-base>
-			<descent-profile-high-rate type="double">-0.00084337</descent-profile-high-rate>
-			<descent-profile-low-base type="double">0.17</descent-profile-low-base>
-			<descent-profile-low-rate type="double">-0.00033133</descent-profile-low-rate>
-        </constant>
-    </autopilot>
-
 
 <!-- INCLUIDO DESPUES -->
 
@@ -474,19 +464,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         </dimensions>
         <aircraft-class type="string">gate</aircraft-class>
         <aircraft-operator>Iberia</aircraft-operator>
-        <aircraft-data>
-            <path>/sim/dimensions/radius-m</path>
-            <path>/sim/dimensions/parkpos-offset-m</path>
-            <path>/sim/aircraft-class</path>
-            <path>/sim/aircraft-operator</path>
-            <path>/sim/view[100]/enabled</path>
-            <path>/sim/view[101]/enabled</path>
-            <path>/sim/yokes-visible</path>
-            <path>/controls/gear/tiller-enabled</path>
-            <path>/sim/weight[0]/weight-lb</path>
-            <path>/sim/weight[1]/weight-lb</path>
-            <path>/sim/weight[2]/weight-lb</path>
-        </aircraft-data>
        
 
         <yokes-visible type="bool">1</yokes-visible>
