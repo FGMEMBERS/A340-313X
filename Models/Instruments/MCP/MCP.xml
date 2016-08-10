@@ -375,7 +375,7 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>/it-autoflight/fd_master</property>
+				<property>/it-autoflight/fd_mastersw</property>
 			</binding>
 		</action>
 	</animation>

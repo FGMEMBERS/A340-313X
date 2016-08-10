@@ -13,15 +13,38 @@
   <z-offset>0.9</z-offset>
  </animation>
  
+	<!-- Flight Director System -->
     <animation>
         <type>select</type>
-        <object-name>sidestick-pos</object-name>
-		<condition>
-			<equals>
-				<property>/it-autoflight/ap_master</property>
-				<value>0</value>
-			</equals>
-		</condition>
+        <object-name>FDRoll</object-name>
+        <object-name>FDPitch</object-name>
+        <condition>
+			<property>/it-autoflight/fd_master</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>FDPitch</object-name>
+        <property>/it-autoflight/fd/pitch-bar</property>
+        <factor>0.0012</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>FDRoll</object-name>
+        <property>/it-autoflight/fd/roll-bar</property>
+        <factor>0.0007</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
     </animation>
  
  
@@ -468,100 +491,6 @@
 			<z-m>0.003</z-m>
 		</center>
 	</animation>
-
-	<!-- Flight director -->
-	<animation>
-		<name>Flight director select</name>
-		<type>select</type>
-		<object-name>FDPitch</object-name>
-		<object-name>FDRoll</object-name>
-		<condition>
-			<property>instrumentation/afds/inputs/FD</property>
-		</condition>
-	</animation>
-	<!--animation>
-		<name>Flight director pitch</name>
-		<type>translate</type>
-		<object-name>FDPitch</object-name>
-		<property>autopilot/internal/flight-director-pitch-deg</property>
-		<interpolation>
-			<entry><ind>-30</ind><dep>-0.0367</dep></entry>
-			<entry><ind>0</ind><dep>-0.0008</dep></entry>
-			<entry><ind>30</ind><dep>0.0352</dep></entry>
-		</interpolation>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation-->
-
-	<animation>
-        <type>translate</type>
-        <object-name>FDPitch</object-name>
-        <property>autopilot/internal/target-pitch-deg</property>
-        <factor>0.00168</factor>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>1</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>translate</type>
-        <object-name>FDPitch</object-name>
-        <property>orientation/pitch-deg</property>
-        <factor>0.00168</factor>
-        <axis>
-            <x>0</x>
-            <y>0</y>
-            <z>-1</z>
-        </axis>
-    </animation>
-
-
-	<!--animation>
-		<name>Flight director roll</name>
-		<type>translate</type>
-		<object-name>FDRoll</object-name>
-		<property>autopilot/internal/flight-director-roll-deg</property>
-		<interpolation>
-			<entry><ind>-30</ind><dep>-0.038</dep></entry>
-			<entry><ind>0</ind><dep>0</dep></entry>
-			<entry><ind>30</ind><dep>0.038</dep></entry>
-		</interpolation>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation-->
-
-	<animation>
-        <type>translate</type>
-        <object-name>FDRoll</object-name>
-        <property>autopilot/internal/target-roll-deg</property>
-        <factor>0.001</factor>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
-    <animation>
-        <type>translate</type>
-        <object-name>FDRoll</object-name>
-        <property>orientation/roll-deg</property>
-        <factor>0.001</factor>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-    </animation>
-
 
 
 

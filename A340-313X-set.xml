@@ -999,10 +999,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<file>Aircraft/A340-313X/Models/Instruments/ND/ND.nas</file>
 			<file>Aircraft/A340-313X/Nasal/efis.nas</file>
         </a340>
-		<it2>
+		<itaf>
 			<file>Aircraft/A340-313X/Nasal/autoflight.nas</file>
 			<file>Aircraft/A340-313X/Nasal/autoflight-logic.nas</file>
-		</it2>
+		</itaf>
         <dialogs>
             <file>Aircraft/A340-313X/Nasal/dialogs.nas</file>
         </dialogs>
