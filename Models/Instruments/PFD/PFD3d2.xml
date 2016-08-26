@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Primary Flight Display -->
+
+<PropertyList>
+
+	<path>res/PFD2.ac</path>
+
+ <animation>
+  <type>scale</type>
+  <x-offset>0.9</x-offset>
+  <y-offset>0.9</y-offset>
+  <z-offset>0.9</z-offset>
+ </animation>
+ 
+	<!-- Flight Director System -->
+    <animation>
+        <type>select</type>
+        <object-name>FDRoll</object-name>
+        <object-name>FDPitch</object-name>
+        <condition>
+			<property>/it-autoflight/fd_master2</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>FDPitch</object-name>
+        <property>/it-autoflight/fd/pitch-bar</property>
+        <factor>0.0012</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>FDRoll</object-name>
+        <property>/it-autoflight/fd/roll-bar</property>
+        <factor>0.0007</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+ 
+ 
+    <animation>
+        <type>translate</type>
+        <object-name>sidestick-pos</object-name>
+        <property>controls/flight/elevator</property>
+        <factor>0.0218</factor>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>translate</type>
+        <object-name>sidestick-pos</object-name>
+        <property>controls/flight/aileron</property>
+        <factor>0.0220</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+	<!-- 3D TEXT -->
+	<text>
+		<name>Autopilot IAS setting</name>
+		<offsets>
+			<x-m>0.003</x-m>
+			<y-m>-0.070</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.0f</format>
+		<property>autopilot/settings/target-speed-kt</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.009</character-size>
+		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+	<text>
+		<name>Autopilot Mach setting</name>
+		<offsets>
+			<x-m>0.003</x-m>
+			<y-m>-0.073</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%1.2f</format>
+		<property>autopilot/settings/target-mach</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.009</character-size>
+		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+
+
+	<animation>
+		<name>Autopilot IAS setting select</name>
+		<type>select</type>
+		<object-name>Autopilot IAS setting</object-name>
+		<condition>
+			<equals>
+				<property>controls/it2/apthrmode</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autopilot Mach setting select</name>
+		<type>select</type>
+		<object-name>Autopilot Mach setting</object-name>
+		<condition>
+			<equals>
+				<property>controls/it2/apthrmode</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+	<text>
+		<name>Autopilot altitude setting</name>
+		<offsets>
+			<x-m>0.003</x-m>
+			<y-m>0.059</y-m>
+			<z-m>0.060</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%5.0f</format>
+		<property>autopilot/settings/target-altitude-ft</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.009</character-size>
+		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+
+	<text>
+		<name>Autopilot heading setting</name>
+		<offsets>
+			<x-m>0.003</x-m>
+			<y-m>-0.012</y-m>
+			<z-m>-0.054</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%3.0f</format>
+		<property>autopilot/settings/heading-bug-deg</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.009</character-size>
+		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+	<text>
+		<name>Mach indicator</name>
+		<offsets>
+			<x-m>0.003</x-m>
+			<y-m>-0.070</y-m>
+			<z-m>-0.042</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%1.2f</format>
+		<property>velocities/mach</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.009</character-size>
+		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+
+	<text>
+		<name>Altimeter barometer setting</name>
+		<offsets>
+			<x-m>0.003</x-m>
+			<y-m>0.044</y-m>
+			<z-m>-0.044</z-m>
+		</offsets>
+		<alignment>left-center</alignment>
+		<axis-alignment>yz-plane</axis-alignment>
+		<type type="string">number-value</type>
+		<format type="string">%2.2f IN</format>
+		<property>instrumentation/altimeter/setting-inhg</property>
+		<font>helvetica_bold.txf</font>
+		<character-size>0.009</character-size>
+		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
+		<font-resolution>
+			<width type="int">32</width>
+			<height type="int">32</height>
+		</font-resolution>
+	</text>
+
+
+<!--***-->
+
+	<!-- Emission animations -->
+	<animation>
+		<name>Cyan text</name>
+		<type>material</type>
+		<object-name>Autopilot IAS setting</object-name>
+		<object-name>Autopilot Mach setting</object-name>
+		<object-name>Autopilot altitude setting</object-name>
+		<object-name>Autopilot heading setting</object-name>
+		<object-name>Mach indicator</object-name>
+		<object-name>Altimeter barometer setting</object-name>
+		<emission>
+			<red>0.2</red>
+			<green>0.79</green>
+			<blue>0.8</blue>
+		</emission>
+	</animation>
+
+	<!-- ANIMATIONS -->
+	<!-- Lighting -->
+	<!--animation>
+		<name>Dome illumination</name>
+		<type>material</type>
+		<object-name>Border</object-name>
+		<object-name>Off</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<factor-prop>controls/lighting/dome-norm</factor-prop>
+		</emission>
+	</animation-->
+
+	<!-- Power on/off -->
+	<!--animation>
+		<name>Power on/off</name>
+		<type>select</type>
+		<object-name>Off</object-name>
+		<condition>
+			<less-than>
+				<property>systems/electrical/outputs/efis</property>
+				<value>15</value>
+			</less-than>
+		</condition>
+	</animation-->
+
+	<!-- Autopilot indicators -->
+	<animation>
+		<name>Autopilot engaged indicator</name>
+		<type>select</type>
+		<object-name>APEng</object-name>
+		<condition>
+				<property>/it-autoflight/ap_master</property>
+		</condition>
+	</animation>
+	<animation>
+		<name>Flight director indicator</name>
+		<type>select</type>
+		<object-name>APFD</object-name>
+		<condition>
+			<property>/it-autoflight/fd_master</property>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autothrottle indicator</name>
+		<type>select</type>
+		<object-name>APAT</object-name>
+		<condition>
+				<property>/it-autoflight/at_master</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Autopilot thr hold indicator</name>
+		<type>select</type>
+		<object-name>thr</object-name>
+		<condition>
+			<and>
+		        <equals>
+		            <property>/it-autoflight/at_master</property>
+		            <value>1</value>
+		        </equals>
+		        <equals>
+		            <property>/it-autoflight/apthrmode2</property>
+		            <value>0</value>
+		        </equals>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<name>Autopilot idle hold indicator</name>
+		<type>select</type>
+		<object-name>idle</object-name>
+		<condition>
+			<and>
+		        <equals>
+		            <property>/it-autoflight/at_master</property>
+		            <value>1</value>
+		        </equals>
+		        <equals>
+		            <property>/it-autoflight/apthrmode2</property>
+		            <value>1</value>
+		        </equals>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<name>Autopilot clb hold indicator</name>
+		<type>select</type>
+		<object-name>clb</object-name>
+		<condition>
+			<and>
+		        <equals>
+		            <property>/it-autoflight/at_master</property>
+		            <value>1</value>
+		        </equals>
+		        <equals>
+		            <property>/it-autoflight/apthrmode2</property>
+		            <value>2</value>
+		        </equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Autopilot heading hold indicator</name>
+		<type>select</type>
+		<object-name>APHdg</object-name>
+		<condition>
+					<equals>
+						<property>/it-autoflight/aplatmode</property>
+						<value>0</value>
+					</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autopilot LOC hold indicator</name>
+		<type>select</type>
+		<object-name>APLoc</object-name>
+		<condition>
+			<or>
+					<equals>
+						<property>/it-autoflight/aplatmode</property>
+						<value>2</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/loc1</property>
+						<value>1</value>
+					</equals>
+			</or>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autopilot LNAV hold indicator</name>
+		<type>select</type>
+		<object-name>APLnav</object-name>
+		<condition>
+					<equals>
+						<property>/it-autoflight/aplatmode</property>
+						<value>1</value>
+					</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>Autopilot altitude hold indicator</name>
+		<type>select</type>
+		<object-name>APAlt</object-name>
+		<condition>
+					<equals>
+						<property>/it-autoflight/apvertmode</property>
+						<value>0</value>
+					</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autopilot Vertical Speed indicator</name>
+		<type>select</type>
+		<object-name>vnav</object-name>
+		<condition>
+					<equals>
+						<property>/it-autoflight/apvertmode</property>
+						<value>1</value>
+					</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autopilot FLCH indicator</name>
+		<type>select</type>
+		<object-name>flch</object-name>
+		<condition>
+					<equals>
+						<property>/it-autoflight/apvertmode</property>
+						<value>4</value>
+					</equals>
+		</condition>
+	</animation>
+	<animation>
+		<name>Autopilot approach hold indicator</name>
+		<type>select</type>
+		<object-name>APApp</object-name>
+		<condition>
+			<or>
+					<equals>
+						<property>/it-autoflight/apvertmode</property>
+						<value>2</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/app1</property>
+						<value>1</value>
+					</equals>
+			</or>
+		</condition>
+	</animation>
+
+	<!-- Attitude indicator -->
+	<animation>
+		<name>Attitude indicator</name>
+		<type>texmultiple</type>
+		<object-name>AI</object-name>
+		<transform>
+			<subtype>textranslate</subtype>
+			<property>orientation/pitch-deg</property>
+			<factor>0.003095703</factor>
+			<axis>
+				<x>0</x>
+				<y>1</y>
+			</axis>
+		</transform>
+		<transform>
+			<subtype>texrotate</subtype>
+			<property>orientation/roll-deg</property>
+			<axis>
+				<x>0</x>
+				<y>0</y>
+				<z>-1</z>
+			</axis>
+			<center>
+				<x>0.25</x>
+				<y>0.5</y>
+			</center>
+		</transform>
+	</animation>
+
+	<animation>
+		<name>Attitude indicator roll pointer</name>
+		<type>rotate</type>
+		<object-name>RollPtr</object-name>
+		<property>orientation/roll-deg</property>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.0079</y-m>
+			<z-m>0.003</z-m>
+		</center>
+	</animation>
+
+
+
+	<!-- AGL display -->
+	<animation>
+		<name>AGL display select</name>
+		<type>select</type>
+		<object-name>AGL</object-name>
+		<object-name>AGL1</object-name>
+		<object-name>AGL10</object-name>
+		<object-name>AGL100</object-name>
+		<object-name>AGL1000</object-name>
+		<condition>
+			<less-than-equals>
+				<property>position/altitude-agl-ft</property>
+				<value>2000</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<name>AGL display 1000's</name>
+		<type>textranslate</type>
+		<object-name>AGL1000</object-name>
+		<property>position/altitude-agl-ft</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>AGL display 100's</name>
+		<type>textranslate</type>
+		<object-name>AGL100</object-name>
+		<property>position/altitude-agl-ft</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>AGL display 10's</name>
+		<type>textranslate</type>
+		<object-name>AGL10</object-name>
+		<property>position/altitude-agl-ft</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>AGL display 1's</name>
+		<type>textranslate</type>
+		<object-name>AGL1</object-name>
+		<property>position/altitude-agl-ft</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<!-- ILS guides -->
+	<animation>
+		<name>ILS guides select</name>
+		<type>select</type>
+		<object-name>ILS</object-name>
+		<!--object-name>ILSPtr</object-name-->
+		<!--object-name>GSTrack</object-name-->
+		<!--object-name>GSPtr</object-name-->
+		<condition>
+			<property>instrumentation/nav/nav-loc</property>
+		</condition>
+	</animation>
+
+	<animation>
+        <type>select</type>
+        <object-name>ILSPtr</object-name>
+        <condition>
+            <and>
+                <property>instrumentation/nav/in-range</property>
+                <property>instrumentation/nav/nav-loc</property>
+            </and>
+        </condition>
+    </animation>
+
+
+	<animation>
+		<name>ILS lateral guide pointer translate</name>
+		<type>translate</type>
+		<object-name>ILSPtr</object-name>
+		<property>instrumentation/nav/heading-needle-deflection-norm</property>
+		<factor>-0.0272</factor>
+		<axis>
+		    <x>0</x>
+		    <y>-1</y>
+		    <z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+        <type>select</type>
+        	<object-name>GSTrack</object-name>
+       		<condition>
+            	<property>instrumentation/nav/has-gs</property>
+        	</condition>
+   	 </animation>
+
+	<animation>
+        <type>select</type>
+        <object-name>GSPtr</object-name>
+        <condition>
+            <and>
+                <property>instrumentation/nav/gs-in-range</property>
+                <property>instrumentation/nav/has-gs</property>
+            </and>
+        </condition>
+      </animation>
+
+	<animation>
+		<name>ILS glideslope guide pointer translate</name>
+		<type>translate</type>
+		<object-name>GSPtr</object-name>
+		<property>instrumentation/nav/gs-needle-deflection-norm</property>
+		<factor>0.0272</factor>
+		<axis>
+		    <x>0</x>
+		    <y>0</y>
+		    <z>1</z>
+		</axis>
+	</animation>
+
+	<!-- IAS indicator -->
+	<animation>
+		<name>IAS indicator tape translate</name>
+		<type>textranslate</type>
+		<object-name>Spd</object-name>
+		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>560</ind><dep>0.752929687</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>IAS bug select</name>
+		<type>select</type>
+		<object-name>SpdIASAP</object-name>
+		<condition>
+			<!--and-->
+				<not>
+					<equals>
+						<property>autopilot/settings/speed-mode</property>
+						<value>mach</value>
+					</equals>
+				</not>
+				<!--less-than-equals>
+					<property>sim/model/A320neo/ias-bug-kt-norm</property>
+					<value>72</value>
+				</less-than-equals>
+				<greater-than-equals>
+					<property>sim/model/A320neo/ias-bug-kt-norm</property>
+					<value>-72</value>
+				</greater-than-equals>
+			</and-->
+		</condition>
+	</animation>
+	<!--animation>
+		<name>IAS bug translate</name>
+		<type>translate</type>
+		<object-name>SpdIASAP</object-name>
+		<property>sim/model/A320neo/ias-bug-kt-norm</property>
+		<factor>0.00059</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation-->
+
+	<animation>
+		<name>Mach bug select</name>
+		<type>select</type>
+		<object-name>SpdMachAP</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/afds/inputs/ias-mach-selected</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	<!--animation>
+		<name>Mach bug translate</name>
+		<type>translate</type>
+		<object-name>SpdMachAP</object-name>
+		<!property>sim/model/A320neo/mach-bug-kt-norm</property>
+		<factor>0.00059</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation-->
+
+	<!-- Altimeter -->
+	<animation>
+		<name>Altimeter readout 10000's</name>
+		<type>textranslate</type>
+		<object-name>Alt10000</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.00001</factor>
+		<step>10000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altimeter readout 1000's</name>
+		<type>textranslate</type>
+		<object-name>Alt1000</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.0001</factor>
+		<step>1000</step>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altimeter readout 100's</name>
+		<type>textranslate</type>
+		<object-name>Alt100</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<condition>
+			<greater-than-equals>
+				<property>instrumentation/altimeter/indicated-altitude-ft</property>
+				<value>0</value>
+			</greater-than-equals>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altimeter readout 10's</name>
+		<type>textranslate</type>
+		<object-name>Alt10</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.01</factor>
+		<condition>
+			<greater-than-equals>
+				<property>instrumentation/altimeter/indicated-altitude-ft</property>
+				<value>0</value>
+			</greater-than-equals>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+	<animation>
+		<name>Altimeter readout 1's</name>
+		<type>textranslate</type>
+		<object-name>Alt1</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<factor>0.1</factor>
+		<condition>
+			<greater-than-equals>
+				<property>instrumentation/altimeter/indicated-altitude-ft</property>
+				<value>0</value>
+			</greater-than-equals>
+		</condition>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Altimeter tape 1 select</name>
+		<type>select</type>
+		<object-name>AltTape1</object-name>
+		<condition>
+			<less-than>
+				<property>instrumentation/altimeter/indicated-altitude-ft</property>
+				<value>9600</value>
+			</less-than>
+		</condition>
+	</animation>
+	<animation>
+		<name>Altimeter tape 1 translate</name>
+		<type>textranslate</type>
+		<object-name>AltTape1</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<interpolation>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>9600</ind><dep>0.9035</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Altimeter tape 2 select</name>
+		<type>select</type>
+		<object-name>AltTape2</object-name>
+		<condition>
+			<and>
+				<greater-than-equals>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>9600</value>
+				</greater-than-equals>
+				<less-than>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>19200</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Altimeter tape 2 translate</name>
+		<type>textranslate</type>
+		<object-name>AltTape2</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<interpolation>
+			<entry><ind>9600</ind><dep>0</dep></entry>
+			<entry><ind>19200</ind><dep>0.9035</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Altimeter tape 3 select</name>
+		<type>select</type>
+		<object-name>AltTape3</object-name>
+		<condition>
+			<and>
+				<greater-than-equals>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>19200</value>
+				</greater-than-equals>
+				<less-than>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>28800</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Altimeter tape 3 translate</name>
+		<type>textranslate</type>
+		<object-name>AltTape3</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<interpolation>
+			<entry><ind>19200</ind><dep>0</dep></entry>
+			<entry><ind>28800</ind><dep>0.9035</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Altimeter tape 4 select</name>
+		<type>select</type>
+		<object-name>AltTape4</object-name>
+		<condition>
+			<and>
+				<greater-than-equals>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>28800</value>
+				</greater-than-equals>
+				<less-than>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>38400</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Altimeter tape 4 translate</name>
+		<type>textranslate</type>
+		<object-name>AltTape4</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<interpolation>
+			<entry><ind>28800</ind><dep>0</dep></entry>
+			<entry><ind>38400</ind><dep>0.9035</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Altimeter tape 5 select</name>
+		<type>select</type>
+		<object-name>AltTape5</object-name>
+		<condition>
+			<and>
+				<greater-than-equals>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>38400</value>
+				</greater-than-equals>
+				<less-than>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>48000</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Altimeter tape 5 translate</name>
+		<type>textranslate</type>
+		<object-name>AltTape5</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<interpolation>
+			<entry><ind>38400</ind><dep>0</dep></entry>
+			<entry><ind>48000</ind><dep>0.9035</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Altimeter tape 6 select</name>
+		<type>select</type>
+		<object-name>AltTape6</object-name>
+		<condition>
+			<and>
+				<greater-than-equals>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>48000</value>
+				</greater-than-equals>
+				<less-than>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
+					<value>57600</value>
+				</less-than>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<name>Altimeter tape 6 translate</name>
+		<type>textranslate</type>
+		<object-name>AltTape6</object-name>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
+		<interpolation>
+			<entry><ind>48000</ind><dep>0</dep></entry>
+			<entry><ind>57600</ind><dep>0.9035</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+		</axis>
+	</animation>
+
+	<!-- Heading display -->
+	<animation>
+		<name>Magnetic heading compass texrotate</name>
+		<type>texrotate</type>
+		<object-name>Hdg</object-name>
+		<property>orientation/heading-magnetic-deg</property>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>-1</z>
+		</axis>
+		<center>
+			<x>0.75</x>
+			<y>0.75</y>
+		</center>
+	</animation>
+
+	<!--animation>
+		<name>Heading bug translate</name>
+		<type>translate</type>
+		<object-name>HdgAP</object-name>
+		<property>autopilot/settings/heading-bug-deg</property>
+		<factor>-0.000495</factor>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation-->
+
+	<!-- Vertical speed indicator -->
+	<animation>
+		<name>Vertical speed needle</name>
+		<type>translate</type>
+		<object-name>VSPtr</object-name>
+		<property>velocities/vertical-speed-fps</property>
+		<interpolation>
+			<entry><ind>100</ind><dep>0.0328</dep></entry>
+			<entry><ind>66.667</ind><dep>0.0275</dep></entry>
+			<entry><ind>33.333</ind><dep>0.0217</dep></entry>
+			<entry><ind>16.667</ind><dep>0.0106</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>-16.667</ind><dep>-0.0111</dep></entry>
+			<entry><ind>-33.333</ind><dep>-0.022</dep></entry>
+			<entry><ind>-66.667</ind><dep>-0.0275</dep></entry>
+			<entry><ind>-100</ind><dep>-0.033</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<name>Vertical speed autopilot bug</name>
+		<type>translate</type>
+		<object-name>VSAP</object-name>
+		<property>autopilot/settings/vertical-speed-fpm</property>
+		<interpolation>
+			<entry><ind>6000</ind><dep>0.0328</dep></entry>
+			<entry><ind>4000</ind><dep>0.0275</dep></entry>
+			<entry><ind>2000</ind><dep>0.0217</dep></entry>
+			<entry><ind>1000</ind><dep>0.0106</dep></entry>
+			<entry><ind>0</ind><dep>0</dep></entry>
+			<entry><ind>-1000</ind><dep>-0.0111</dep></entry>
+			<entry><ind>-2000</ind><dep>-0.022</dep></entry>
+			<entry><ind>-4000</ind><dep>-0.0275</dep></entry>
+			<entry><ind>-6000</ind><dep>-0.033</dep></entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+
+
+
+</PropertyList>

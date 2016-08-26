@@ -36,12 +36,14 @@
     <object-name>LNAVBtn</object-name>
     <object-name>LOCBtn</object-name>
     <object-name>APBtns</object-name>
+    <object-name>APBtns2</object-name>
     <object-name>ATBtn</object-name>
     <object-name>ALT.btn</object-name>
     <object-name>AltKnb</object-name>
     <object-name>VSKnb</object-name>
     <object-name>APPRBtn</object-name>
     <object-name>FDBtns</object-name>
+    <object-name>FDBtns2</object-name>
     <object-name>ILSBtns</object-name>
     <object-name>MCP</object-name>
     <object-name>RDR.arpt</object-name>
@@ -385,6 +387,29 @@
 		<object-name>FDBtnLts</object-name>
 		<condition>
 				<property>/it-autoflight/fd_master</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<name>Flight director 2 button pick</name>
+		<type>pick</type>
+		<object-name>FDBtns2</object-name>
+		<object-name>FDBtnLts2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/it-autoflight/fd_mastersw2</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>Flight director 2 button light</name>
+		<type>select</type>
+		<object-name>FDBtnLts2</object-name>
+		<condition>
+				<property>/it-autoflight/fd_master2</property>
 		</condition>
 	</animation>
 
@@ -1229,6 +1254,7 @@
 		<name>Autopilot engage button pick</name>
 		<type>pick</type>
 		<object-name>APBtns</object-name>
+		<object-name>APBtnLts</object-name>
 		<action>
 			<button>0</button>
 			<repeatable>false</repeatable>
@@ -1246,6 +1272,33 @@
 		<condition>
 			<equals>
 				<property>/it-autoflight/ap_master</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
+		<name>Autopilot 2 engage button pick</name>
+		<type>pick</type>
+		<object-name>APBtns2</object-name>
+		<object-name>APBtnLts2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+			<command>property-toggle</command>
+			<property>/it-autoflight/ap_mastersw2</property>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<name>Autopilot 2 engage button light</name>
+		<type>select</type>
+		<object-name>APBtnLts2</object-name>
+		<condition>
+			<equals>
+				<property>/it-autoflight/ap_master2</property>
 				<value>1</value>
 			</equals>
 		</condition>

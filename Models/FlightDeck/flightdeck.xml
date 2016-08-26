@@ -146,7 +146,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A340-313X/Models/Instruments/PFD/PFD3d.xml</path>
+		<path>Aircraft/A340-313X/Models/Instruments/PFD/PFD3d2.xml</path>
 		<offsets>
 			<x-m>-0.5837</x-m>
 			<y-m>0.51115</y-m>
