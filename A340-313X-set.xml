@@ -11,10 +11,10 @@
      <model n="0">
             <path>Aircraft/A340-313X/Models/A340-313X.xml</path>
             <livery>
-                <file type="string">Iberia</file>
+                <file type="string">Airbus</file>
             </livery>
             <lights>
-                <file type="string">Iberia</file>
+                <file type="string">Airbus</file>
             </lights>
         </model>
 
