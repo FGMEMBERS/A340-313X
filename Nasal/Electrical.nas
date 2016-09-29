@@ -146,7 +146,6 @@ setlistener("/sim/signals/fdm-initialized", func {
     init_switches();
     settimer(update_electrical,5);
     print("Electrical System ... ok");
-	itaf.ap_init();
 });
 
 var init_switches = func{

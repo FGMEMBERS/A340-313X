@@ -350,11 +350,11 @@
     	<object-name>flap</object-name>
     	<property>/surface-positions/flap-pos-norm</property>
     	<interpolation>
-				<entry><ind>0</ind><dep>0</dep></entry>
-				<entry><ind>0.29</ind><dep>0.068</dep></entry>
-				<entry><ind>0.596</ind><dep>0.152</dep></entry>
-				<entry><ind>0.645</ind><dep>0.24</dep></entry>
-				<entry><ind>1</ind><dep>0.325</dep></entry>
+				<entry><ind>0.000</ind><dep>0.000</dep></entry>
+				<entry><ind>0.240</ind><dep>0.068</dep></entry>
+				<entry><ind>0.496</ind><dep>0.152</dep></entry>
+				<entry><ind>0.620</ind><dep>0.240</dep></entry>
+				<entry><ind>0.833</ind><dep>0.325</dep></entry>
 			</interpolation>
     	<axis>
     		<x>1</x>
@@ -368,11 +368,11 @@
     	<object-name>slat</object-name>
     	<property>/surface-positions/flap-pos-norm</property>
     	<interpolation>
-				<entry><ind>0</ind><dep>0</dep></entry>
-				<entry><ind>0.29</ind><dep>0.11</dep></entry>
-				<entry><ind>0.596</ind><dep>0.22</dep></entry>
-				<entry><ind>0.645</ind><dep>0.33</dep></entry>
-				<entry><ind>1</ind><dep>0.33</dep></entry>
+				<entry><ind>0.000</ind><dep>0.00</dep></entry>
+				<entry><ind>0.240</ind><dep>0.11</dep></entry>
+				<entry><ind>0.496</ind><dep>0.22</dep></entry>
+				<entry><ind>0.620</ind><dep>0.33</dep></entry>
+				<entry><ind>0.833</ind><dep>0.33</dep></entry>
 			</interpolation>
     	<axis>
     		<x>1</x>

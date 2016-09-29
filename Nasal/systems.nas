@@ -641,6 +641,7 @@ setlistener("/sim/signals/fdm-initialized", func {
 #    setprop("/instrumentation/groundradar/id",getprop("sim/tower/airport-id"));
     setprop("/sim/flaps/current", 0);
     var capwing = getprop("consumables/fuel/tank[0]/capacity-gal_us");
+	setprop("instrumentation/efis/ecam/display-mode", "FCTL");
 # make the fuel quantity balancing
     var total_fuel = 0;
     var capcenter = 0;
@@ -1001,3 +1002,9 @@ _setlistener("/sim/signals/fdm-initialized", func {
 });
 
 
+setlistener("/sim/signals/fdm-initialized", func {	
+  	itaf.ap_init();			
+	setprop("/it-autoflight/settings/retard-enable", 0);  # Enable or disable automatic autothrottle retard.
+	setprop("/it-autoflight/settings/retard-ft", 20);     # Add this to change the retard altitude, default is 50ft AGL.
+	setprop("/it-autoflight/settings/land-flap", 0.620);  # Define the landing flaps here. This is needed for autoland, and retard.
+});

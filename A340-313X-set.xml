@@ -477,13 +477,11 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <chase-distance-m>-100</chase-distance-m>
 
          <flaps>
-            <setting>0.000</setting>  <!-- flaps up -->
-            <setting>0.033</setting>  <!-- flaps 1  -->
-            <setting>0.166</setting>  <!-- flaps 5  -->
-            <setting>0.500</setting>  <!-- flaps 15 --> 
-            <setting>0.666</setting>  <!-- flaps 20 -->
-            <setting>0.833</setting>  <!-- flaps 25 -->
-            <!--setting>1.000</setting-->  <!-- flaps 30 -->
+            <setting>0.000</setting>  <!-- flaps 0  -->
+            <setting>0.240</setting>  <!-- flaps 1  -->
+            <setting>0.496</setting>  <!-- flaps 2  -->
+            <setting>0.620</setting>  <!-- flaps 3  --> 
+            <setting>0.833</setting>  <!-- flaps 4  -->
         </flaps>
 
         <systems>
@@ -492,6 +490,9 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <!--  fast running autopilot rules (running at FDM frequency / 120Hz) -->
             <autopilot>
                 <path>Aircraft/A340-313X/Systems/it-autoflight.xml</path>
+            </autopilot>
+            <autopilot>
+                <path>Aircraft/A340-313X/Systems/it-autothrust.xml</path>
             </autopilot>
             <autopilot>
                 <name>Autobrake system</name>
@@ -639,86 +640,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <binding>
                     <command>nasal</command>
                     <script>dialogs.Radio.open()</script>
-                </binding>
-            </key>
-            <key n="1">
-                <name>Ctrl-A</name>
-                <desc>toggle autopilot altitude lock</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>instrumentation/afds/inputs/alt-hold</property>
-                </binding>
-            </key>
-             <key n="7">
-                <name>Ctrl-G</name>
-                <desc>toggle autopilot glide slope lock</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>instrumentation/afds/inputs/app-hold</property>
-                </binding>
-            </key>
-            <key n="8">
-                <name>Ctrl-H</name>
-                <desc>toggle autopilot heading lock</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>instrumentation/afds/inputs/hdg-hold</property>
-                </binding>
-            </key>
-            <!--key n="9">
-                <name>Ctrl-I</name>
-                <desc>toggle auto spoilers</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>controls.toggleAutoSpoilers();</script>
-                </binding>
-            </key-->
-            <key n="12">
-                <name>Ctrl-L</name>
-                <desc>toggle cabin lights</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>controls/lighting/cabin-lights</property>
-                </binding>
-            </key>
-            <key n="14">
-                <name>Ctrl-N</name>
-                <desc>toggle LNAV lock</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>instrumentation/afds/inputs/lnav-hold</property>
-                </binding>
-            </key>
-            <key n="15">
-                <name>Ctrl-o</name>
-                <desc>A/P ~ Passive</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>autopilot/locks/passive-mode</property>
-                </binding>
-            </key>
-            <key n="16">
-                <name>Ctrl-P</name>
-                <desc>toggle VS</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>instrumentation/afds/inputs/vs-fpa-hold</property>
-                </binding>
-            </key>
-            <key n="19">
-                <name>Ctrl-S</name>
-                <desc>toggle autothrottle</desc>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>instrumentation/afds/inputs/at-hold</property>
-                </binding>
-            </key>
-            <key n="20">
-                <name>Ctrl-t</name>
-                <desc>TO/GA switch</desc>
-                <binding>
-                    <command>nasal</command>
-                    <script>a340.afds.input(2,2);</script>
                 </binding>
             </key>
             <key n="23">
@@ -981,7 +902,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <a340>
             <file>Aircraft/A340-313X/Nasal/Electrical.nas</file>
             <file>Aircraft/A340-313X/Nasal/systems.nas</file>
-            <file>Aircraft/A340-313X/Nasal/AFDS.nas</file>
             <file>Aircraft/A340-313X/Nasal/tyresmoke.nas</file>
             <file>Aircraft/A340-313X/Nasal/gpws.nas</file>
             <file>Aircraft/A340-313X/Nasal/warnsystem.nas</file>

@@ -576,7 +576,10 @@
 		<object-name>screw.005</object-name>
 		<object-name>thr_b.004</object-name>
 		<property>controls/engines/engine[0]/throttle</property>
-		<factor>40</factor>
+		<interpolation>
+			<entry><ind>0</ind><dep>10</dep></entry>
+			<entry><ind>1</ind><dep>55</dep></entry>
+		</interpolation> 
 		<axis>
 			<x>0</x>
 			<y>-1</y>
@@ -624,7 +627,10 @@
 		<object-name>screw.001</object-name>
 		<object-name>thr_b.001</object-name>
 		<property>controls/engines/engine[1]/throttle</property>
-		<factor>40</factor>
+		<interpolation>
+			<entry><ind>0</ind><dep>10</dep></entry>
+			<entry><ind>1</ind><dep>55</dep></entry>
+		</interpolation> 
 		<axis>
 			<x>0</x>
 			<y>-1</y>
@@ -673,7 +679,10 @@
 		<object-name>screw</object-name>
 		<object-name>thr_b</object-name>
 		<property>controls/engines/engine[2]/throttle</property>
-		<factor>40</factor>
+		<interpolation>
+			<entry><ind>0</ind><dep>10</dep></entry>
+			<entry><ind>1</ind><dep>55</dep></entry>
+		</interpolation> 
 		<axis>
 			<x>0</x>
 			<y>-1</y>
@@ -721,7 +730,10 @@
 		<object-name>screw.006</object-name>
 		<object-name>thr_b.005</object-name>
 		<property>controls/engines/engine[3]/throttle</property>
-		<factor>40</factor>
+		<interpolation>
+			<entry><ind>0</ind><dep>10</dep></entry>
+			<entry><ind>1</ind><dep>55</dep></entry>
+		</interpolation> 
 		<axis>
 			<x>0</x>
 			<y>-1</y>
@@ -1218,7 +1230,10 @@
 		<type>rotate</type>
 		<object-name>FlapsLever</object-name>
 		<property>controls/flight/flaps</property>
-		<factor>80</factor>
+		<interpolation>
+			<entry><ind>0.000</ind><dep>0 </dep></entry>
+			<entry><ind>0.833</ind><dep>60</dep></entry>
+		</interpolation> 
 		<center>
 			<x-m>-0.0020</x-m>
 			<y-m>0</y-m>
@@ -1238,14 +1253,8 @@
         	<button>0</button>
             <repeatable type="bool">false</repeatable>
             <binding>
-                <command>property-cycle</command>
-                <property>controls/flight/flaps</property>
-                <value>0.0</value>
-                <value>0.129</value>
-                <value>0.596</value>
-                <value>0.745</value>
-                <value>1</value>
-				<wrap>0</wrap>
+                <command>nasal</command>
+                <script>controls.flapsDown(1);</script>
             </binding>
         </action>
     </animation>
@@ -1256,16 +1265,11 @@
         <object-name>FlapsLever</object-name>
         <action>
         	<button>1</button>
+        	<button>4</button>
             <repeatable type="bool">false</repeatable>
             <binding>
-                <command>property-cycle</command>
-                <property>controls/flight/flaps</property>
-				<value>1</value>
-	            <value>0.745</value>
-	            <value>0.596</value>
-                <value>0.29</value>
-                <value>0.00</value>
-				<wrap>0</wrap>
+                <command>nasal</command>
+                <script>controls.flapsDown(-1);</script>
             </binding>
         </action>
     </animation>
