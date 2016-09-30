@@ -5,7 +5,70 @@ MATERIAL "instr-lights.001" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 0 
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0.667974 0.667974 0.667974  spec 0 0 0  shi 128  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0.658824 0.670588 0.67451  spec 0 0 0  shi 128  trans 0
 OBJECT world
-kids 54
+kids 57
+OBJECT poly
+name "man"
+loc 2.92908e-005 0.0187215 0.0334252
+data 8
+Mesh.078
+texture "pfd3.png"
+crease 30.000000
+numvert 4
+0.003121 0.065513 0.026037
+0.003121 0.073472 0.026037
+0.003121 0.073472 0.045139
+0.003121 0.065513 0.045139
+numsurf 1
+SURF 0x0
+mat 1
+refs 4
+3 0.680469 0.822891
+0 0.739453 0.822891
+1 0.739453 0.852891
+2 0.680469 0.852891
+kids 0
+OBJECT poly
+name "toga"
+loc 1.07486e-005 0.00227616 0.000420958
+data 8
+Mesh.081
+texture "pfd3.png"
+crease 30.000000
+numvert 4
+0.003121 0.074871 0.057728
+0.003121 0.082828 0.057728
+0.003121 0.082828 0.078951
+0.003121 0.074871 0.078951
+numsurf 1
+SURF 0x0
+mat 1
+refs 4
+3 0.680469 0.947891
+0 0.751172 0.947891
+1 0.751172 0.977891
+2 0.680469 0.977891
+kids 0
+OBJECT poly
+name "mct"
+loc 1.08657e-005 -0.00799814 0
+data 8
+Mesh.080
+texture "pfd3.png"
+crease 30.000000
+numvert 4
+0.003121 0.084229 0.078951
+0.003121 0.092186 0.078951
+0.003121 0.092186 0.057728
+0.003121 0.084229 0.057728
+numsurf 1
+SURF 0x0
+mat 1
+refs 4
+0 0.680469 0.885391
+3 0.743359 0.885391
+2 0.743359 0.915391
+1 0.680469 0.915391
+kids 0
 OBJECT poly
 name "clb"
 data 8
@@ -1525,6 +1588,7 @@ refs 4
 kids 0
 OBJECT poly
 name "SpdIASAP"
+loc 0 0.00333597 0
 data 8
 Mesh.110
 texture "pfd.png"
@@ -1545,6 +1609,7 @@ refs 4
 kids 0
 OBJECT poly
 name "SpdMachAP"
+loc 0 0.00332876 0
 data 8
 Mesh.111
 texture "pfd.png"
@@ -1565,6 +1630,7 @@ refs 4
 kids 0
 OBJECT poly
 name "SpdPtr"
+loc 0 0.00334467 0
 data 8
 Mesh.112
 texture "pfd.png"

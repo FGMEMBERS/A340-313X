@@ -491,8 +491,12 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <autopilot>
                 <path>Aircraft/A340-313X/Systems/it-autoflight.xml</path>
             </autopilot>
+			<!-- Uses slightly modified IT-AUTOFLIGHT Thrust controller. -->
             <autopilot>
-                <path>Aircraft/A340-313X/Systems/it-autothrust.xml</path>
+                <path>Aircraft/A340-313X/Systems/custom-autothrust.xml</path>
+            </autopilot>
+            <autopilot>
+                <path>Aircraft/A340-313X/Systems/thrust.xml</path>
             </autopilot>
             <autopilot>
                 <name>Autobrake system</name>
@@ -922,6 +926,9 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <dialogs>
             <file>Aircraft/A340-313X/Nasal/dialogs.nas</file>
         </dialogs>
+		<thrust>
+			<file>Aircraft/A340-313X/Nasal/thrust.nas</file>
+		</thrust>
         <!--cdu>
             <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
         </cdu-->

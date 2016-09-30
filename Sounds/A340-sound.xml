@@ -2200,6 +2200,10 @@
 			<mode>looped</mode>
 			<condition>
 				<and>
+					<greater-than>
+						<property>/controls/flight/flaps</property>
+						<value>0.620</value>
+					</greater-than>
 					<property>sim/current-view/internal</property>
 					<less-than>
 						<property>/position/altitude-agl-ft</property>
@@ -2224,19 +2228,19 @@
 					</greater-than>
 					<less-than>
 						<property>controls/engines/engine[0]/throttle</property>
-						<value>0.5</value>
+						<value>0.80</value>
 					</less-than>
 					<less-than>
 						<property>controls/engines/engine[1]/throttle</property>
-						<value>0.5</value>
+						<value>0.80</value>
 					</less-than>
 					<less-than>
 						<property>controls/engines/engine[2]/throttle</property>
-						<value>0.5</value>
+						<value>0.80</value>
 					</less-than>
 					<less-than>
 						<property>controls/engines/engine[3]/throttle</property>
-						<value>0.5</value>
+						<value>0.80</value>
 					</less-than>
 					<not>
 						<property>/gear/gear[0]/wow</property>
