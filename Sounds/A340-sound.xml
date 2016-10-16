@@ -2204,7 +2204,6 @@
 						<property>/controls/flight/flaps</property>
 						<value>0.620</value>
 					</greater-than>
-					<property>sim/current-view/internal</property>
 					<less-than>
 						<property>/position/altitude-agl-ft</property>
 						<value>37</value>

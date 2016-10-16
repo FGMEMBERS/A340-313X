@@ -319,6 +319,18 @@
 	</animation>
 	
 	<animation>
+		<name>LAND indicator</name>
+		<type>select</type>
+		<object-name>land</object-name>
+		<condition>
+			<equals>
+				<property>/it-autoflight/apvertmode</property>
+				<value>6</value>
+			</equals>
+		</condition>
+	</animation>
+	
+	<animation>
 		<name>MAN indicator</name>
 		<type>select</type>
 		<object-name>man</object-name>
