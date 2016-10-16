@@ -99,12 +99,12 @@ setlistener("/controls/engines/engine[3]/throttle-lever", func {
 	} else if (thrr  >= 0.80 and thrr < 0.95) {
 		setprop("/systems/thrust/at4", 1);
 		setprop("/it-autoflight/at_mastersw", 1);
-		setprop("/controls/engines/engine[2]/throttle-fdm", 0.96);
+		setprop("/controls/engines/engine[3]/throttle-fdm", 0.96);
 		setprop("/systems/thrust/state4", "MCT");
 	} else if (thrr >= 0.95) {
 		setprop("/systems/thrust/at4", 1);
 		setprop("/it-autoflight/at_mastersw", 1);
-		setprop("/controls/engines/engine[2]/throttle-fdm", 1);
+		setprop("/controls/engines/engine[3]/throttle-fdm", 1);
 		setprop("/systems/thrust/state4", "TOGA");
 	}
 });
