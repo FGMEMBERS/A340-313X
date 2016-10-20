@@ -18,8 +18,8 @@ ENGINE STARTERS
           <product><property>/engines/engine[0]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
-			<entry><ind>0.30</ind> <dep>0.50</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.00</dep></entry>
         </table>
       
       </product>
@@ -40,7 +40,7 @@ ENGINE STARTERS
           <product><property>/engines/engine[0]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.50</dep></entry>
         </table>
       
       </product>
@@ -67,8 +67,8 @@ ENGINE STARTERS
           <product><property>/engines/engine[1]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
-			<entry><ind>0.30</ind> <dep>0.50</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.00</dep></entry>
         </table>
       
       </product>
@@ -89,7 +89,7 @@ ENGINE STARTERS
           <product><property>/engines/engine[1]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.50</dep></entry>
         </table>
       
       </product>
@@ -116,8 +116,8 @@ ENGINE STARTERS
           <product><property>/engines/engine[2]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
-			<entry><ind>0.30</ind> <dep>0.50</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.00</dep></entry>
         </table>
       
       </product>
@@ -138,7 +138,7 @@ ENGINE STARTERS
           <product><property>/engines/engine[2]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.50</dep></entry>
         </table>
       
       </product>
@@ -159,8 +159,8 @@ ENGINE STARTERS
           <product><property>/engines/engine[3]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.00</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.90</dep></entry>
-			<entry><ind>0.30</ind> <dep>0.50</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.00</dep></entry>
         </table>
       
       </product>
@@ -181,7 +181,7 @@ ENGINE STARTERS
           <product><property>/engines/engine[3]/rpm</property><value>0.01</value>  </product>
 			<entry><ind>0.00</ind> <dep>0.50</dep></entry>
 			<entry><ind>0.05</ind> <dep>0.70</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.50</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.50</dep></entry>
         </table>
       
       </product>
@@ -396,8 +396,8 @@ ENGINE A1
       <product>
         <table>
           <product><property>/engines/engine[0]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.20</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.20</dep></entry>
 			<entry><ind>0.80</ind> <dep>0.00</dep></entry>
         </table>
 		
@@ -417,8 +417,8 @@ ENGINE A1
       <product>
         <table>
           <product><property>/engines/engine[0]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.00</dep></entry>
 			<entry><ind>0.80</ind> <dep>2.00</dep></entry>
         </table>
 		
@@ -571,8 +571,8 @@ ENGINE B1
       <product>
         <table>
           <product><property>/engines/engine[1]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.20</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.20</dep></entry>
 			<entry><ind>0.80</ind> <dep>0.00</dep></entry>
         </table>
 		
@@ -592,8 +592,8 @@ ENGINE B1
       <product>
         <table>
           <product><property>/engines/engine[1]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.00</dep></entry>
 			<entry><ind>0.80</ind> <dep>2.00</dep></entry>
         </table>
 		
@@ -746,8 +746,8 @@ ENGINE C1
       <product>
         <table>
           <product><property>/engines/engine[2]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.20</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.20</dep></entry>
 			<entry><ind>0.80</ind> <dep>0.00</dep></entry>
         </table>
 		
@@ -767,8 +767,8 @@ ENGINE C1
       <product>
         <table>
           <product><property>/engines/engine[2]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.00</dep></entry>
 			<entry><ind>0.80</ind> <dep>2.00</dep></entry>
         </table>
 		
@@ -922,8 +922,8 @@ ENGINE D1
       <product>
         <table>
           <product><property>/engines/engine[3]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>0.20</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>0.20</dep></entry>
 			<entry><ind>0.80</ind> <dep>0.00</dep></entry>
         </table>
 		
@@ -943,8 +943,8 @@ ENGINE D1
       <product>
         <table>
           <product><property>/engines/engine[3]/rpm</property><value>0.01</value>  </product>
-			<entry><ind>0.30</ind> <dep>0.00</dep></entry>
-			<entry><ind>0.45</ind> <dep>1.00</dep></entry>
+			<entry><ind>0.16</ind> <dep>0.00</dep></entry>
+			<entry><ind>0.23</ind> <dep>1.00</dep></entry>
 			<entry><ind>0.80</ind> <dep>2.00</dep></entry>
         </table>
 		

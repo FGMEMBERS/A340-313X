@@ -139,7 +139,7 @@ http://www.cfmaeroengines.com/engines/cfm56-5c
             tsfc="0.33"
             epr="32.8"
             exhaust-speed="1300.0"
-            n1-idle="45"
+            n1-idle="23"
             n1-max="105"
             n2-idle="60"
             n2-max="108">
@@ -160,7 +160,7 @@ http://www.cfmaeroengines.com/engines/cfm56-5c
             tsfc="0.33"
             epr="32.8"
             exhaust-speed="1300.0"
-            n1-idle="45"
+            n1-idle="23"
             n1-max="105"
             n2-idle="60"
             n2-max="108">
@@ -180,7 +180,7 @@ http://www.cfmaeroengines.com/engines/cfm56-5c
             tsfc="0.33"
             epr="32.8"
             exhaust-speed="1300.0"
-            n1-idle="45"
+            n1-idle="23"
             n1-max="105"
             n2-idle="60"
             n2-max="108">
@@ -201,7 +201,7 @@ http://www.cfmaeroengines.com/engines/cfm56-5c
             tsfc="0.33"
             epr="32.8"
             exhaust-speed="1300.0"
-            n1-idle="45"
+            n1-idle="23"
             n1-max="105"
             n2-idle="60"
             n2-max="108">
