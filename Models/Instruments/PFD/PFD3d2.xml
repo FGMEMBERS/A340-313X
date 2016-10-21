@@ -289,7 +289,7 @@
 		<type>select</type>
 		<object-name>APFD</object-name>
 		<condition>
-			<property>/it-autoflight/fd_master</property>
+			<property>/it-autoflight/fd_master2</property>
 		</condition>
 	</animation>
 	<animation>
