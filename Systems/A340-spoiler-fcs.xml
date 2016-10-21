@@ -1,11 +1,6 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-
-<?xml version="1.0"?>
-
-<PropertyList>
-
     <flipflop>
         <name>Auto Speedbrake Engage logic</name>
         <debug>false</debug>
