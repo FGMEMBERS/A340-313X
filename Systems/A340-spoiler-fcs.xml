@@ -77,7 +77,7 @@
                     </greater-than>
 				</or>
         </R>
-        <output>/controls/flight/spoilers</output>	
+        <output>/controls/flight/speedbrake</output>	
     </flipflop>
 
 
