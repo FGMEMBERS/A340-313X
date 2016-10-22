@@ -393,7 +393,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>engines/engine/egt-degc</property>
+		<property>engines/engine/egt-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -409,7 +409,7 @@
     <animation>
     	<type>rotate</type>
     	<object-name>egt1</object-name>
-    	<property>engines/engine/egt-degc</property>
+    	<property>engines/engine/egt-actual</property>
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
@@ -434,7 +434,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>engines/engine[1]/egt-degc</property>
+		<property>engines/engine[1]/egt-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -451,7 +451,7 @@
     <animation>
     	<type>rotate</type>
     	<object-name>egt2</object-name>
-    	<property>engines/engine[1]/egt-degc</property>
+    	<property>engines/engine[1]/egt-actual</property>
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
@@ -477,7 +477,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>engines/engine[2]/egt-degc</property>
+		<property>engines/engine[2]/egt-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -493,7 +493,7 @@
  <animation>
     	<type>rotate</type>
     	<object-name>egt2.001</object-name>
-    	<property>engines/engine[2]/egt-degc</property>
+    	<property>engines/engine[2]/egt-actual</property>
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
@@ -520,7 +520,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%4.0f</format>
-		<property>engines/engine[3]/egt-degc</property>
+		<property>engines/engine[3]/egt-actual</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
 		<draw-text type="bool">true</draw-text>
@@ -537,7 +537,7 @@
      <animation>
     	<type>rotate</type>
     	<object-name>egt2.002</object-name>
-    	<property>engines/engine[3]/egt-degc</property>
+    	<property>engines/engine[3]/egt-actual</property>
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
