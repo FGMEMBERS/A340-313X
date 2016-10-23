@@ -234,7 +234,7 @@ http://www.cfmaeroengines.com/engines/cfm56-5c
 
 <!-- Central-->
 
-<gear x="-2.39" y="5.6" z="-5.7" compression="0.8" spring="1.0" >
+<gear x="-2.39" y="5.6" z="-5.7" compression="0.8" spring="0.6" >
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -242,7 +242,7 @@ http://www.cfmaeroengines.com/engines/cfm56-5c
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.39" y="-5.6" z="-5.7" compression="0.8" spring="1.0">
+<gear x="-2.39" y="-5.6" z="-5.7" compression="0.8" spring="0.6">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -250,7 +250,7 @@ http://www.cfmaeroengines.com/engines/cfm56-5c
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.39" y="0" z="-5.7" compression="3.0" spring="1.2" >
+<gear x="-2.39" y="0" z="-5.6" compression="3.0" spring="0.6" >
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
   <control-speed control="EXTEND" transition-time="7"/>

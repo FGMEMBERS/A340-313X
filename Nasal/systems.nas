@@ -851,9 +851,6 @@ var Startup = func{
     setprop("controls/lighting/logo-lights",1);
     setprop("controls/lighting/cabin-lights",1);
     setprop("controls/lighting/strobe",1);
-    setprop("controls/lighting/landing-light[0]",1);
-    setprop("controls/lighting/landing-light[1]",1);
-    setprop("controls/lighting/landing-light[2]",1);
     setprop("controls/engines/engine[0]/cutoff",0);
     setprop("controls/engines/engine[1]/cutoff",0);
     setprop("controls/engines/engine[2]/cutoff",0);
