@@ -108,10 +108,11 @@
     	<type>rotate</type>
     	<object-name>n11.001</object-name>
     	<property>engines/engine/n1</property>
-    	<factor>1.8</factor>
+    	<factor>1.95</factor>
+		<offset-deg>-5.95</offset-deg>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.059</y-m>
+    		<y-m>-0.0592</y-m>
     		<z-m>0.0524</z-m>
     	</center>
     	<axis>
@@ -148,7 +149,8 @@
     	<type>rotate</type>
     	<object-name>n11</object-name>
     	<property>engines/engine[1]/n1</property>
-    	<factor>1.8</factor>
+    	<factor>1.95</factor>
+		<offset-deg>-5.95</offset-deg>
     	<center>
     		<x-m>0</x-m>
     		<y-m>-0.024</y-m>
@@ -190,10 +192,11 @@
     	<type>rotate</type>
     	<object-name>n12</object-name>
     	<property>engines/engine[2]/n1</property>
-    	<factor>1.8</factor>
+    	<factor>1.95</factor>
+		<offset-deg>-5.95</offset-deg>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.0235</y-m>
+    		<y-m>0.0233</y-m>
     		<z-m>0.0524</z-m>
     	</center>
     	<axis>
@@ -227,17 +230,16 @@
 		</font-resolution>
 	</text>
 
-	
-   
 
  <animation>
     	<type>rotate</type>
     	<object-name>n12.001</object-name>
     	<property>engines/engine[3]/n1</property>
-    	<factor>1.8</factor>
+    	<factor>1.95</factor>
+		<offset-deg>-5.95</offset-deg>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.061</y-m>
+    		<y-m>0.0605</y-m>
     		<z-m>0.0524</z-m>
     	</center>
     	<axis>
@@ -413,7 +415,7 @@
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.06</y-m>
+    		<y-m>-0.0582</y-m>
     		<z-m>0.0246</z-m>
     	</center>
     	<axis>
@@ -427,7 +429,7 @@
 		<name>osgtext-green</name>
 		<offsets>
 			<x-m>0.0004</x-m>
-			<y-m>-0.024</y-m>
+			<y-m>-0.026</y-m>
 			<z-m>0.0249</z-m>
 		</offsets>
 		<alignment>center-center</alignment>
@@ -455,7 +457,7 @@
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>-0.024</y-m>
+    		<y-m>-0.0239</y-m>
     		<z-m>0.0246</z-m>
     	</center>
     	<axis>
@@ -497,7 +499,7 @@
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.024</y-m>
+    		<y-m>0.0258</y-m>
     		<z-m>0.0246</z-m>
     	</center>
     	<axis>
@@ -541,7 +543,7 @@
     	<factor>0.19</factor>
     	<center>
     		<x-m>0</x-m>
-    		<y-m>0.06</y-m>
+    		<y-m>0.061</y-m>
     		<z-m>0.0246</z-m>
     	</center>
     	<axis>
