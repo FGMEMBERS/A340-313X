@@ -45,6 +45,7 @@
     <object-name>FDBtns</object-name>
     <object-name>FDBtns2</object-name>
     <object-name>ILSBtns</object-name>
+    <object-name>ILSBtns2</object-name>
     <object-name>MCP</object-name>
     <object-name>RDR.arpt</object-name>
     <object-name>RDR.arpt.001</object-name>
@@ -98,38 +99,15 @@
 		<name>Pressure mode</name>
 		<type>pick</type>
 		<object-name>hpasel</object-name>
-		<action>
-			<button>0</button>
-			<repeatable type="bool">false</repeatable>
-			<binding>
-				<command>property-cycle</command>
-				<property>autopilot/settings/pressure-mode</property>
-				<value type="int">0</value>
-				<value type="int">1</value>
-			</binding>
-			<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/altimeter/setting-hPa</property>
-			</binding>
-		</action>
-	</animation>
-
-	<animation>
-		<name>Pressure mode</name>
-		<type>pick</type>
 		<object-name>hpasel.001</object-name>
 		<action>
 			<button>0</button>
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-cycle</command>
-				<property>autopilot/settings/pressure-mode</property>
-				<value type="int">0</value>
-				<value type="int">1</value>
-			</binding>
-			<binding>
-				<command>property-toggle</command>
-				<property>instrumentation/altimeter/setting-hPa</property>
+				<property>modes/altimeter/inhg</property>
+				<value>0</value>
+				<value>1</value>
 			</binding>
 		</action>
 	</animation>
@@ -146,7 +124,7 @@
 		<object-name>AltPressure.01</object-name>
 		<condition>
 			<equals>
-				<property>autopilot/settings/pressure-mode</property>
+				<property>modes/altimeter/inhg</property>
 				<value>1</value>
 			</equals>
 		</condition>
@@ -216,7 +194,7 @@
 		<object-name>AltPressure.003</object-name>
 		<condition>
 			<equals>
-				<property>autopilot/settings/pressure-mode</property>
+				<property>modes/altimeter/inhg</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -287,10 +265,22 @@
 			<button>3</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
-				<command>property-adjust</command>
-				<property>instrumentation/altimeter/setting-inhg</property>
-				<step>0.01</step>
-				<max>99.99</max>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") + 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") + 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
 			</binding>
 		</action>
 		<action>
@@ -298,10 +288,22 @@
 			<button>4</button>
 			<repeatable type="bool">true</repeatable>
 			<binding>
-				<command>property-adjust</command>
-				<property>instrumentation/altimeter/setting-inhg</property>
-				<step>-0.01</step>
-				<min>0</min>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-inhg", getprop("instrumentation/altimeter/setting-inhg") - 0.01);
+				</script>
+				<condition>
+					<property>modes/altimeter/inhg</property>
+				</condition>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>
+				setprop("/instrumentation/altimeter/setting-hpa", getprop("instrumentation/altimeter/setting-hpa") - 1.0);
+				</script>
+				<condition>
+					<not><property>modes/altimeter/inhg</property></not>
+				</condition>
 			</binding>
 		</action>
 	</animation>
@@ -415,7 +417,7 @@
 
 
 <!-- ILS ya -->
-	<!--animation>
+	<animation>
 		<name>ILS button pick</name>
 		<type>pick</type>
 		<object-name>ILSBtns</object-name>
@@ -425,17 +427,39 @@
 			<repeatable type="bool">false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>sim/rendering/glide-slope-tunnel</property>
+				<property>/modes/pfd/ILS1</property>
 			</binding>
 		</action>
-	</animation-->
+	</animation>
 	<animation>
 		<name>ILS button light</name>
 		<type>select</type>
 		<object-name>ILSBtnLts</object-name>
 		<condition>
-			<!--property>instrumentation/pfd/ils</property-->
-			<property>sim/rendering/glide-slope-tunnel</property>
+			<property>/modes/pfd/ILS1</property>
+		</condition>
+	</animation>
+	
+	<animation>
+		<name>ILS2 button pick</name>
+		<type>pick</type>
+		<object-name>ILSBtns2</object-name>
+		<object-name>ILSBtnLts2</object-name>
+		<action>
+			<button>0</button>
+			<repeatable type="bool">false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>/modes/pfd/ILS2</property>
+			</binding>
+		</action>
+	</animation>
+	<animation>
+		<name>ILS2 button light</name>
+		<type>select</type>
+		<object-name>ILSBtnLts2</object-name>
+		<condition>
+			<property>/modes/pfd/ILS2</property>
 		</condition>
 	</animation>
 
@@ -673,7 +697,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<!--property>instrumentation/mfd/nav-display[0]</property-->
-				<property>instrumentation/efis/input/lh-vor-adf</property>
+				<property>instrumentation/efis/inputs/lh-vor-adf</property>
 				<value type="int">2</value>
 				<value type="int">0</value>
 				<value type="int">1</value>
@@ -685,7 +709,7 @@
 		<type>rotate</type>
 		<object-name>NAV1SwtchL</object-name>
 		<!--property>instrumentation/mfd/nav-display[0]</property-->
-		<property>instrumentation/efis/input/lh-vor-adf</property>
+		<property>instrumentation/efis/inputs/lh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -708,7 +732,7 @@
 		<type>rotate</type>
 		<object-name>NAV1SwtchR</object-name>
 		<!--property>instrumentation/mfd/nav-display[0]</property-->
-		<property>instrumentation/efis/input/lh-vor-adf</property>
+		<property>instrumentation/efis/inputs/lh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -737,7 +761,7 @@
 			<binding>
 				<command>property-cycle</command>
 				<!--property>instrumentation/mfd/nav-display[1]</property-->
-				<property>instrumentation/efis/input/rh-vor-adf</property>
+				<property>instrumentation/efis/inputs/rh-vor-adf</property>
 				<value type="int">2</value>
 				<value type="int">0</value>
 				<value type="int">1</value>
@@ -749,7 +773,7 @@
 		<type>rotate</type>
 		<object-name>NAV2SwtchL</object-name>
 		<!--property>instrumentation/mfd/nav-display[1]</property-->
-		<property>instrumentation/efis/input/rh-vor-adf</property>
+		<property>instrumentation/efis/inputs/rh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -771,7 +795,7 @@
 		<type>rotate</type>
 		<object-name>NAV2SwtchR</object-name>
 		<!--property>instrumentation/mfd/nav-display[1]</property-->
-		<property>instrumentation/efis/input/rh-vor-adf</property>
+		<property>instrumentation/efis/inputs/rh-vor-adf</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>25</dep></entry>
@@ -1477,7 +1501,7 @@
 					</or>
 				</condition>
 				<command>nasal</command>
-				<script>controls.click(4);a340.afds.input(1,4);</script>
+				<script>controls.click(4);a340.afds.inputs(1,4);</script>
 			</binding>
 		</action>
 	</animation-->

@@ -567,6 +567,20 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <virtual-cockpit>true</virtual-cockpit>
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
     </sim>
+	
+	<modes>
+		<altimeter>
+			<inhg>0</inhg>
+		</altimeter>
+		<pfd>
+			<minimums-mode>DH</minimums-mode>
+			<ILS1>false</ILS1>
+			<ILS2>false</ILS2>
+			<fma>
+				<athr-box>O  </athr-box>
+			</fma>
+		</pfd>
+	</modes>
 
     <engines n="0">
         <engine n="0">
@@ -941,11 +955,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<file>Aircraft/A340-313X/Nasal/ground-services.nas</file>
 			<file>Aircraft/A340-313X/Nasal/fuel-dump.nas</file>
 			<file>Aircraft/A340-313X/Nasal/doors.nas</file>
-			<!--file>Aircraft/A340-313X/Nasal/terrainmap.nas</file-->
-			<!--file>Aircraft/A340-313X/Nasal/terrain-map.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
 			<file>Aircraft/A340-313X/Models/Instruments/ND/ND.nas</file>
 			<file>Aircraft/A340-313X/Nasal/efis.nas</file>
+			<file>Aircraft/A340-313X/Nasal/PFD_FMA.nas</file>
         </a340>
 		<itaf>
 			<file>Aircraft/A340-313X/Nasal/it-autoflight.nas</file>
@@ -956,9 +969,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		<thrust>
 			<file>Aircraft/A340-313X/Nasal/thrust.nas</file>
 		</thrust>
-        <!--cdu>
-            <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
-        </cdu-->
     </nasal>
 
     <limits n="0">

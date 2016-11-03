@@ -130,11 +130,11 @@
 	<!-- Primary Flight Displays -->
 	
 	<model>
-		<path>Aircraft/A340-313X/Models/Instruments/PFD/PFD3d.xml</path>
+		<path>Aircraft/A340-313X/Models/Instruments/PFD/PFD1.xml</path>
 		<offsets>
-			<x-m>-0.5837</x-m>
+			<x-m>-0.582</x-m>
 			<y-m>-0.51115</y-m>
-			<z-m>-0.0492</z-m>
+			<z-m>-0.0422</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 		<condition>
@@ -146,11 +146,11 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A340-313X/Models/Instruments/PFD/PFD3d2.xml</path>
+		<path>Aircraft/A340-313X/Models/Instruments/PFD/PFD2.xml</path>
 		<offsets>
-			<x-m>-0.5837</x-m>
-			<y-m>0.51115</y-m>
-			<z-m>-0.0492</z-m>
+			<x-m>-0.582</x-m>
+			<y-m> 0.51115</y-m>
+			<z-m>-0.0422</z-m>
 			<pitch-deg>-15</pitch-deg>
 		</offsets>
 		<condition>

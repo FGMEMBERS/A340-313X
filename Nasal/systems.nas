@@ -1,10 +1,10 @@
-#A340-313X systems
+#A340-600HGW systems
 #Syd Adams adapted by Andino
 #
 var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
 var chronometer = aircraft.timer.new("/instrumentation/clock/ET-sec",1);
 var vmodel = substr(getprop("sim/aero"), 3);
-aircraft.livery.init("Aircraft/A340-313X/Models/Liveries");
+aircraft.livery.init("Aircraft/A340-600VIP/Models/Liveries");
 
 #EFIS specific class
 # ie: var efis = EFIS.new("instrumentation/efis");
@@ -33,18 +33,6 @@ var EFIS = {
         m.mins_mode_txt = m.efis.initNode("minimums-mode-text","RADIO","STRING");
         m.minimums = m.efis.initNode("minimums",250,"INT");
         m.mk_minimums = props.globals.getNode("instrumentation/mk-viii/inputs/arinc429/decision-height");
-        m.wxr = m.efis.initNode("inputs/wxr",0,"BOOL");
-        m.range = m.efis.initNode("inputs/range",0);
-        m.sta = m.efis.initNode("inputs/sta",0,"BOOL");
-        m.wpt = m.efis.initNode("inputs/wpt",0,"BOOL");
-        m.arpt = m.efis.initNode("inputs/arpt",0,"BOOL");
-        m.data = m.efis.initNode("inputs/data",0,"BOOL");
-        m.pos = m.efis.initNode("inputs/pos",0,"BOOL");
-        m.terr = m.efis.initNode("inputs/terr",0,"BOOL");
-        m.rh_vor_adf = m.efis.initNode("inputs/rh-vor-adf",0,"INT");
-        m.lh_vor_adf = m.efis.initNode("inputs/lh-vor-adf",0,"INT");
-		m.nd_plan_wpt = m.efis.initNode("inputs/plan-wpt-index", 0, "INT");
-
         m.radio = m.efis.getNode("radio-mode",1);
         m.radio.setIntValue(0);
         m.radio_selected = m.efis.getNode("radio-selected",1);
@@ -851,6 +839,9 @@ var Startup = func{
     setprop("controls/lighting/logo-lights",1);
     setprop("controls/lighting/cabin-lights",1);
     setprop("controls/lighting/strobe",1);
+#    setprop("controls/lighting/landing-light[0]",1);
+#    setprop("controls/lighting/landing-light[1]",1);
+#    setprop("controls/lighting/landing-light[2]",1);
     setprop("controls/engines/engine[0]/cutoff",0);
     setprop("controls/engines/engine[1]/cutoff",0);
     setprop("controls/engines/engine[2]/cutoff",0);
@@ -1005,4 +996,12 @@ setlistener("/sim/signals/fdm-initialized", func {
 	setprop("/it-autoflight/settings/retard-ft", 20);     # Add this to change the retard altitude, default is 50ft AGL.
 	setprop("/it-autoflight/settings/land-flap", 0.620);  # Define the landing flaps here. This is needed for autoland, and retard.
 	setprop("/it-autoflight/settings/land-enable", 1);    # Enable or disable automatic landing.
+});
+
+setlistener("/instrumentation/altimeter/indicated-altitude-ft", func {
+	setprop("/instrumentation/altimeter/indicated-altitude-ft-pfd", getprop("/instrumentation/altimeter/indicated-altitude-ft") / 100);
+});
+
+setlistener("/instrumentation/vertical-speed-indicator/indicated-speed-fpm", func {
+	setprop("/instrumentation/vertical-speed-indicator/indicated-speed-fpm-pfd", getprop("/instrumentation/vertical-speed-indicator/indicated-speed-fpm") / 100);
 });
