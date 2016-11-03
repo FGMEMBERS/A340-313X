@@ -1083,32 +1083,6 @@
         </font-resolution>
     </text>
 	
-    <animation>
-        <type>select</type>
-        <object-name>pitch-mode-fma</object-name>
-        <object-name>roll-mode-fma</object-name>
-        <condition>
-			<or>
-				<equals>
-					<property>/it-autoflight/ap_master</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/it-autoflight/ap_master2</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/it-autoflight/fd_master</property>
-					<value>1</value>
-				</equals>
-				<equals>
-					<property>/it-autoflight/fd_master2</property>
-					<value>1</value>
-				</equals>
-			</or>
-        </condition>
-    </animation>
-	
     <text>
         <name>pitch-mode-armed-fma</name>
         <offsets>
@@ -1156,6 +1130,34 @@
             <height type="int">32</height>
         </font-resolution>
     </text>
+	
+    <animation>
+        <type>select</type>
+        <object-name>pitch-mode-fma</object-name>
+        <object-name>roll-mode-fma</object-name>
+        <object-name>pitch-mode-armed-fma</object-name>
+        <object-name>roll-mode-armed-fma</object-name>
+        <condition>
+			<or>
+				<equals>
+					<property>/it-autoflight/ap_master</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/ap_master2</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/fd_master</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/it-autoflight/fd_master2</property>
+					<value>1</value>
+				</equals>
+			</or>
+        </condition>
+    </animation>
 	
     <text>
         <name>ap-mode-fma</name>
