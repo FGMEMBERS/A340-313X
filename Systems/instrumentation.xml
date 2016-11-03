@@ -118,6 +118,12 @@ This file selects the instrumentation modules that should be available.
         <name>tcas</name>
         <number>0</number>
     </tcas>
+	
+<vertical-speed-indicator>
+  <name>vertical-speed-indicator</name>
+  <number>0</number>
+  <static-pressure>/systems/static/pressure-inhg</static-pressure>
+</vertical-speed-indicator>
 
 <comm-radio>
 <name>comm</name>

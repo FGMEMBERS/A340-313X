@@ -76,13 +76,13 @@
 			<kp-vorloc>0.10</kp-vorloc>
 		</roll>
 		<pitch>
-			<umin>-0.20</umin>
-			<umax>0.20</umax>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
 			<kp>-0.09</kp>
 		</pitch>
 		<flch>
-			<umin>-0.20</umin>
-			<umax>0.20</umax>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
 			<kp>-0.09</kp>
 		</flch>
 		<gs>
@@ -144,9 +144,9 @@
 		
             <config>
                 <x-offset-m type="double">-0.50</x-offset-m>
-                <y-offset-m type="double">0.35</y-offset-m>
+                <y-offset-m type="double">0.14</y-offset-m>
                 <z-offset-m type="double">-28.90</z-offset-m>
-                <pitch-offset-deg>-13.5</pitch-offset-deg>
+                <pitch-offset-deg>-8</pitch-offset-deg>
                 <limits>
                     <enabled type="bool">true</enabled> 
                 </limits>
@@ -249,9 +249,9 @@
 	    <from-model-idx type="int">0</from-model-idx>
 	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
 		        <x-offset-m type="double">0.45</x-offset-m>
-		        <y-offset-m type="double">0.28</y-offset-m>
+		        <y-offset-m type="double">0.14</y-offset-m>
 		        <z-offset-m type="double">-28.90</z-offset-m>
-	    <pitch-offset-deg>-10</pitch-offset-deg>
+	    <pitch-offset-deg>-8</pitch-offset-deg>
 	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
 	   </config>
 	   <dynamic>
