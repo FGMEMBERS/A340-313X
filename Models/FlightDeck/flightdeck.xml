@@ -578,6 +578,8 @@
 		<property>controls/engines/engine[0]/throttle</property>
 		<interpolation>
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
+			<entry><ind>0.04900</ind><dep>10</dep></entry>
+			<entry><ind>0.05000</ind><dep>12</dep></entry>
 			<entry><ind>0.59999</ind><dep>38</dep></entry>
 			<entry><ind>0.60000</ind><dep>40</dep></entry>
 			<entry><ind>0.79999</ind><dep>40</dep></entry>
@@ -635,6 +637,8 @@
 		<property>controls/engines/engine[1]/throttle</property>
 		<interpolation>
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
+			<entry><ind>0.04900</ind><dep>10</dep></entry>
+			<entry><ind>0.05000</ind><dep>12</dep></entry>
 			<entry><ind>0.59999</ind><dep>38</dep></entry>
 			<entry><ind>0.60000</ind><dep>40</dep></entry>
 			<entry><ind>0.79999</ind><dep>40</dep></entry>
@@ -693,6 +697,8 @@
 		<property>controls/engines/engine[2]/throttle</property>
 		<interpolation>
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
+			<entry><ind>0.04900</ind><dep>10</dep></entry>
+			<entry><ind>0.05000</ind><dep>12</dep></entry>
 			<entry><ind>0.59999</ind><dep>38</dep></entry>
 			<entry><ind>0.60000</ind><dep>40</dep></entry>
 			<entry><ind>0.79999</ind><dep>40</dep></entry>
@@ -750,6 +756,8 @@
 		<property>controls/engines/engine[3]/throttle</property>
 		<interpolation>
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
+			<entry><ind>0.04900</ind><dep>10</dep></entry>
+			<entry><ind>0.05000</ind><dep>12</dep></entry>
 			<entry><ind>0.59999</ind><dep>38</dep></entry>
 			<entry><ind>0.60000</ind><dep>40</dep></entry>
 			<entry><ind>0.79999</ind><dep>40</dep></entry>

@@ -646,7 +646,7 @@
 		</font-resolution>
 	</text>
 	
-    <!-- ONH -->
+    <!-- QNH -->
 
 	<text>
         <name>qnh-indicator-inhg</name>
@@ -971,7 +971,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0546226</y-m>
-            <z-m>0.0660781</z-m>
+            <z-m>0.0710781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1040,7 +1040,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0210226</y-m>
-            <z-m>0.0660781</z-m>
+            <z-m>0.0710781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1064,7 +1064,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0106226</y-m>
-            <z-m>0.0660781</z-m>
+            <z-m>0.0710781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1114,7 +1114,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0210226</y-m>
-            <z-m>0.0585781</z-m>
+            <z-m>0.0635781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1138,7 +1138,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0106226</y-m>
-            <z-m>0.0585781</z-m>
+            <z-m>0.0635781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1162,7 +1162,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0656226</y-m>
-            <z-m>0.0680781</z-m>
+            <z-m>0.0730781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1186,7 +1186,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0656226</y-m>
-            <z-m>0.0605781</z-m>
+            <z-m>0.0655781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1210,7 +1210,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0656226</y-m>
-            <z-m>0.0531781</z-m>
+            <z-m>0.0581781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1234,7 +1234,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0656226</y-m>
-            <z-m>0.0531781</z-m>
+            <z-m>0.0581781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1258,7 +1258,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0546226</y-m>
-            <z-m>0.0660781</z-m>
+            <z-m>0.0710781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1289,19 +1289,19 @@
 				<or>
 					<equals>
 						<property>/systems/thrust/state1</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</equals>
 					<equals>
 						<property>/systems/thrust/state2</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</equals>
 					<equals>
 						<property>/systems/thrust/state3</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</equals>
 					<equals>
 						<property>/systems/thrust/state4</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</equals>
 				</or>
 			</and>
@@ -1320,19 +1320,19 @@
 				<or>
 					<not-equals>
 						<property>/systems/thrust/state1</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</not-equals>
 					<not-equals>
 						<property>/systems/thrust/state2</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</not-equals>
 					<not-equals>
 						<property>/systems/thrust/state3</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</not-equals>
 					<not-equals>
 						<property>/systems/thrust/state4</property>
-						<value>ATHR</value>
+						<value>CL</value>
 					</not-equals>
 				</or>
 			</and>
@@ -1373,7 +1373,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0546226</y-m>
-            <z-m>0.0660781</z-m>
+            <z-m>0.0710781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1396,7 +1396,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0546226</y-m>
-            <z-m>0.0580781</z-m>
+            <z-m>0.0630781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1419,7 +1419,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0546226</y-m>
-            <z-m>0.0580781</z-m>
+            <z-m>0.0630781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1442,7 +1442,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>-0.0546226</y-m>
-            <z-m>0.0620781</z-m>
+            <z-m>0.0670781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1587,6 +1587,46 @@
         </condition>
     </animation>
 	
+    <text>
+        <name>athr-lvrclb-fma</name>
+        <offsets>
+            <x-m>0.00091828</x-m>
+            <y-m>-0.0546226</y-m>
+            <z-m>0.0550781</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">LVR CLB</format>
+		<property>autopilot/serviceable</property>
+        <font type="string">helvetica_medium.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.0055</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+
+    <animation>
+        <type>select</type>
+        <object-name>athr-lvrclb-fma</object-name>
+        <condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/systems/thrust/lvrclb</property>
+					<value>1</value>
+				</equals>
+			</and>
+        </condition>
+    </animation>
+	
 	<!-- Manually Set Altitude -->
 	
 	<text>
@@ -1721,6 +1761,7 @@
 		<object-name>athr-toga-fma</object-name>
 		<object-name>athr-mct-fma</object-name>
 		<object-name>athr-box-fma</object-name>
+		<object-name>athr-lvrclb-fma</object-name>
 		<object-name>vs-num</object-name>
 		<object-name>vs-num-lower</object-name>
         <diffuse>
