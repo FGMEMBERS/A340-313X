@@ -1278,7 +1278,6 @@
 	
     <animation>
         <type>select</type>
-        <object-name>athr-active-fma</object-name>
         <object-name>thrust-mode-fma</object-name>
         <condition>
 			<and>
@@ -1310,6 +1309,85 @@
 	
     <animation>
         <type>select</type>
+        <object-name>athr-active-fma</object-name>
+        <condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+				<or>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>MAN</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>MAN</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>MAN</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>MAN</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>CL</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>CL</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>CL</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>CL</value>
+					</equals>
+				</or>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>TOGA</value>
+				</not-equals>
+			</and>
+        </condition>
+    </animation>
+	
+    <animation>
+        <type>select</type>
         <object-name>athr-armed-fma</object-name>
         <condition>
 			<and>
@@ -1318,22 +1396,38 @@
 					<value>1</value>
 				</equals>
 				<or>
-					<not-equals>
+					<equals>
 						<property>/systems/thrust/state1</property>
-						<value>CL</value>
-					</not-equals>
-					<not-equals>
+						<value>MCT</value>
+					</equals>
+					<equals>
 						<property>/systems/thrust/state2</property>
-						<value>CL</value>
-					</not-equals>
-					<not-equals>
+						<value>MCT</value>
+					</equals>
+					<equals>
 						<property>/systems/thrust/state3</property>
-						<value>CL</value>
-					</not-equals>
-					<not-equals>
+						<value>MCT</value>
+					</equals>
+					<equals>
 						<property>/systems/thrust/state4</property>
-						<value>CL</value>
-					</not-equals>
+						<value>MCT</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>TOGA</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>TOGA</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>TOGA</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>TOGA</value>
+					</equals>
 				</or>
 			</and>
         </condition>
