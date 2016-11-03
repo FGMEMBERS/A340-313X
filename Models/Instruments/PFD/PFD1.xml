@@ -1206,7 +1206,7 @@
     </text>
     
     <text>
-        <name>athr-mode-fma</name>
+        <name>athr-active-fma</name>
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0656226</y-m>
@@ -1229,6 +1229,145 @@
         </font-resolution>
     </text>
 	
+    <text>
+        <name>athr-armed-fma</name>
+        <offsets>
+            <x-m>0.00091828</x-m>
+            <y-m>0.0656226</y-m>
+            <z-m>0.0531781</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+        <type type="string">text-value</type>
+        <format type="string">%s</format>
+        <truncate type="bool">false</truncate>
+        <font type="string">helvetica_medium.txf</font>
+        <property>/modes/pfd/fma/at-mode</property>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.0055</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+    <text>
+        <name>athr-thrlvr-fma</name>
+        <offsets>
+            <x-m>0.00091828</x-m>
+            <y-m>-0.0546226</y-m>
+            <z-m>0.0660781</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR LVR</format>
+		<property>autopilot/serviceable</property>
+        <font type="string">helvetica_medium.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.0055</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+    <animation>
+        <type>select</type>
+        <object-name>athr-active-fma</object-name>
+        <object-name>thrust-mode-fma</object-name>
+        <condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+				<or>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>ATHR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>ATHR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>ATHR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>ATHR</value>
+					</equals>
+				</or>
+			</and>
+        </condition>
+    </animation>
+	
+    <animation>
+        <type>select</type>
+        <object-name>athr-armed-fma</object-name>
+        <condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+				<or>
+					<not-equals>
+						<property>/systems/thrust/state1</property>
+						<value>ATHR</value>
+					</not-equals>
+					<not-equals>
+						<property>/systems/thrust/state2</property>
+						<value>ATHR</value>
+					</not-equals>
+					<not-equals>
+						<property>/systems/thrust/state3</property>
+						<value>ATHR</value>
+					</not-equals>
+					<not-equals>
+						<property>/systems/thrust/state4</property>
+						<value>ATHR</value>
+					</not-equals>
+				</or>
+			</and>
+        </condition>
+    </animation>
+	
+    <animation>
+        <type>select</type>
+        <object-name>athr-thrlvr-fma</object-name>
+        <condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+				<less-than>
+					<property>/controls/engines/engine[0]/throttle</property>
+					<value>0.60</value>
+				</less-than>
+				<less-than>
+					<property>/controls/engines/engine[1]/throttle</property>
+					<value>0.60</value>
+				</less-than>
+				<less-than>
+					<property>/controls/engines/engine[2]/throttle</property>
+					<value>0.60</value>
+				</less-than>
+				<less-than>
+					<property>/controls/engines/engine[3]/throttle</property>
+					<value>0.60</value>
+				</less-than>
+			</and>
+        </condition>
+    </animation>
+
     <text>
         <name>athr-man-fma</name>
         <offsets>
@@ -1577,7 +1716,7 @@
         <object-name>dh-label</object-name>
 		<object-name>ap-mode-fma</object-name>
 		<object-name>fd-mode-fma</object-name>
-		<object-name>athr-mode-fma</object-name>
+		<object-name>athr-active-fma</object-name>
 		<object-name>athr-man-fma</object-name>
 		<object-name>athr-toga-fma</object-name>
 		<object-name>athr-mct-fma</object-name>
@@ -1642,6 +1781,7 @@
 		<object-name>thrust-mode-fma</object-name>
         <object-name>pitch-mode-fma</object-name>
         <object-name>roll-mode-fma</object-name>
+		<object-name>athr-thrlvr-fma</object-name>
 		<diffuse>
 			<red>0</red>
 			<green>0.843</green>
@@ -1722,6 +1862,7 @@
     <animation>
         <type>material</type>
         <object-name>decision-height</object-name>
+		<object-name>athr-armed-fma</object-name>
         <diffuse>
             <red>0.06</red>
             <green>0.55</green>

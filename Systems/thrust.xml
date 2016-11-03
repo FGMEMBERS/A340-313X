@@ -13,7 +13,7 @@
         <input> 
             <expression>
                 <table>
-                    <property>/controls/engines/engine[0]/throttle-lever</property> 
+                    <property>/controls/engines/engine[0]/throttle</property> 
                     <entry><ind>0.0</ind><dep>0.00</dep></entry>
                     <entry><ind>0.6</ind><dep>0.94</dep></entry>
                 </table>
@@ -30,7 +30,7 @@
         <input> 
             <expression>
                 <table>
-                    <property>/controls/engines/engine[1]/throttle-lever</property> 
+                    <property>/controls/engines/engine[1]/throttle</property> 
                     <entry><ind>0.0</ind><dep>0.00</dep></entry>
                     <entry><ind>0.6</ind><dep>0.94</dep></entry>
                 </table>
@@ -47,7 +47,7 @@
         <input> 
             <expression>
                 <table>
-                    <property>/controls/engines/engine[2]/throttle-lever</property> 
+                    <property>/controls/engines/engine[2]/throttle</property> 
                     <entry><ind>0.0</ind><dep>0.00</dep></entry>
                     <entry><ind>0.6</ind><dep>0.94</dep></entry>
                 </table>
@@ -64,7 +64,7 @@
         <input> 
             <expression>
                 <table>
-                    <property>/controls/engines/engine[3]/throttle-lever</property> 
+                    <property>/controls/engines/engine[3]/throttle</property> 
                     <entry><ind>0.0</ind><dep>0.00</dep></entry>
                     <entry><ind>0.6</ind><dep>0.94</dep></entry>
                 </table>
@@ -81,7 +81,7 @@
 		<enable>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[0]/throttle-lever</property>
+					<property>/controls/engines/engine[0]/throttle</property>
 					<value>0.80</value>
 				</less-than>
 			</condition>
@@ -89,7 +89,7 @@
 		<input>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[0]/throttle-lever</property>
+					<property>/controls/engines/engine[0]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
@@ -99,11 +99,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 				</and>
@@ -118,11 +118,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -141,11 +141,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<not-equals>
@@ -164,11 +164,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[0]/throttle-lever</property>
+						<property>/controls/engines/engine[0]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -182,7 +182,7 @@
 		<max-rate-of-change>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[0]/throttle-lever</property>
+					<property>/controls/engines/engine[0]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
@@ -198,7 +198,7 @@
 		<enable>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[1]/throttle-lever</property>
+					<property>/controls/engines/engine[1]/throttle</property>
 					<value>0.80</value>
 				</less-than>
 			</condition>
@@ -206,7 +206,7 @@
 		<input>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[1]/throttle-lever</property>
+					<property>/controls/engines/engine[1]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
@@ -216,11 +216,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 				</and>
@@ -235,11 +235,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -258,11 +258,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<not-equals>
@@ -281,11 +281,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[1]/throttle-lever</property>
+						<property>/controls/engines/engine[1]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -299,7 +299,7 @@
 		<max-rate-of-change>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[1]/throttle-lever</property>
+					<property>/controls/engines/engine[1]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
@@ -315,7 +315,7 @@
 		<enable>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[2]/throttle-lever</property>
+					<property>/controls/engines/engine[2]/throttle</property>
 					<value>0.80</value>
 				</less-than>
 			</condition>
@@ -323,7 +323,7 @@
 		<input>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[2]/throttle-lever</property>
+					<property>/controls/engines/engine[2]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
@@ -333,11 +333,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 				</and>
@@ -352,11 +352,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -375,11 +375,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<not-equals>
@@ -398,11 +398,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[2]/throttle-lever</property>
+						<property>/controls/engines/engine[2]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -416,7 +416,7 @@
 		<max-rate-of-change>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[2]/throttle-lever</property>
+					<property>/controls/engines/engine[2]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
@@ -432,7 +432,7 @@
 		<enable>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[3]/throttle-lever</property>
+					<property>/controls/engines/engine[3]/throttle</property>
 					<value>0.80</value>
 				</less-than>
 			</condition>
@@ -440,7 +440,7 @@
 		<input>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[3]/throttle-lever</property>
+					<property>/controls/engines/engine[3]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
@@ -450,11 +450,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 				</and>
@@ -469,11 +469,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -492,11 +492,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<not-equals>
@@ -515,11 +515,11 @@
 			<condition>
 				<and>
 					<greater-than-equals>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.60</value>
 					</greater-than-equals>
 					<less-than>
-						<property>/controls/engines/engine[3]/throttle-lever</property>
+						<property>/controls/engines/engine[3]/throttle</property>
 						<value>0.80</value>
 					</less-than>
 					<equals>
@@ -533,7 +533,7 @@
 		<max-rate-of-change>
 			<condition>
 				<less-than>
-					<property>/controls/engines/engine[3]/throttle-lever</property>
+					<property>/controls/engines/engine[3]/throttle</property>
 					<value>0.60</value>
 				</less-than>
 			</condition>
