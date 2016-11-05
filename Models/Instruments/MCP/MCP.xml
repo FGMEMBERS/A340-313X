@@ -522,7 +522,7 @@
  <animation>
         <type>rotate</type>
         <object-name>MFDSwtchL2</object-name>
-	<property>instrumentation/efis/inputs/range-nm</property>
+		<property>instrumentation/efis/inputs/range-nm</property>
         <interpolation>
             <entry><ind>10</ind><dep>0</dep></entry>
             <entry><ind>20</ind><dep>30</dep></entry>
@@ -1154,84 +1154,27 @@
 		<type>pick</type>
 		<object-name>HdgKnb</object-name>
 		<action>
-			<button>3</button> <!--  scroll up -->
+			<button>3</button>
 			<repeatable>true</repeatable>
 			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<not>
-							<property>instrumentation/afds/inputs/hdg-trk-selected</property>
-						</not>
-					</and>
-				</condition>
 				<command>property-adjust</command>
-				<property>it-autoflight/settings/heading-bug-deg</property>
-				<step type="int">1</step>
-				<min type="int">1</min>
-				<max type="int">361</max>
-				<wrap type="bool">true</wrap>
-			</binding>
-			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<property>instrumentation/afds/inputs/hdg-trk-selected</property>
-					</and>
-				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/settings/heading-bug-deg</property>
-				<step type="int">1</step>
-				<min type="int">1</min>
-				<max type="int">361</max>
-				<wrap type="bool">true</wrap>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>controls.click(5);</script>
+				<property>/it-autoflight/settings/heading-bug-deg</property>
+				<step>1</step>
+				<min">1</min>
+				<max>361</max>
+				<wrap>true</wrap>
 			</binding>
 		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<object-name>HdgKnb</object-name>
 		<action>
-			<button>4</button> <!--  scroll down -->
+			<button>4</button>
 			<repeatable>true</repeatable>
 			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<not>
-							<property>instrumentation/afds/inputs/hdg-trk-selected</property>
-						</not>
-					</and>
-				</condition>
 				<command>property-adjust</command>
-				<property>it-autoflight/settings/heading-bug-deg</property>
-				<step type="int">-1</step>
-				<min type="int">1</min>
-				<max type="int">361</max>
-				<wrap type="bool">true</wrap>
-			</binding>
-			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<property>instrumentation/afds/inputs/hdg-trk-selected</property>
-					</and>
-				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/settings/heading-bug-deg</property>
-				<step type="int">-1</step>
-				<min type="int">1</min>
-				<max type="int">361</max>
-				<wrap type="bool">true</wrap>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>controls.click(5);</script>
+				<property>/it-autoflight/settings/heading-bug-deg</property>
+				<step>-1</step>
+				<min">1</min>
+				<max>361</max>
+				<wrap>true</wrap>
 			</binding>
 		</action>
 	</animation>
