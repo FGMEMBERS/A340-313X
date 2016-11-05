@@ -1160,7 +1160,7 @@
 				<command>property-adjust</command>
 				<property>/it-autoflight/settings/heading-bug-deg</property>
 				<step>1</step>
-				<min">1</min>
+				<min>1</min>
 				<max>361</max>
 				<wrap>true</wrap>
 			</binding>
@@ -1172,7 +1172,7 @@
 				<command>property-adjust</command>
 				<property>/it-autoflight/settings/heading-bug-deg</property>
 				<step>-1</step>
-				<min">1</min>
+				<min>1</min>
 				<max>361</max>
 				<wrap>true</wrap>
 			</binding>
@@ -1821,32 +1821,23 @@
 		<type>pick</type>
 		<object-name>VSKnb</object-name>
 		<action>
-			<button>0</button>
-			<repeatable type="bool">true</repeatable>
-			<binding>
-				<command>property-assign</command>
-				<property>/it-autoflight/apvertset</property>
-				<value>1</value>
-			</binding>
-		</action>
-		<action>
 			<button>3</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>it-autoflight/settings/vertical-speed-fpm</property>
-				<step type="double">100</step>
-				<max>9999</max>
+				<step>100</step>
+				<max>8000</max>
 			</binding>
 		</action>
 		<action>
 			<button>4</button>
-			<repeatable type="bool">true</repeatable>
+			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
 				<property>it-autoflight/settings/vertical-speed-fpm</property>
-				<step type="double">-100</step>
-				<min>-9999</min>
+				<step>-100</step>
+				<min>-6000</min>
 			</binding>
 		</action>
 	</animation>
