@@ -1449,84 +1449,29 @@
 		</action>
 	</animation-->
 
-	<animation>
-		<type>pick</type>
-		<object-name>AltKnb</object-name>
-		<action>
-			<button>4</button> <!--  scroll down -->
-			<repeatable>false</repeatable>
-			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<not>
-							<property>instrumentation/afds/inputs/alt-knob</property>
-						</not>
-					</and>
-				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/settings/target-altitude-ft</property>
-				<step>-100</step>
-				<min>0</min>
-				<max>50000</max>
-			</binding>
-			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<property>instrumentation/afds/inputs/alt-knob</property>
-					</and>
-				</condition>
-				<command>property-adjust</command>
-				<property>it-autoflight/settings/target-altitude-ft</property>
-				<step>-1000</step>
-				<min>0</min>
-				<max>50000</max>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>controls.click(5);</script>
-			</binding>
-		</action>
-	</animation>
-
    <animation>
 		<type>pick</type>
 		<object-name>AltKnb</object-name>
 		<action>
-			<button>3</button> <!--  scroll up -->
+			<button>3</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<not>
-							<property>instrumentation/afds/inputs/alt-knob</property>
-						</not>
-					</and>
-				</condition>
 				<command>property-adjust</command>
-				<property>it-autoflight/settings/target-altitude-ft</property>
+				<property>/it-autoflight/settings/target-altitude-ft</property>
 				<step>100</step>
 				<min>0</min>
 				<max>50000</max>
 			</binding>
+		</action>
+		<action>
+			<button>4</button>
+			<repeatable>false</repeatable>
 			<binding>
-				<condition>
-					<and>
-						<property>/systems/electrical/outputs/avionics</property>
-						<property>instrumentation/afds/inputs/alt-knob</property>
-					</and>
-				</condition>
 				<command>property-adjust</command>
-				<property>it-autoflight/settings/target-altitude-ft</property>
-				<step>1000</step>
+				<property>/it-autoflight/settings/target-altitude-ft</property>
+				<step>-100</step>
 				<min>0</min>
 				<max>50000</max>
-			</binding>
-			<binding>
-				<command>nasal</command>
-				<script>controls.click(5);</script>
 			</binding>
 		</action>
 	</animation>
