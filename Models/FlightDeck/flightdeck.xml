@@ -580,11 +580,11 @@
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
 			<entry><ind>0.04900</ind><dep>10</dep></entry>
 			<entry><ind>0.05000</ind><dep>12</dep></entry>
-			<entry><ind>0.59999</ind><dep>38</dep></entry>
-			<entry><ind>0.60000</ind><dep>40</dep></entry>
-			<entry><ind>0.79999</ind><dep>40</dep></entry>
-			<entry><ind>0.80000</ind><dep>48</dep></entry>
-			<entry><ind>0.94999</ind><dep>48</dep></entry>
+			<entry><ind>0.59999</ind><dep>33</dep></entry>
+			<entry><ind>0.60000</ind><dep>35</dep></entry>
+			<entry><ind>0.79999</ind><dep>35</dep></entry>
+			<entry><ind>0.80000</ind><dep>46</dep></entry>
+			<entry><ind>0.94999</ind><dep>46</dep></entry>
 			<entry><ind>0.95000</ind><dep>55</dep></entry>
 			<entry><ind>1.00000</ind><dep>55</dep></entry>
 		</interpolation> 
@@ -639,11 +639,11 @@
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
 			<entry><ind>0.04900</ind><dep>10</dep></entry>
 			<entry><ind>0.05000</ind><dep>12</dep></entry>
-			<entry><ind>0.59999</ind><dep>38</dep></entry>
-			<entry><ind>0.60000</ind><dep>40</dep></entry>
-			<entry><ind>0.79999</ind><dep>40</dep></entry>
-			<entry><ind>0.80000</ind><dep>48</dep></entry>
-			<entry><ind>0.94999</ind><dep>48</dep></entry>
+			<entry><ind>0.59999</ind><dep>33</dep></entry>
+			<entry><ind>0.60000</ind><dep>35</dep></entry>
+			<entry><ind>0.79999</ind><dep>35</dep></entry>
+			<entry><ind>0.80000</ind><dep>46</dep></entry>
+			<entry><ind>0.94999</ind><dep>46</dep></entry>
 			<entry><ind>0.95000</ind><dep>55</dep></entry>
 			<entry><ind>1.00000</ind><dep>55</dep></entry>
 		</interpolation> 
@@ -699,11 +699,11 @@
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
 			<entry><ind>0.04900</ind><dep>10</dep></entry>
 			<entry><ind>0.05000</ind><dep>12</dep></entry>
-			<entry><ind>0.59999</ind><dep>38</dep></entry>
-			<entry><ind>0.60000</ind><dep>40</dep></entry>
-			<entry><ind>0.79999</ind><dep>40</dep></entry>
-			<entry><ind>0.80000</ind><dep>48</dep></entry>
-			<entry><ind>0.94999</ind><dep>48</dep></entry>
+			<entry><ind>0.59999</ind><dep>33</dep></entry>
+			<entry><ind>0.60000</ind><dep>35</dep></entry>
+			<entry><ind>0.79999</ind><dep>35</dep></entry>
+			<entry><ind>0.80000</ind><dep>46</dep></entry>
+			<entry><ind>0.94999</ind><dep>46</dep></entry>
 			<entry><ind>0.95000</ind><dep>55</dep></entry>
 			<entry><ind>1.00000</ind><dep>55</dep></entry>
 		</interpolation> 
@@ -758,11 +758,11 @@
 			<entry><ind>0.00000</ind><dep>10</dep></entry>
 			<entry><ind>0.04900</ind><dep>10</dep></entry>
 			<entry><ind>0.05000</ind><dep>12</dep></entry>
-			<entry><ind>0.59999</ind><dep>38</dep></entry>
-			<entry><ind>0.60000</ind><dep>40</dep></entry>
-			<entry><ind>0.79999</ind><dep>40</dep></entry>
-			<entry><ind>0.80000</ind><dep>48</dep></entry>
-			<entry><ind>0.94999</ind><dep>48</dep></entry>
+			<entry><ind>0.59999</ind><dep>33</dep></entry>
+			<entry><ind>0.60000</ind><dep>35</dep></entry>
+			<entry><ind>0.79999</ind><dep>35</dep></entry>
+			<entry><ind>0.80000</ind><dep>46</dep></entry>
+			<entry><ind>0.94999</ind><dep>46</dep></entry>
 			<entry><ind>0.95000</ind><dep>55</dep></entry>
 			<entry><ind>1.00000</ind><dep>55</dep></entry>
 		</interpolation> 
@@ -1283,6 +1283,7 @@
         <object-name>FlapsLever</object-name>
         <action>
         	<button>0</button>
+        	<button>4</button>
             <repeatable type="bool">false</repeatable>
             <binding>
                 <command>nasal</command>
@@ -1297,7 +1298,7 @@
         <object-name>FlapsLever</object-name>
         <action>
         	<button>1</button>
-        	<button>4</button>
+        	<button>3</button>
             <repeatable type="bool">false</repeatable>
             <binding>
                 <command>nasal</command>
