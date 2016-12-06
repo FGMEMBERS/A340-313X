@@ -5,7 +5,7 @@
 		setprop("instrumentation/efis/nd/display-mode", "ARC");
 		setprop("instrumentation/efis/inputs/tfc", 1);
 		setprop("instrumentation/efis/inputs/wpt", 0);
-		setprop("instrumentation/efis/inputs/wxr", 1);
+		setprop("instrumentation/efis/inputs/wxr", 0);
 		setprop("instrumentation/efis/inputs/sta", 0);
 		setprop("instrumentation/efis/inputs/arpt", 0);
 		setprop("instrumentation/efis/mfd/true-north", 0);

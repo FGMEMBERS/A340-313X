@@ -803,11 +803,11 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         </tcas>
         <efis>
             <inputs>
-                <tfc  type="bool">true</tfc>
-                <sta  type="bool">true</sta>
-                <arpt type="bool">true</arpt>
-                <wpt  type="bool">true</wpt>
-                <wxr  type="bool">true</wxr>
+                <tfc  type="bool">false</tfc>
+                <sta  type="bool">false</sta>
+                <arpt type="bool">false</arpt>
+                <wpt  type="bool">false</wpt>
+                <wxr  type="bool">false</wxr>
                 <range type="int">10</range>
             </inputs>
             <eicas>
