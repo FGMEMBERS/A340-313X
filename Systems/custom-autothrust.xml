@@ -18,15 +18,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -36,7 +36,7 @@
       <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-speed-kt</property>
+      <property>/it-autoflight/input/spd-kts</property>
     </reference>
     <output>
       <property>/controls/engines/engine[0]/throttle-cmd</property>
@@ -46,7 +46,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -65,15 +64,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -84,7 +83,7 @@
 	  <scale>1000.0</scale>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-mach</property>
+      <property>/it-autoflight/input/spd-mach</property>
 	  <scale>1000.0</scale>
     </reference>
     <output>
@@ -95,7 +94,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -113,11 +111,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -133,11 +131,10 @@
       <property>/controls/engines/engine[0]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.08</u_min>  
@@ -155,11 +152,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>2</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -175,11 +172,10 @@
       <property>/controls/engines/engine[0]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -198,15 +194,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -216,7 +212,7 @@
       <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-speed-kt</property>
+      <property>/it-autoflight/input/spd-kts</property>
     </reference>
     <output>
       <property>/controls/engines/engine[1]/throttle-cmd</property>
@@ -226,7 +222,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -245,15 +240,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -264,7 +259,7 @@
 	  <scale>1000.0</scale>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-mach</property>
+      <property>/it-autoflight/input/spd-mach</property>
 	  <scale>1000.0</scale>
     </reference>
     <output>
@@ -275,7 +270,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -293,11 +287,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -313,11 +307,10 @@
       <property>/controls/engines/engine[1]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.08</u_min>  
@@ -335,11 +328,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>2</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -355,11 +348,10 @@
       <property>/controls/engines/engine[1]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -378,15 +370,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -396,7 +388,7 @@
       <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-speed-kt</property>
+      <property>/it-autoflight/input/spd-kts</property>
     </reference>
     <output>
       <property>/controls/engines/engine[2]/throttle-cmd</property>
@@ -406,7 +398,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -425,15 +416,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -444,7 +435,7 @@
 	  <scale>1000.0</scale>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-mach</property>
+      <property>/it-autoflight/input/spd-mach</property>
 	  <scale>1000.0</scale>
     </reference>
     <output>
@@ -455,7 +446,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -473,11 +463,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -493,11 +483,10 @@
       <property>/controls/engines/engine[2]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.08</u_min>  
@@ -515,11 +504,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>2</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -535,11 +524,10 @@
       <property>/controls/engines/engine[2]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -558,15 +546,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -576,7 +564,7 @@
       <property>/velocities/airspeed-kt</property>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-speed-kt</property>
+      <property>/it-autoflight/input/spd-kts</property>
     </reference>
     <output>
       <property>/controls/engines/engine[3]/throttle-cmd</property>
@@ -586,7 +574,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -605,15 +592,15 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode</property>
+			<property>/it-autoflight/input/kts-mach</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>0</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -624,7 +611,7 @@
 	  <scale>1000.0</scale>
     </input>
     <reference>
-      <property>/it-autoflight/settings/target-mach</property>
+      <property>/it-autoflight/input/spd-mach</property>
 	  <scale>1000.0</scale>
     </reference>
     <output>
@@ -635,7 +622,6 @@
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  
@@ -653,11 +639,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>1</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -673,11 +659,10 @@
       <property>/controls/engines/engine[3]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.08</u_min>  
@@ -695,11 +680,11 @@
 	  <condition>
 		<and>
 		  <equals>
-			<property>/it-autoflight/apthrmode2</property>
+			<property>/it-autoflight/output/thr-mode</property>
 			<value>2</value>
 		  </equals>
 		  <equals>
-			<property>/it-autoflight/retard</property>
+			<property>/it-autoflight/output/retard</property>
 			<value>0</value>
 		  </equals>
 		</and>
@@ -715,11 +700,10 @@
       <property>/controls/engines/engine[3]/throttle-cmd</property>
     </output>
     <config>
-      <Kp>0.1</Kp>        
+      <Kp>0.01</Kp>        
       <beta>1.0</beta>    
       <alpha>0.1</alpha>  
       <gamma>0.0</gamma>  
-                          
       <Ti>10.0</Ti>       
       <Td>0.00001</Td>    
       <u_min>0.0</u_min>  

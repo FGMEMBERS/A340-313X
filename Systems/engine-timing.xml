@@ -69,5 +69,169 @@
         </input>
 		<output>/engines/engine[3]/egt-actual</output>
     </filter>
+	
+	<filter>
+		<name>Throttle 1</name>
+		<type>gain</type>
+		<gain>1</gain>
+		<update-interval-secs type="double">0.05</update-interval-secs>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[0]/reverser</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<property>/controls/engines/engine[0]/throttle</property> 
+		</input>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[0]/reverser</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>controls/engines/engine[0]/throttle</property> 
+					<entry><ind>1</ind><dep>0.5</dep></entry>
+					<entry><ind>0</ind><dep>0.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/controls/engines/engine[0]/throttle-pos</output>
+	</filter>
+	
+	<filter>
+		<name>Throttle 2</name>
+		<type>gain</type>
+		<gain>1</gain>
+		<update-interval-secs type="double">0.05</update-interval-secs>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[1]/reverser</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<property>/controls/engines/engine[1]/throttle</property> 
+		</input>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[1]/reverser</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>controls/engines/engine[1]/throttle</property> 
+					<entry><ind>1</ind><dep>0.5</dep></entry>
+					<entry><ind>0</ind><dep>0.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/controls/engines/engine[1]/throttle-pos</output>
+	</filter>
+	
+	<filter>
+		<name>Throttle 3</name>
+		<type>gain</type>
+		<gain>1</gain>
+		<update-interval-secs type="double">0.05</update-interval-secs>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[2]/reverser</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<property>/controls/engines/engine[2]/throttle</property> 
+		</input>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[2]/reverser</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>controls/engines/engine[2]/throttle</property> 
+					<entry><ind>1</ind><dep>0.5</dep></entry>
+					<entry><ind>0</ind><dep>0.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/controls/engines/engine[2]/throttle-pos</output>
+	</filter>
+	
+	<filter>
+		<name>Throttle 4</name>
+		<type>gain</type>
+		<gain>1</gain>
+		<update-interval-secs type="double">0.05</update-interval-secs>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[3]/reverser</property>
+					<value>0</value>
+				</equals>
+			</condition>
+			<property>/controls/engines/engine[3]/throttle</property> 
+		</input>
+		<input> 
+			<condition>
+				<equals>
+					<property>/controls/engines/engine[3]/reverser</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>controls/engines/engine[3]/throttle</property> 
+					<entry><ind>1</ind><dep>0.5</dep></entry>
+					<entry><ind>0</ind><dep>0.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/controls/engines/engine[3]/throttle-pos</output>
+	</filter>
+	
+    <filter>
+        <name>Altitude PFD</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+				<floor>
+					<div>
+						<property>/instrumentation/altimeter/indicated-altitude-ft</property> 
+						<value>100</value>
+					</div>
+				</floor>
+            </expression>
+        </input>
+		<output>/instrumentation/altimeter/indicated-altitude-ft-pfd</output>
+    </filter>
+	
+	<filter>
+        <name>V/S PFD</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+				<floor>
+					<div>
+						<property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property> 
+						<value>100</value>
+					</div>
+				</floor>
+            </expression>
+        </input>
+		<output>/instrumentation/vertical-speed-indicator/indicated-speed-fpm-pfd</output>
+    </filter>
 
 </PropertyList>

@@ -6,7 +6,7 @@
    <name>apoff</name>
    <path>/Aircraft/A340-313X/Sounds/apoff.wav</path>
    <condition>
-	 <property>/it-autoflight/apoffsound</property>
+	 <property>/it-autoflight/sound/apoffsound</property>
    </condition>
    <volume>
     <factor>40.0</factor>
@@ -17,7 +17,7 @@
    <name>apoff2</name>
    <path>/Aircraft/A340-313X/Sounds/apoff.wav</path>
    <condition>
-	 <property>/it-autoflight/apoffsound2</property>
+	 <property>/it-autoflight/sound/apoffsound2</property>
    </condition>
    <volume>
     <factor>40.0</factor>
@@ -2192,23 +2192,230 @@
         <max-dist>50.0</max-dist-->
     </engine>
 
+<!-- Custom GPWS -->
+	    <gpws>
+			<name>2500</name>
+			<path>Aircraft/A340-313X/Sounds/GPWS/altitude-2500.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<equals>
+						<property>/instrumentation/mk-viii/inputs/discretes/gpws-inhibit</property>
+						<value>0</value>
+					</equals>
+					<less-than-equals>
+						<property>/position/gear-agl-ft</property>
+						<value>2500</value>
+					</less-than-equals>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>2400</value>
+					</greater-than>
+					<less-than>
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<value>0</value>
+					</less-than>
+				</and>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</gpws>
+	    <gpws>
+			<name>2000</name>
+			<path>Aircraft/A340-313X/Sounds/GPWS/altitude-2000.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<equals>
+						<property>/instrumentation/mk-viii/inputs/discretes/gpws-inhibit</property>
+						<value>0</value>
+					</equals>
+					<less-than-equals>
+						<property>/position/gear-agl-ft</property>
+						<value>2000</value>
+					</less-than-equals>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>1900</value>
+					</greater-than>
+					<less-than>
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<value>0</value>
+					</less-than>
+				</and>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</gpws>
+	    <gpws>
+			<name>10ftaland</name>
+			<path>Aircraft/A340-313X/Sounds/GPWS/altitude-10ft.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<equals>
+						<property>/instrumentation/mk-viii/inputs/discretes/gpws-inhibit</property>
+						<value>0</value>
+					</equals>
+					<greater-than>
+						<property>/controls/flight/flaps</property>
+						<value>0.640</value>
+					</greater-than>
+					<less-than-equals>
+						<property>/position/gear-agl-ft</property>
+						<value>10</value>
+					</less-than-equals>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>8</value>
+					</greater-than>
+					<less-than>
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<value>0</value>
+					</less-than>
+					<or>
+						<equals>
+							<property>/it-autoflight/output/ap1</property>
+							<value>1</value>
+						</equals>
+						<equals>
+							<property>/it-autoflight/output/ap2</property>
+							<value>1</value>
+						</equals>
+					</or>
+				</and>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</gpws>
+	    <gpws>
+			<name>5</name>
+			<path>Aircraft/A340-313X/Sounds/GPWS/altitude-5.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<equals>
+						<property>/instrumentation/mk-viii/inputs/discretes/gpws-inhibit</property>
+						<value>0</value>
+					</equals>
+					<greater-than>
+						<property>/controls/flight/flaps</property>
+						<value>0.640</value>
+					</greater-than>
+					<less-than-equals>
+						<property>/position/gear-agl-ft</property>
+						<value>5</value>
+					</less-than-equals>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>3</value>
+					</greater-than>
+					<less-than>
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<value>0</value>
+					</less-than>
+					<equals>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.0</value>
+					</equals>
+					<equals>
+						<property>/controls/engines/engine[1]/throttle</property>
+						<value>0.0</value>
+					</equals>
+				</and>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</gpws>
+		
+	    <gpws>
+			<name>100above</name>
+			<path>Aircraft/A340-313X/Sounds/GPWS/100-above.wav</path>
+			<mode>once</mode>
+			<condition>
+				<and>
+					<equals>
+						<property>/instrumentation/mk-viii/inputs/discretes/gpws-inhibit</property>
+						<value>0</value>
+					</equals>
+					<less-than-equals> <!-- Until I add a calulation for minimums + 100, and add the ability to adjust DH, I'm keeping 350. Should be working within the next few builds -->
+						<property>/position/gear-agl-ft</property>
+						<value>350</value>
+					</less-than-equals>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>300</value>
+					</greater-than>
+					<less-than>
+						<property>/it-autoflight/internal/vert-speed-fpm</property>
+						<value>0</value>
+					</less-than>
+				</and>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</gpws>
+	
 <!-- Retard Warning -->
 
-	<retard>
+			
+		<retard>
 			<name>retard</name>
-			<path>Sounds/retard.wav</path>
+			<path>Aircraft/A340-313X/Sounds/GPWS/retard.wav</path>
 			<mode>looped</mode>
 			<condition>
 				<and>
 					<greater-than>
 						<property>/controls/flight/flaps</property>
-						<value>0.620</value>
+						<value>0.640</value>
 					</greater-than>
-					<less-than>
-						<property>/position/altitude-agl-ft</property>
-						<value>37</value>
-					</less-than>
-
+					<or>
+						<and>
+							<less-than>
+								<property>/position/gear-agl-ft</property>
+								<value>18</value>
+							</less-than>
+							<equals>
+								<property>/it-autoflight/output/ap1</property>
+								<value>0</value>
+							</equals>
+							<equals>
+								<property>/it-autoflight/output/ap2</property>
+								<value>0</value>
+							</equals>
+						</and>
+						<and>
+							<less-than>
+								<property>/position/gear-agl-ft</property>
+								<value>8</value>
+							</less-than>
+							<or>
+								<equals>
+									<property>/it-autoflight/output/ap1</property>
+									<value>1</value>
+								</equals>
+								<equals>
+									<property>/it-autoflight/output/ap2</property>
+									<value>1</value>
+								</equals>
+							</or>
+						</and>
+					</or>
 					<greater-than>
 						<property>controls/engines/engine[0]/throttle</property>
 						<value>0.0</value>
@@ -2244,26 +2451,18 @@
 					<not>
 						<property>/gear/gear[1]/wow</property>
 						<property>/gear/gear[2]/wow</property>
-						<property>/gear/gear[3]/wow</property>
 					</not>
 					<less-than>
 						<property>velocities/airspeed-kt</property>
-						<value>150</value>
+						<value>160</value>
 					</less-than>
 				</and>
 			</condition>
 			<volume>
-				<property>/sim/sound/effects/volume</property>
+				<factor>8</factor>
 			</volume>
-			<!--volume>
-                <property>sim/sound/Ovolume</property>
-            </volume-->
-			<type>avionics</type>
-			<!--position>
-				<x>22.5</x>
-				<y>0</y>
-				<z>0.78</z>
-			</position-->
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
 		</retard>
 		
 
@@ -2287,7 +2486,365 @@
 			<max-dist>100</max-dist-->
 		</overspeed>
 
-
+	<detenta>
+		<mode>once</mode>
+		<name>detendaa</name>
+		<path>detenta.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state1</property>
+				<value>IDLE</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detenta>
+	
+	<detentb>
+		<mode>once</mode>
+		<name>detendba</name>
+		<path>detentb.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state2</property>
+				<value>IDLE</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentb>
+	
+	<detentc>
+		<mode>once</mode>
+		<name>detendca</name>
+		<path>detentc.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state3</property>
+				<value>IDLE</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentc>
+	
+	<detentd>
+		<mode>once</mode>
+		<name>detendda</name>
+		<path>detentd.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state4</property>
+				<value>IDLE</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentd>
+	
+	<detenta>
+		<mode>once</mode>
+		<name>detendab</name>
+		<path>detenta.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state1</property>
+				<value>MAN</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detenta>
+	
+	<detentb>
+		<mode>once</mode>
+		<name>detendbb</name>
+		<path>detentb.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state2</property>
+				<value>MAN</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentb>
+	
+	<detentc>
+		<mode>once</mode>
+		<name>detendcb</name>
+		<path>detentc.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state3</property>
+				<value>MAN</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentc>
+	
+	<detentd>
+		<mode>once</mode>
+		<name>detenddb</name>
+		<path>detentd.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state4</property>
+				<value>MAN</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentd>
+	
+	<detenta>
+		<mode>once</mode>
+		<name>detendac</name>
+		<path>detenta.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state1</property>
+				<value>CL</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detenta>
+	
+	<detentb>
+		<mode>once</mode>
+		<name>detendbc</name>
+		<path>detentb.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state2</property>
+				<value>CL</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentb>
+	
+	<detentc>
+		<mode>once</mode>
+		<name>detendcc</name>
+		<path>detentc.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state3</property>
+				<value>CL</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentc>
+	
+	<detentd>
+		<mode>once</mode>
+		<name>detenddc</name>
+		<path>detentd.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state4</property>
+				<value>CL</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentd>
+	
+	<detenta>
+		<mode>once</mode>
+		<name>detendad</name>
+		<path>detenta.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state1</property>
+				<value>MAN THR</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detenta>
+	
+	<detentb>
+		<mode>once</mode>
+		<name>detendbd</name>
+		<path>detentb.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state2</property>
+				<value>MAN THR</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentb>
+	
+	<detentc>
+		<mode>once</mode>
+		<name>detendcd</name>
+		<path>detentc.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state3</property>
+				<value>MAN THR</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentc>
+	
+	<detentd>
+		<mode>once</mode>
+		<name>detenddd</name>
+		<path>detentd.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state4</property>
+				<value>MAN THR</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentd>
+	
+	<detenta>
+		<mode>once</mode>
+		<name>detendae</name>
+		<path>detenta.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state1</property>
+				<value>MCT</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detenta>
+	
+	<detentb>
+		<mode>once</mode>
+		<name>detendbe</name>
+		<path>detentb.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state2</property>
+				<value>MCT</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentb>
+	
+	<detentc>
+		<mode>once</mode>
+		<name>detendce</name>
+		<path>detentc.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state3</property>
+				<value>MCT</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentc>
+	
+	<detentd>
+		<mode>once</mode>
+		<name>detendde</name>
+		<path>detentd.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state4</property>
+				<value>MCT</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentd>
+	
+	<detenta>
+		<mode>once</mode>
+		<name>detendaf</name>
+		<path>detenta.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state1</property>
+				<value>TOGA</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detenta>
+	
+	<detentb>
+		<mode>once</mode>
+		<name>detendbf</name>
+		<path>detentb.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state2</property>
+				<value>TOGA</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentb>
+	
+	<detentc>
+		<mode>once</mode>
+		<name>detendcf</name>
+		<path>detentc.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state3</property>
+				<value>TOGA</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentc>
+	
+	<detentd>
+		<mode>once</mode>
+		<name>detenddf</name>
+		<path>detentd.wav</path>
+		<condition>
+			<equals>
+				<property>/systems/thrust/state4</property>
+				<value>TOGA</value>
+			</equals>
+		</condition>
+		<volume>
+			<property>/sim/sound/effects/volume</property>
+		</volume>
+	</detentd>
 
     </fx>
 </PropertyList>

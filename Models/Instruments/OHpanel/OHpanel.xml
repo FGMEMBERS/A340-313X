@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+
+	<path>res/ohpanelA330.ac</path>
+	
+	<!-- **************************************** -->
+	<!-- ANIMATIONS -->
+	<!-- Dome lighting -->
+	<!-- Updated to the New Layout & New 3D Objects -->
+	<!-- DAWEED - 2015/12/07 -->
+	<!-- Updated for A340s by it0uchpods -->
+	<!-- **************************************** -->
+	<!-- Dome Light -->
+	<animation>
+		<name>Dome illumination</name>
+		<type>material</type>
+		<object-name>ACESSFeedGuard</object-name>
+		<object-name>ACESSFeedGuardAxis</object-name>
+		<object-name>ACFlowKnb</object-name>
+		<object-name>APUFireGuard</object-name>
+		<object-name>APUFireGuardAxis</object-name>
+		<object-name>APUFireTest</object-name>
+		<object-name>AftCall</object-name>
+		<object-name>AftCargoHtBtn</object-name>
+		<object-name>AftCargoHtKnb</object-name>
+		<object-name>AftCargoSmkAgtDisp</object-name>
+		<object-name>AftCargoSmkAgtGuard</object-name>
+		<object-name>AftCargoSmkAgtGuardAxis</object-name>
+		<object-name>AnnunciatorLtSwtch</object-name>
+		<object-name>BatSelectDisplaySwitch</object-name>
+		<object-name>BattDisplay</object-name>
+		<object-name>BeaconLtSwtch</object-name>
+		<object-name>BlElecPumpGuard</object-name>
+		<object-name>BlElecPumpGuardAxis</object-name>
+		<object-name>BlEng1PumpGuard</object-name>
+		<object-name>BlEng1PumpGuardAxis</object-name>
+		<object-name>CTankFeedModeGuard</object-name>
+		<object-name>CTankFeedModeGuardAxis</object-name>
+		<object-name>CTankFeedModeSwitch</object-name>
+		<object-name>CabinACKnb</object-name>
+		<object-name>CaptPursSwitch</object-name>
+		<object-name>CargoSmkTest</object-name>
+		<object-name>CockpitACKnb</object-name>
+		<object-name>DitchGuard</object-name>
+		<object-name>DitchGuardAxis</object-name>
+		<object-name>DomeCTLSwtch</object-name>
+		<object-name>DomeLtSwtch</object-name>
+		<object-name>EmerCallGuard</object-name>
+		<object-name>EmerCallGuardAxis</object-name>
+		<object-name>EmerExtLtSwtch</object-name>
+		<object-name>EmerGenManOnGuard</object-name>
+		<object-name>EmerGenManOnGuardAxis</object-name>
+		<object-name>EmerGenTestGuard</object-name>
+		<object-name>EmerGenTestGuardAxis</object-name>
+		<object-name>Eng1FireGuard</object-name>
+		<object-name>Eng1FireGuardAxis</object-name>
+		<object-name>Eng1ManStartGuard</object-name>
+		<object-name>Eng1ManStartGuardAxis</object-name>
+		<object-name>Eng2FireGuard</object-name>
+		<object-name>Eng2FireGuardAxis</object-name>
+		<object-name>Eng2ManStartGuard</object-name>
+		<object-name>Eng2ManStartGuardAxis</object-name>
+		<object-name>Eng3FireGuard</object-name>
+		<object-name>Eng3FireGuardAxis</object-name>
+		<object-name>Eng3ManStartGuard</object-name>
+		<object-name>Eng3ManStartGuardAxis</object-name>
+		<object-name>Eng4FireGuard</object-name>
+		<object-name>Eng4FireGuardAxis</object-name>
+		<object-name>Eng4ManStartGuard</object-name>
+		<object-name>Eng4ManStartGuardAxis</object-name>
+		<object-name>EngFireTest</object-name>
+		<object-name>EvacHornOffBtn</object-name>
+		<object-name>ExtCall</object-name>
+		<object-name>FuelDumpACTGuard</object-name>
+		<object-name>FuelDumpARMGuard</object-name>
+		<object-name>FuelDumpARMGuardAxis</object-name>
+		<object-name>FuelDumpCTGuardAxis</object-name>
+		<object-name>FwdCabinCall</object-name>
+		<object-name>FwdCall</object-name>
+		<object-name>FwdCargoHtKnb</object-name>
+		<object-name>FwdCargoSmkAgtGuard</object-name>
+		<object-name>FwdCargoSmkAgtGuardAxis</object-name>
+		<object-name>GrElecPumpGuard</object-name>
+		<object-name>GrElecPumpGuardAxis</object-name>
+		<object-name>GrEng1PumpGuard</object-name>
+		<object-name>GrEng1PumpGuardAxis</object-name>
+		<object-name>GrEng2PumpGuard</object-name>
+		<object-name>GrEng2PumpGuardAxis</object-name>
+		<object-name>GroundCall</object-name>
+		<object-name>IDG1Guard</object-name>
+		<object-name>IDG1GuardAxis</object-name>
+		<object-name>IDG2Guard</object-name>
+		<object-name>IDG2GuardAxis</object-name>
+		<object-name>IDG3Guard</object-name>
+		<object-name>IDG3GuardAxis</object-name>
+		<object-name>IDG4Guard</object-name>
+		<object-name>IDG4GuardAxis</object-name>
+		<object-name>IR1ModeKnb</object-name>
+		<object-name>IR2ModeKnb</object-name>
+		<object-name>IR3ModeKnb</object-name>
+		<object-name>InnTkSpltLGuard</object-name>
+		<object-name>InnTkSpltLGuardAxis</object-name>
+		<object-name>InnTkSpltRGuard</object-name>
+		<object-name>InnTkSpltRGuardAxis</object-name>
+		<object-name>IrsOnBatLight</object-name>
+		<object-name>LandingLtSwtch</object-name>
+		<object-name>LdgElevKnb</object-name>
+		<object-name>LeftRainRPLNT</object-name>
+		<object-name>LeftWiperKnb</object-name>
+		<!--object-name>Markings</object-name-->
+		<object-name>MidCall</object-name>
+		<object-name>NavLogoLtSwtch</object-name>
+		<object-name>NoSmokingSwtch</object-name>
+		<object-name>NoseLtSwtch</object-name>
+		<object-name>OutRTKXferGuard</object-name>
+		<object-name>OutRTKXferGuardAxis</object-name>
+		<object-name>OxyMaskDeployGuard</object-name>
+		<object-name>OxyMaskDeployGuardAxis</object-name>
+		<object-name>Panel</object-name>
+		<object-name>PursCall</object-name>
+		<object-name>RamAirGuard</object-name>
+		<object-name>RamAirGuardAxis</object-name>
+		<object-name>RatGuard</object-name>
+		<object-name>RatGuardAxis</object-name>
+		<object-name>RightRainRPLNT</object-name>
+		<object-name>RightWiperKnb</object-name>
+		<object-name>SeatBeltSwtch</object-name>
+		<object-name>StbyCompassLtSwtch</object-name>
+		<object-name>StrobeLtSwtch</object-name>
+		<object-name>SwitchesNuts</object-name>
+		<object-name>TurnoffLtSwtch</object-name>
+		<object-name>VSCTLSwitch</object-name>
+		<object-name>ValveSelectSwitch</object-name>
+		<object-name>WingLtSwtch</object-name>
+		<object-name>XbleedKnb</object-name>
+		<object-name>YeElecPumpGuard</object-name>
+		<object-name>YeElecPumpGuardAxis</object-name>
+		<object-name>YeEng2PumpGuard</object-name>
+		<object-name>YeEng2PumpGuardAxis</object-name>
+		<emission>
+			<red>0.5</red>
+			<green>0.5</green>
+			<blue>0.5</blue>
+			<factor-prop>/controls/lighting/dome-norm</factor-prop>
+		</emission>
+	</animation>
+	
+	<!-- Panel lighting -->
+	<animation>
+		<name>Panel lighting select</name>
+		<type>select</type>
+		<object-name>MarkingLts</object-name>
+		<condition>
+			<or>
+				<not>
+					<property>controls/lighting/dome-norm</property>
+				</not>
+				<and>
+					<equals>
+						<property>controls/lighting/dome-norm</property>
+						<value>0.5</value>
+					</equals>
+					<greater-than>
+						<property>controls/lighting/overhead-panel-norm</property>
+						<value>0.25</value>
+					</greater-than>
+				</and>
+				<and>
+					<equals>
+						<property>controls/lighting/dome-norm</property>
+						<value>1</value>
+					</equals>
+					<greater-than>
+						<property>controls/lighting/overhead-panel-norm</property>
+						<value>0.5</value>
+					</greater-than>
+				</and>
+			</or>
+		</condition>
+	</animation>
+	<!--animation>
+		<name>Panel no lighting select</name>
+		<type>select</type>
+		<object-name>Markings</object-name>
+		<condition>
+			<or>
+				<and>
+					<equals>
+						<property>controls/lighting/dome-norm</property>
+						<value>0.5</value>
+					</equals>
+					<less-than-equals>
+						<property>controls/lighting/overhead-panel-norm</property>
+						<value>0.25</value>
+					</less-than-equals>
+				</and>
+				<and>
+					<equals>
+						<property>controls/lighting/dome-norm</property>
+						<value>1</value>
+					</equals>
+					<less-than-equals>
+						<property>controls/lighting/overhead-panel-norm</property>
+						<value>0.5</value>
+					</less-than-equals>
+				</and>
+			</or>
+		</condition>
+	</animation-->
+	<animation>
+		<name>Panel lighting</name>
+		<type>material</type>
+		<object-name>MarkingLts</object-name>
+		<emission>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+			<factor-prop>controls/lighting/overhead-panel-norm</factor-prop>
+		</emission>
+	</animation>
+
+</PropertyList>

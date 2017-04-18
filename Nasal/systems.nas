@@ -1,10 +1,10 @@
-#A340-600HGW systems
+#A340 systems
 #Syd Adams adapted by Andino
 #
 var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
 var chronometer = aircraft.timer.new("/instrumentation/clock/ET-sec",1);
 var vmodel = substr(getprop("sim/aero"), 3);
-aircraft.livery.init("Aircraft/A340-600VIP/Models/Liveries");
+aircraft.livery.init("Aircraft/A340-313X/Models/Liveries");
 
 #EFIS specific class
 # ie: var efis = EFIS.new("instrumentation/efis");
@@ -991,17 +991,7 @@ _setlistener("/sim/signals/fdm-initialized", func {
 
 
 setlistener("/sim/signals/fdm-initialized", func {	
-  	itaf.ap_init();			
-	setprop("/it-autoflight/settings/retard-enable", 0);  # Enable or disable automatic autothrottle retard.
-	setprop("/it-autoflight/settings/retard-ft", 20);     # Add this to change the retard altitude, default is 50ft AGL.
-	setprop("/it-autoflight/settings/land-flap", 0.620);  # Define the landing flaps here. This is needed for autoland, and retard.
-	setprop("/it-autoflight/settings/land-enable", 1);    # Enable or disable automatic landing.
-});
-
-setlistener("/instrumentation/altimeter/indicated-altitude-ft", func {
-	setprop("/instrumentation/altimeter/indicated-altitude-ft-pfd", getprop("/instrumentation/altimeter/indicated-altitude-ft") / 100);
-});
-
-setlistener("/instrumentation/vertical-speed-indicator/indicated-speed-fpm", func {
-	setprop("/instrumentation/vertical-speed-indicator/indicated-speed-fpm-pfd", getprop("/instrumentation/vertical-speed-indicator/indicated-speed-fpm") / 100);
+  	itaf.ap_init();
+	setprop("/it-autoflight/input/fd1", 1);
+	setprop("/it-autoflight/input/fd2", 1);
 });
