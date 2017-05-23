@@ -92,7 +92,6 @@
 			<vorloc>-4.0</vorloc>
 			<vs>0.01</vs>
 			<fpa>0.30</fpa>
-			<gs>0.11</gs>
 		</cmd>
 		<autoland>
 			<kp-roll>0.06</kp-roll>
